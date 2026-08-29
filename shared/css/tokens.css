@@ -1,0 +1,99 @@
+/* =========================================================================
+   ESIG — Design System · 1/4 · JETONS (tokens)
+   -------------------------------------------------------------------------
+   Source unique des couleurs, typographies, espacements et mesures.
+   Aligné sur la Brand Bible (Livre III — Brand OS) et le registre de
+   décisions (docs/DECISIONS.md, 22/07/2026).
+
+   RÈGLE DE MARQUE : Bleu Marine 60% · Or 20% (accent rare) · clair/blanc 20%.
+   Ne jamais introduire de couleur hors de cette palette.
+   ========================================================================= */
+
+:root {
+  /* ---- Couleurs de marque (canon) ---------------------------------- */
+  --esig-navy:        #2A4291;  /* Bleu Marine ESIG — couleur primaire */
+  --esig-or:          #B0862B;  /* Or Institutionnel — accent, à mériter */
+
+  /* Variantes utilitaires dérivées (survols, dégradés d'ombre, états) */
+  --esig-navy-900:    #17244f;  /* très foncé — pieds de page, survols */
+  --esig-navy-700:    #22356f;  /* foncé — survol de bouton primaire */
+  --esig-navy-300:    #6b7db8;  /* clair — bordures actives, focus doux */
+  --esig-navy-050:    #eef1f9;  /* voile navy très clair — fonds de section */
+  --esig-or-700:      #8a6a22;  /* or foncé — texte or accessible sur blanc */
+  --esig-or-100:      #f4ecd8;  /* or très clair — surlignage discret */
+
+  /* ---- Neutres ----------------------------------------------------- */
+  --blanc:            #ffffff;
+  --gris-clair:       #eef1f6;  /* fonds secondaires, zébrures */
+  --gris-bordure:     #d6dce8;  /* filets, contours de cartes */
+  --texte:            #1f2933;  /* près-noir — corps de texte */
+  --texte-doux:       #5a6472;  /* légendes, mentions secondaires */
+
+  /* ---- Couleurs sémantiques (états) -------------------------------- */
+  --succes:           #1b7a46;
+  --succes-fond:      #e6f4ec;
+  --alerte:           #b23a2e;
+  --alerte-fond:      #fbeae8;
+  --info:             var(--esig-navy);
+  --info-fond:        var(--esig-navy-050);
+
+  /* ---- Typographie ------------------------------------------------- */
+  /* Titres : Georgia (autorité académique) — polices système, aucun CDN */
+  --police-titre: Georgia, "Times New Roman", serif;
+  /* Texte : Calibri (confort de lecture) + piles de substitution */
+  --police-texte: Calibri, "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+
+  /* Échelle typographique fluide (mobile → grand écran) */
+  --fs-xs:   0.8125rem;                               /* 13px — légendes */
+  --fs-sm:   0.9375rem;                               /* 15px */
+  --fs-base: 1rem;                                    /* 16px — corps */
+  --fs-md:   clamp(1.125rem, 1rem + 0.5vw, 1.25rem);  /* sous-titres */
+  --fs-lg:   clamp(1.35rem, 1.1rem + 1vw, 1.75rem);   /* titres 3 */
+  --fs-xl:   clamp(1.75rem, 1.3rem + 2vw, 2.5rem);    /* titres 2 */
+  --fs-2xl:  clamp(2.1rem, 1.5rem + 3vw, 3.25rem);    /* titres 1 / héros */
+
+  --lh-serree:  1.2;   /* titres */
+  --lh-normale: 1.6;   /* corps (Brand Bible : 1,3 à 1,5 ; 1,6 pour l'écran) */
+
+  --poids-normal: 400;
+  --poids-gras:   700;
+
+  /* ---- Espacements (échelle 4 px) ---------------------------------- */
+  --e-1: 0.25rem;  --e-2: 0.5rem;   --e-3: 0.75rem;  --e-4: 1rem;
+  --e-5: 1.5rem;   --e-6: 2rem;     --e-8: 3rem;     --e-10: 4rem;
+  --e-12: 6rem;
+
+  /* ---- Rayons, ombres, contours ------------------------------------ */
+  --rayon-s: 4px;
+  --rayon-m: 8px;
+  --rayon-l: 16px;
+  --rayon-plein: 999px;
+
+  --ombre-1: 0 1px 2px rgba(23, 36, 79, 0.06), 0 1px 3px rgba(23, 36, 79, 0.10);
+  --ombre-2: 0 4px 12px rgba(23, 36, 79, 0.10), 0 2px 4px rgba(23, 36, 79, 0.06);
+  --ombre-3: 0 12px 28px rgba(23, 36, 79, 0.16);
+
+  --filet-or: 3px solid var(--esig-or);  /* filet d'accent signature */
+
+  /* ---- Mise en page ------------------------------------------------ */
+  --largeur-contenu: 1200px;   /* conteneur principal */
+  --largeur-texte:   68ch;     /* longueur de ligne lisible */
+  --hauteur-entete:  72px;
+
+  /* ---- Mouvement (sobre) ------------------------------------------- */
+  --transition: 160ms ease;
+
+  /* ---- Focus (accessibilité) --------------------------------------- */
+  --focus-anneau: 3px solid var(--esig-or);
+  --focus-decalage: 2px;
+
+  /* ---- Plans (z-index) --------------------------------------------- */
+  --z-entete: 100;
+  --z-menu:   200;
+  --z-nova:   300;
+}
+
+/* Respect de la préférence « animations réduites » */
+@media (prefers-reduced-motion: reduce) {
+  :root { --transition: 0ms; }
+}

@@ -1,0 +1,106 @@
+/* =========================================================================
+   ESIG — Design System · 3/4 · MISE EN PAGE (layout)
+   -------------------------------------------------------------------------
+   Conteneurs, grille responsive mobile-first, sections et utilitaires.
+   Points de rupture : 360 / 768 / 1024 / 1440 px (cf. CLAUDE.md).
+   ========================================================================= */
+
+/* ---- Conteneur principal ------------------------------------------- */
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  margin-inline: auto;
+  padding-inline: var(--e-4);
+}
+@media (min-width: 768px) {
+  .conteneur { padding-inline: var(--e-6); }
+}
+.conteneur--etroit { max-width: 760px; }
+.conteneur--large  { max-width: 1360px; }
+
+/* ---- Sections ------------------------------------------------------ */
+.section { padding-block: var(--e-8); }
+@media (min-width: 768px) {
+  .section { padding-block: var(--e-10); }
+}
+.section--clair  { background: var(--gris-clair); }
+.section--navy   { background: var(--esig-navy); color: var(--blanc); }
+.section--navy h1, .section--navy h2, .section--navy h3 { color: var(--blanc); }
+.section--navy a { color: var(--blanc); }
+
+/* En-tête de section : kicker or + titre + chapô */
+.section-entete { max-width: var(--largeur-texte); margin-bottom: var(--e-6); }
+.section-entete--centre { margin-inline: auto; text-align: center; }
+.kicker {
+  display: inline-block;
+  font-family: var(--police-titre);
+  font-weight: var(--poids-gras);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--esig-or-700);
+  margin-bottom: var(--e-2);
+}
+.chapo {
+  font-size: var(--fs-md);
+  color: var(--texte-doux);
+  margin-top: var(--e-3);
+}
+.section--navy .chapo { color: rgba(255, 255, 255, 0.85); }
+.section--navy .kicker { color: var(--esig-or-100); }
+
+/* ---- Grille responsive (auto-fit) ---------------------------------- */
+.grille { display: grid; gap: var(--e-5); }
+.grille--2 { grid-template-columns: 1fr; }
+.grille--3 { grid-template-columns: 1fr; }
+.grille--4 { grid-template-columns: 1fr; }
+
+@media (min-width: 600px) {
+  .grille--2, .grille--3, .grille--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grille--3 { grid-template-columns: repeat(3, 1fr); }
+  .grille--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Grille « cartes » qui s'adapte toute seule au contenu */
+.grille--auto {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+/* ---- Mise en page à deux colonnes (contenu + aside) ---------------- */
+.deux-colonnes { display: grid; gap: var(--e-6); }
+@media (min-width: 1024px) {
+  .deux-colonnes { grid-template-columns: 2fr 1fr; align-items: start; }
+}
+
+/* ---- Utilitaires flex ---------------------------------------------- */
+.flex { display: flex; gap: var(--e-4); }
+.flex--centre { align-items: center; }
+.flex--entre  { justify-content: space-between; }
+.flex--enroule { flex-wrap: wrap; }
+.flex--colonne { flex-direction: column; }
+
+/* ---- Utilitaires d'espacement et de texte -------------------------- */
+.pile > * + * { margin-top: var(--e-4); }      /* rythme vertical */
+.pile-s > * + * { margin-top: var(--e-2); }
+.pile-l > * + * { margin-top: var(--e-6); }
+
+.texte-centre { text-align: center; }
+.texte-doux   { color: var(--texte-doux); }
+.mesure       { max-width: var(--largeur-texte); }
+.sans-marge-bas > *:last-child { margin-bottom: 0; }
+
+/* ---- Ratios média -------------------------------------------------- */
+.ratio-16-9 { aspect-ratio: 16 / 9; }
+.ratio-4-3  { aspect-ratio: 4 / 3; }
+.ratio-1-1  { aspect-ratio: 1 / 1; }
+.couvre { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- Filet or de séparation (accent signature) --------------------- */
+.filet-or {
+  width: 64px; height: 3px;
+  background: var(--esig-or);
+  border: 0; margin: var(--e-4) 0;
+}
+.section-entete--centre .filet-or { margin-inline: auto; }

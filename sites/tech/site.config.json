@@ -1,0 +1,7 @@
+{
+  "ECO_TECH": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}innovations.html\">Innovations</a></li><li><a href=\"{{BASE}}filieres.html\">Filières</a></li><li><a href=\"{{BASE}}club.html\">Tech Club</a></li><li><a href=\"{{BASE}}actualites.html\">Actualités</a></li><li><a href=\"{{BASE}}emissions.html\">Émissions</a></li><li><a href=\"{{BASE}}evenements.html\">Événements</a></li>",
+  "CTA_URL": "proposer.html",
+  "CTA_LIBELLE": "Proposer un projet",
+  "LEGAL": "https://esig.tg/"
+}

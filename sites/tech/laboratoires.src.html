@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratoires &amp; équipements — ESIG TECH</title>
+  <meta name="description" content="Les laboratoires et plateaux techniques de l'ESIG Global Success : informatique et réseaux, mécanique et fabrication, énergies, robotique et topographie.">
+  <link rel="canonical" href="https://tech.esig.tg/laboratoires.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ESIG TECH">
+  <meta property="og:title" content="Laboratoires &amp; équipements — ESIG TECH">
+  <meta property="og:description" content="Plateaux techniques et équipements à disposition des étudiants.">
+  <meta property="og:url" content="https://tech.esig.tg/laboratoires.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/css/tech.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="index.html">ESIG TECH</a></li><li><span aria-current="page">Laboratoires &amp; équipements</span></li></ol></nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="eyebrow-tech">Apprendre en pratiquant</p>
+        <h1>Laboratoires &amp; équipements</h1>
+        <hr class="filet-or">
+        <p class="chapo">Des plateaux techniques et du matériel professionnel à disposition des étudiants : la montée en compétences passe par la pratique, sur des équipements réels.</p>
+      </div>
+      <div data-labos-liste data-source="/data/laboratoires-tech.json">
+        <p class="texte-doux">Chargement des laboratoires…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section"><div class="conteneur"><div class="bloc-cta">
+    <p class="kicker">Équiper, co-financer, mutualiser</p>
+    <h2>Soutenez nos plateaux techniques</h2>
+    <p>Entreprises et partenaires : contribuez à l'équipement des laboratoires et rapprochez-vous des talents de demain.</p>
+    <div class="bloc-cta__actions">
+      <a class="btn btn--accent btn--large" href="proposer.html">Devenir partenaire</a>
+      <a class="btn btn--fantome btn--large" href="filieres.html">Voir les filières</a>
+    </div>
+  </div></div></section>
+</main>
+
+<!--#inclure:footer-->
+<script>window.ESIG_CONFIG={whatsapp:"+22893033351"};window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur nos labos ? Je vous oriente.",whatsapp:"+22893033351"};</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/tech-listes.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

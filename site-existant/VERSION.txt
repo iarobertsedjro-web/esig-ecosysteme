@@ -1,0 +1,52 @@
+========================================================================
+  SITE WEB ESIG GLOBAL SUCCESS
+  FICHE DE VERSION DU LIVRABLE
+========================================================================
+
+  VERSION : 1.5.0
+  DATE    : 14 juillet 2026
+  STATUT  : Refonte technique — prête pour recette puis mise en production
+
+------------------------------------------------------------------------
+  CONTENU DE CETTE VERSION
+------------------------------------------------------------------------
+
+  Architecture du site
+    - Page d'accueil structurée en deux pôles (Parcours académique /
+      Formation Continue & Modulaire), avec mise en avant du VAE/VAP
+    - Pages : Accueil, Parcours académique, Formation Continue,
+      Admission, Contact, Actualités
+    - Catalogue de 145 formations réelles
+    - Fiches détaillées à onglets (Présentation, Compétences,
+      Programme, Débouchés, Admission)
+
+  Contenu enrichi
+    - Offre Master complète : 25 spécialités professionnelles
+      entièrement renseignées, réparties sur 5 domaines
+    - 32 autres fiches renseignées (15 BTS, 17 Licences)
+
+  Fonctionnalités
+    - Module Actualités & Galerie (autonomie éditoriale)
+    - Réseaux sociaux actifs : Facebook, LinkedIn, Instagram, TikTok
+    - Formulaires de pré-inscription et de contact (Formspree)
+    - Référencement (SEO) : sitemap, robots.txt, données structurées
+      Schema.org, balisage Open Graph
+
+------------------------------------------------------------------------
+  COMMENT VÉRIFIER QUE VOUS AVEZ LA BONNE VERSION
+------------------------------------------------------------------------
+
+  Ce fichier VERSION.txt indique toujours la version de l'archive.
+  Le même numéro apparaît, en petit, dans le pied de page du site.
+  En cas de doute sur la version en circulation, ouvrez ce fichier.
+
+------------------------------------------------------------------------
+  HISTORIQUE COMPLET
+------------------------------------------------------------------------
+
+  Voir le fichier CHANGELOG.txt pour le détail des versions
+  successives et de leurs évolutions.
+
+========================================================================
+  ESIG Global Success — Lomé, Togo — esig.tg
+========================================================================

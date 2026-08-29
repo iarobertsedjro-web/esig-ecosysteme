@@ -1,0 +1,53 @@
+/* =========================================================================
+   social.css — Icônes des réseaux sociaux (pied de page + page Contact)
+   ========================================================================= */
+
+.social-links{display:flex;gap:12px;align-items:center}
+
+.social-link{
+  display:flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;
+  transition:transform .16s,background .2s,color .2s;
+}
+.social-link svg{width:20px;height:20px}
+
+/* --- Variante pied de page (fond navy, icônes claires) --- */
+.footer-social{justify-content:center;margin:0 0 20px}
+.footer-social .social-link{
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.15);
+}
+.footer-social .social-link:hover{
+  background:var(--teal);color:#fff;border-color:var(--teal);transform:translateY(-3px);
+}
+
+/* --- Variante page Contact (fond clair, accent teal) --- */
+.contact-social{margin-top:8px}
+.contact-social .social-link{
+  background:rgba(14,124,123,.08);color:var(--teal);
+  border:1px solid rgba(14,124,123,.2);
+}
+.contact-social .social-link:hover{
+  background:var(--teal);color:#fff;transform:translateY(-3px);
+  box-shadow:0 6px 16px rgba(14,124,123,.28);
+}
+
+@media(max-width:560px){
+  .social-link{width:38px;height:38px}
+  .social-links{gap:10px}
+}
+
+/* Bande sociale dédiée sur la page Contact */
+.contact-social-band{
+  text-align:center;margin-top:32px;padding:26px 20px;
+  background:var(--light);border:1px solid var(--border);border-radius:16px;
+}
+.contact-social-label{
+  display:block;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;
+}
+.contact-social-band .social-links{justify-content:center}
+
+/* Numéro de version du site (discret, pied de page) */
+.site-version{
+  margin-top:14px;font-size:11.5px;color:rgba(255,255,255,.4);letter-spacing:.3px;
+}

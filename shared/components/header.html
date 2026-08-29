@@ -1,0 +1,49 @@
+<!-- =========================================================================
+     COMPOSANT PARTAGÉ : EN-TÊTE (bandeau écosystème + navigation)
+     Injecté par build/build.js via le repère « #inclure:header ».
+     Jetons remplaçables : {{ECO_*}} (aria-current du sous-domaine actif),
+     {{NAV}} (liste de navigation propre au site), {{CTA_URL}}, {{CTA_LIBELLE}}.
+     ========================================================================= -->
+<a class="saut-contenu" href="#contenu">Aller au contenu principal</a>
+
+<!-- Bandeau écosystème : sélecteur discret entre les 8 espaces du portail -->
+<div class="bandeau-ecosysteme">
+  <div class="conteneur">
+    <span class="bandeau-ecosysteme__label">Écosystème ESIG :</span>
+    <a href="https://esig.tg" {{ECO_WWW}}>Institution</a>
+    <a href="https://admission.esig.tg" {{ECO_ADMISSION}}>Admissions</a>
+    <a href="https://executive.esig.tg" {{ECO_EXECUTIVE}}>Formation continue</a>
+    <a href="https://cooperation.esig.tg" {{ECO_COOPERATION}}>Coopération</a>
+    <a href="https://carrieres.esig.tg" {{ECO_CARRIERES}}>Carrières</a>
+    <a href="https://alumni.esig.tg" {{ECO_ALUMNI}}>Alumni</a>
+    <a href="https://tech.esig.tg" {{ECO_TECH}}>ESIG Tech</a>
+    <a href="https://news.esig.tg" {{ECO_NEWS}}>ESIG News</a>
+  </div>
+</div>
+
+<!-- En-tête principal -->
+<header class="entete">
+  <div class="conteneur entete__barre">
+    <a class="entete__logo" href="{{BASE}}index.html" aria-label="ESIG Global Success — accueil">
+      <img src="/shared/img/logo/logo-esig.png" alt="" width="44" height="44">
+      <span class="nom">ESIG Global Success<small>Build Your Future</small></span>
+    </a>
+
+    <button class="menu-bascule" type="button" aria-expanded="false"
+            aria-controls="navigation-principale" aria-label="Ouvrir le menu">
+      <svg class="icone-ouvrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icone-fermer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div class="entete__nav" id="navigation-principale">
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__liste">
+          {{NAV}}
+        </ul>
+      </nav>
+      <div class="entete__actions" style="padding:var(--e-4)">
+        <a class="btn btn--accent" href="{{CTA_URL}}">{{CTA_LIBELLE}}</a>
+      </div>
+    </div>
+  </div>
+</header>

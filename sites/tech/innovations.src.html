@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovations &amp; projets étudiants — ESIG TECH</title>
+  <meta name="description" content="Les innovations, prototypes et projets technologiques des étudiants de l'ESIG Global Success : robotique, énergies, drones, IA, industrie. Filtrez par domaine et statut.">
+  <link rel="canonical" href="https://tech.esig.tg/innovations.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ESIG TECH">
+  <meta property="og:title" content="Innovations &amp; projets étudiants — ESIG TECH">
+  <meta property="og:description" content="Prototypes et projets technologiques des étudiants de l'ESIG.">
+  <meta property="og:url" content="https://tech.esig.tg/innovations.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/css/tech.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="index.html">ESIG TECH</a></li><li><span aria-current="page">Innovations &amp; projets</span></li></ol></nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="eyebrow-tech">Réalisations étudiantes</p>
+        <h1>Innovations &amp; projets</h1>
+        <hr class="filet-or">
+        <p class="chapo">Prototypes, applications et projets technologiques imaginés et réalisés par les étudiants de l'ESIG, seuls ou avec le Tech Club. Filtrez par domaine et par statut, puis ouvrez la fiche complète.</p>
+      </div>
+      <div data-projets-liste data-source="/data/projets-tech.json">
+        <p class="texte-doux">Chargement des projets…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section"><div class="conteneur"><div class="bloc-cta">
+    <p class="kicker">Vous avez un projet ?</p>
+    <h2>Proposez votre innovation</h2>
+    <p>Étudiant, enseignant, entreprise ou investisseur : soumettez un projet ou proposez un partenariat technologique.</p>
+    <div class="bloc-cta__actions">
+      <a class="btn btn--accent btn--large" href="proposer.html">Proposer un projet</a>
+      <a class="btn btn--fantome btn--large" href="club.html">Rejoindre le Tech Club</a>
+    </div>
+  </div></div></section>
+</main>
+
+<!--#inclure:footer-->
+<script>window.ESIG_CONFIG={whatsapp:"+22893033351"};window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur les projets tech ? Je vous oriente.",whatsapp:"+22893033351"};</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/projets-tech.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

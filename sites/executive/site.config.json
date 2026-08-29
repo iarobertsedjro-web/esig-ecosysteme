@@ -1,0 +1,7 @@
+{
+  "ECO_EXECUTIVE": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}catalogue.html\">Nos formations</a></li><li><a href=\"{{BASE}}catalogue.html?niveau=modulaire\">Modulaire</a></li><li><a href=\"{{BASE}}langues.html\">Langues</a></li><li><a href=\"{{BASE}}vae-vap.html\">VAE / VAP</a></li><li><a href=\"{{BASE}}devis.html\">Devis entreprise</a></li><li><a href=\"{{BASE}}index.html#contact\">Contact</a></li>",
+  "CTA_URL": "{{BASE}}devis.html",
+  "CTA_LIBELLE": "Demander un devis",
+  "LEGAL": "https://esig.tg/"
+}

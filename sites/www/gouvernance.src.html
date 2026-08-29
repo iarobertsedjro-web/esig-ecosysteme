@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gouvernance et organisation — ESIG Global Success</title>
+  <meta name="description" content="La gouvernance de l'ESIG Global Success : Conseil d'Administration, Direction Générale, ses directions et services, organisés selon une cartographie de processus alignée ISO 9001.">
+  <link rel="canonical" href="https://esig.tg/gouvernance.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gouvernance et organisation — ESIG Global Success">
+  <meta property="og:description" content="Conseil d'Administration, Direction Générale, ses directions et services, dans une organisation par processus alignée ISO 9001.">
+  <meta property="og:url" content="https://esig.tg/gouvernance.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane">
+      <ol>
+        <li><a href="index.html">Accueil</a></li>
+        <li><span aria-current="page">Gouvernance et organisation</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">L'institution</p>
+        <h1>Gouvernance et organisation</h1>
+        <hr class="filet-or">
+        <p class="chapo">L'ESIG Global Success est administrée par un Conseil d'Administration et dirigée par une Direction Générale. Son organisation s'appuie sur une cartographie de processus — stratégiques, métiers et supports — alignée sur la norme ISO 9001.</p>
+      </div>
+
+      <div class="deux-colonnes">
+        <div class="pile">
+          <p>La Direction Générale (M. Robert K. SEDJRO) porte la stratégie de l'établissement et pilote la performance institutionnelle. Elle s'appuie sur un Secrétariat Général et plusieurs directions et services, chacun responsable d'un ensemble de processus documentés.</p>
+          <p>Cette organisation traduit un principe simple : chaque activité de l'école — de la conception des programmes à la délivrance des diplômes, de la relation entreprise à la gestion des infrastructures — relève d'un processus identifié, avec un responsable, des étapes et des indicateurs.</p>
+        </div>
+        <aside class="carte"><div class="carte__corps">
+          <h2 class="carte__titre" style="font-size:var(--fs-md)">Instances de gouvernance</h2>
+          <ul class="pile-s" style="list-style:none;padding:0">
+            <li><strong>Conseil d'Administration</strong><br><span class="texte-doux">Oriente la trajectoire de long terme et approuve les décisions majeures.</span></li>
+            <li><strong>Direction Générale</strong><br><span class="texte-doux">Porte la stratégie, arbitre et alloue les ressources.</span></li>
+            <li><strong>Secrétariat Général</strong><br><span class="texte-doux">Pilote le Système de Management de la Qualité et les fonctions administratives.</span></li>
+          </ul>
+        </div></aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--clair">
+    <div class="conteneur">
+      <div class="section-entete section-entete--centre">
+        <p class="kicker">Une organisation par directions</p>
+        <h2>Les directions de l'ESIG</h2>
+        <hr class="filet-or">
+      </div>
+      <div data-directions-liste data-source="/data/directions.json">
+        <p class="texte-doux">Chargement des directions…</p>
+      </div>
+      <p class="texte-doux" style="margin-top:var(--e-5);font-size:var(--fs-sm)">Cliquez sur une direction ou un service pour en savoir plus. Les noms des responsables (hors Direction Générale) seront précisés par la direction.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div class="bloc-cta">
+        <p class="kicker">Aligné ISO 9001</p>
+        <h2>Une organisation au service de la qualité</h2>
+        <p>Découvrez comment nos processus sont pilotés dans une démarche d'amélioration continue.</p>
+        <div class="bloc-cta__actions">
+          <a href="qualite.html" class="btn btn--accent btn--large">Notre politique qualité</a>
+          <a href="agrements.html" class="btn btn--fantome btn--large">Agréments &amp; certifications</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--#inclure:footer-->
+
+<script>
+  window.ESIG_CONFIG = { whatsapp: "+22893033351" };
+  window.NOVA_CONFIG = { endpoint: "http://localhost:8787/api/assistant", nom: "ESIG NOVA", accroche: "Une question sur l'ESIG ? Je vous oriente.", whatsapp: "+22893033351" };
+</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/directions.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

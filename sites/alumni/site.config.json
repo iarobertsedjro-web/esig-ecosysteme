@@ -1,0 +1,7 @@
+{
+  "ECO_ALUMNI": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}portraits.html\">Portraits</a></li><li><a href=\"{{BASE}}reseau.html\">Réseau</a></li><li><a href=\"{{BASE}}evenements.html\">Événements</a></li><li><a href=\"{{BASE}}rejoindre.html\">Rejoindre</a></li>",
+  "CTA_URL": "{{BASE}}rejoindre.html",
+  "CTA_LIBELLE": "Rejoindre le réseau",
+  "LEGAL": "https://esig.tg/"
+}

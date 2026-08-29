@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable (erreur 404) — ESIG Global Success</title>
+  <meta name="description" content="La page demandée n'existe pas ou a été déplacée. Retrouvez les formations, l'admission et le contact de l'ESIG Global Success à Lomé.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="/images/logo/logo-esig.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/formations.css">
+  <link rel="stylesheet" href="/pages.css">
+  <link rel="stylesheet" href="/base-commun.css">
+  <style>
+    .page404 { max-width: 720px; margin: 0 auto; padding: 60px 20px 80px; text-align: center; }
+    .page404 .code { font-family: 'Sora', sans-serif; font-size: 96px; font-weight: 700; color: #0ea5a4; line-height: 1; }
+    .page404 h1 { margin: 10px 0 14px; }
+    .page404 p.intro { color: #64748b; margin-bottom: 30px; }
+    .recherche404 { display: flex; gap: 10px; max-width: 480px; margin: 0 auto 14px; }
+    .recherche404 input { flex: 1; padding: 13px 16px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 15px; }
+    .recherche404 button { padding: 13px 22px; border: 0; border-radius: 10px; background: #0ea5a4; color: #fff; font-weight: 600; cursor: pointer; }
+    #resultats404 { list-style: none; padding: 0; margin: 0 auto 30px; max-width: 480px; text-align: left; }
+    #resultats404 li a { display: block; padding: 10px 14px; border: 1px solid #e2e8f0; border-radius: 8px; margin-top: 8px; text-decoration: none; color: #0f172a; }
+    #resultats404 li a:hover { border-color: #0ea5a4; }
+    #resultats404 li a small { display: block; color: #64748b; }
+    .liens404 { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 26px 0 34px; }
+    .liens404 a { padding: 10px 18px; border: 1px solid #cbd5e1; border-radius: 999px; text-decoration: none; color: #0f172a; font-size: 14.5px; }
+    .liens404 a:hover { border-color: #0ea5a4; color: #0ea5a4; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo">
+        <span class="logo-mark"></span>
+        ESIG Global Success
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+        <a href="/">Accueil</a>
+        <a href="/parcours-academique.html">Parcours académique</a>
+        <a href="/formation-continue.html">Formation Continue &amp; Modulaire</a>
+        <a href="/actualites.html">Actualités</a>
+        <a href="/admission.html">Admission</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <div class="page404">
+      <div class="code" aria-hidden="true">404</div>
+      <h1>Cette page n'existe pas ou a été déplacée</h1>
+      <p class="intro">Pas d'inquiétude : cherchez une formation ci-dessous ou reprenez votre navigation depuis les rubriques principales.</p>
+
+      <form class="recherche404" id="form404" role="search" aria-label="Rechercher une formation">
+        <label for="q404" class="hp-field">Rechercher une formation</label>
+        <input type="search" id="q404" name="q" placeholder="Ex. : informatique, finance, logistique…" autocomplete="off">
+        <button type="submit">Rechercher</button>
+      </form>
+      <ul id="resultats404" aria-live="polite"></ul>
+
+      <nav class="liens404" aria-label="Rubriques principales">
+        <a href="/parcours-academique.html">BTS · Licences · Masters</a>
+        <a href="/formation-continue.html">Formation continue</a>
+        <a href="/admission.html">Admission</a>
+        <a href="/actualites.html">Actualités</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <a href="/" class="btn btn-teal">Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <address>Bd. de l'Oti, Bè Kpota · 11 BP 149 · Lomé, Togo · <a href="tel:+22893033351">(+228)&nbsp;93&nbsp;03&nbsp;33&nbsp;51</a></address>
+        <p>© 2026 ESIG Global Success · Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/formations-data.js"></script>
+  <script src="/config-site.js"></script>
+  <script src="/commun.js"></script>
+  <script src="/recherche-404.js"></script>
+</body>
+</html>

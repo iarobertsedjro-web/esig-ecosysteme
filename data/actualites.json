@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "version": "2.0.0",
+    "note": "Source des actualités du média ESIG News. Pour ajouter une actualité, copiez un bloc de « actualites » et modifiez-le (voir sites/news/COMMENT-AJOUTER-UNE-ACTU.md). Le tri se fait par « date » (AAAA-MM-JJ), la plus récente en premier.",
+    "categories": ["Événement", "Annonce", "Partenariat", "Vie étudiante", "Conférence", "Communiqué"]
+  },
+  "actualites": [
+    {
+      "slug": "rentree-academique-2026-2027",
+      "date": "2026-09-15",
+      "date_texte": "15 septembre 2026",
+      "categorie": "Événement",
+      "titre": "Rentrée académique 2026-2027",
+      "resume": "La rentrée solennelle de l'année académique 2026-2027 se tiendra sur le campus. Accueil des nouveaux étudiants, présentation des équipes pédagogiques et lancement officiel des cours.",
+      "contenu": [
+        "La rentrée solennelle de l'année académique 2026-2027 se tiendra sur le campus de l'ESIG Global Success à Bè Kpota, Lomé.",
+        "Au programme : accueil des nouveaux étudiants, présentation des équipes pédagogiques et lancement officiel des cours pour l'ensemble des filières."
+      ],
+      "image": "/medias/campus/campus-01.jpg",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    },
+    {
+      "slug": "ouverture-des-preinscriptions",
+      "date": "2026-07-10",
+      "date_texte": "10 juillet 2026",
+      "categorie": "Annonce",
+      "titre": "Ouverture des pré-inscriptions",
+      "resume": "Les pré-inscriptions pour l'année académique 2026-2027 sont officiellement ouvertes. BTS, Licence, Master et formation continue : déposez votre dossier en ligne dès maintenant.",
+      "contenu": [
+        "Les pré-inscriptions pour l'année académique 2026-2027 sont officiellement ouvertes.",
+        "BTS, Licence, Master et formation continue : vous pouvez déposer votre dossier en ligne dès maintenant depuis le site admission."
+      ],
+      "image": "/medias/campus/campus-04.jpg",
+      "lieu": ""
+    },
+    {
+      "slug": "nouveau-partenariat-mobilite-internationale",
+      "date": "2026-06-20",
+      "date_texte": "20 juin 2026",
+      "categorie": "Partenariat",
+      "titre": "Nouveau partenariat de mobilité internationale",
+      "resume": "L'ESIG Global Success renforce son réseau de partenaires universitaires pour offrir de nouvelles opportunités de mobilité à ses étudiants en France, au Canada et en Belgique.",
+      "contenu": [
+        "L'ESIG Global Success renforce son réseau de partenaires universitaires.",
+        "Objectif : offrir de nouvelles opportunités de mobilité à ses étudiants en France, au Canada et en Belgique."
+      ],
+      "image": "/medias/campus/campus-06.jpg",
+      "lieu": ""
+    }
+  ]
+}

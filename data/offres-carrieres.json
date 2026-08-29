@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Exemples de FORMAT — à remplacer par les offres réelles (ou à administrer via le CMS). Ne jamais publier de fausses offres ni de faux employeurs.",
+    "categories": ["Stage", "Emploi", "Alternance"]
+  },
+  "offres": [
+    {
+      "reference": "exemple-stage-dev",
+      "type": "Stage",
+      "titre": "Développeur web",
+      "entreprise": "Entreprise partenaire",
+      "lieu": "Lomé, Togo",
+      "domaine": "Informatique & numérique",
+      "duree": "3 à 6 mois",
+      "exemple": true,
+      "resume": "Participer au développement d'applications web au sein d'une équipe technique encadrée."
+    },
+    {
+      "reference": "exemple-emploi-compta",
+      "type": "Emploi",
+      "titre": "Assistant(e) comptable",
+      "entreprise": "Entreprise partenaire",
+      "lieu": "Lomé, Togo",
+      "domaine": "Gestion & comptabilité",
+      "duree": "CDI",
+      "exemple": true,
+      "resume": "Tenue de la comptabilité courante, rapprochements et préparation des déclarations."
+    },
+    {
+      "reference": "exemple-alternance-reseau",
+      "type": "Alternance",
+      "titre": "Technicien réseaux & systèmes",
+      "entreprise": "Entreprise partenaire",
+      "lieu": "Lomé, Togo",
+      "domaine": "Réseaux & infrastructures",
+      "duree": "12 mois",
+      "exemple": true,
+      "resume": "Installation, supervision et maintenance des équipements réseau, en alternance école/entreprise."
+    }
+  ]
+}

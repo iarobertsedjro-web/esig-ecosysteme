@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Événements tech (page Événements, via agenda.js). Exemples à adapter — remplacez par vos vraies dates. Tri automatique : à venir d'abord, passés en archives.",
+    "categories": ["Hackathon", "Atelier", "Conférence", "Meetup"]
+  },
+  "evenements": [
+    {
+      "slug": "atelier-prompt-engineering-2026",
+      "date": "2026-10-15",
+      "date_texte": "15 octobre 2026",
+      "heure": "14:00 – 17:00",
+      "categorie": "Atelier",
+      "titre": "Atelier — Prompt Engineering & IA générative",
+      "resume": "Prendre en main les IA génératives (ChatGPT, Claude, Gemini) pour gagner en productivité au quotidien.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    },
+    {
+      "slug": "hackathon-esig-2026",
+      "date": "2026-11-21",
+      "date_fin": "2026-11-22",
+      "date_texte": "21 et 22 novembre 2026",
+      "categorie": "Hackathon",
+      "titre": "Hackathon ESIG 2026",
+      "resume": "48 heures pour concevoir en équipe une solution numérique à un défi réel, encadrés par des mentors.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé",
+      "lien": "https://admission.esig.tg",
+      "lien_libelle": "Nos formations tech"
+    },
+    {
+      "slug": "conference-cybersecurite-2026",
+      "date": "2026-12-05",
+      "date_texte": "5 décembre 2026",
+      "categorie": "Conférence",
+      "titre": "Conférence — Cybersécurité : les bons réflexes",
+      "resume": "Panorama des menaces actuelles et bonnes pratiques, avec des professionnels du secteur.",
+      "lieu": "Amphithéâtre ESIG, Lomé"
+    }
+  ]
+}

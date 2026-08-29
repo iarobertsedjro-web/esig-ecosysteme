@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESIG TECH — L'écosystème technologique de l'ESIG Global Success</title>
+  <meta name="description" content="ESIG TECH : innovations et projets étudiants, filières technologiques, Tech Club, actualités, émissions et événements de l'ESIG Global Success à Lomé.">
+  <link rel="canonical" href="https://tech.esig.tg/">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ESIG TECH">
+  <meta property="og:title" content="ESIG TECH — L'écosystème technologique de l'ESIG">
+  <meta property="og:description" content="Innovations étudiantes, filières tech, Tech Club, émissions et événements.">
+  <meta property="og:url" content="https://tech.esig.tg/">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/css/tech.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <section class="hero-tech">
+    <div class="hero-tech__media" aria-hidden="true">
+      <div class="diapo" style="background-image:url('/medias/innovation/robotique.jpg')"></div>
+      <div class="diapo" style="background-image:url('/medias/innovation/topographie.jpg')"></div>
+      <div class="diapo" style="background-image:url('/medias/innovation/panneaux-solaires.jpg')"></div>
+    </div>
+    <div class="conteneur" style="padding-block:var(--e-10)">
+      <p class="eyebrow-tech">ESIG · Pôle technologique</p>
+      <h1 style="font-size:clamp(44px,7vw,84px);letter-spacing:-.01em;margin:.15em 0 .1em">ESIG <span class="accent">TECH</span></h1>
+      <p style="max-width:60ch;font-size:var(--fs-md)">La vitrine des innovations, prototypes et projets technologiques des étudiants de l'ESIG Global Success — filières industrielles et sciences de l'ingénieur, Tech Club, émissions et événements.</p>
+      <div class="hero__actions">
+        <a href="innovations.html" class="btn btn--accent btn--large">Découvrir les innovations</a>
+        <a href="club.html" class="btn btn--fantome btn--large">Rejoindre le Tech Club</a>
+      </div>
+      <div class="stats-tech">
+        <div><b>60+</b><span>filières &amp; modules tech</span></div>
+        <div><b>13</b><span>académies technologiques</span></div>
+        <div><b>Tech Club</b><span>projets &amp; hackathons</span></div>
+        <div><b>Web TV</b><span>émissions &amp; podcasts</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INNOVATIONS À LA UNE -->
+  <section class="section">
+    <div class="conteneur">
+      <div class="section-entete"><p class="eyebrow-tech">Réalisations</p><h2>Innovations à la une</h2><hr class="filet-or"></div>
+      <div data-projets-liste data-limite="3" data-source="/data/projets-tech.json">
+        <p class="texte-doux">Chargement des innovations…</p>
+      </div>
+      <p style="margin-top:var(--e-5)"><a class="btn btn--secondaire" href="innovations.html">Tous les projets</a></p>
+    </div>
+  </section>
+
+  <!-- EXPLORER (rubriques) -->
+  <section class="section section--clair">
+    <div class="conteneur">
+      <div class="section-entete section-entete--centre"><p class="eyebrow-tech">Explorer</p><h2>Tout l'univers ESIG Tech</h2><hr class="filet-or"></div>
+      <div class="grille grille--3">
+        <a class="rlink" href="innovations.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><h3>Innovations &amp; projets</h3><p>Fiches complètes : problématique, solution, technologies, équipe.</p></div></a>
+        <a class="rlink" href="filieres.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4zM21 10v6M7 12v4c0 1.1 2.2 2 5 2s5-.9 5-2v-4"/></svg></span><div><h3>Filières technologiques</h3><p>Informatique, réseaux, IA, cybersécurité, électronique, industrie.</p></div></a>
+        <a class="rlink" href="club.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M15 20c0-2 .6-3.4 2-4"/></svg></span><div><h3>ESIG Tech Club</h3><p>Membres, ateliers, concours et projets toute l'année.</p></div></a>
+        <a class="rlink" href="actualites.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg></span><div><h3>Actualités tech</h3><p>IA, cybersécurité, industrie, énergies, robotique, numérique.</p></div></a>
+        <a class="rlink" href="emissions.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></span><div><h3>Émissions &amp; podcasts</h3><p>Web TV ESIG : interviews, reportages, tutoriels.</p></div></a>
+        <a class="rlink" href="evenements.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v6a6 6 0 0 1-12 0zM6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3"/></svg></span><div><h3>Concours &amp; hackathons</h3><p>L'agenda des défis, ateliers et événements tech.</p></div></a>
+        <a class="rlink" href="laboratoires.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3M8 3h8M8 14h8"/></svg></span><div><h3>Laboratoires &amp; équipements</h3><p>Plateaux techniques et matériel à disposition des étudiants.</p></div></a>
+        <a class="rlink" href="partenaires.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.8 1-5.5-4-3.9L9.5 8z"/></svg></span><div><h3>Partenaires technologiques</h3><p>Entreprises, laboratoires et institutions partenaires.</p></div></a>
+        <a class="rlink" href="proposer.html"><span class="rlink__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><div><h3>Proposer un projet</h3><p>Étudiant, entreprise ou investisseur : lancez-vous.</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉMISSIONS -->
+  <section class="section">
+    <div class="conteneur">
+      <div class="section-entete"><p class="eyebrow-tech">Web TV ESIG</p><h2>Émissions &amp; podcasts</h2><hr class="filet-or"></div>
+      <div data-emissions-liste data-limite="3" data-source="/data/emissions-tech.json">
+        <p class="texte-doux">Chargement des émissions…</p>
+      </div>
+      <p style="margin-top:var(--e-5)"><a class="btn btn--secondaire" href="emissions.html">Toutes les émissions</a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section"><div class="conteneur"><div class="bloc-cta">
+    <p class="kicker">Build Your Future</p>
+    <h2>Un projet, une techno, une envie d'innover ?</h2>
+    <p>Étudiants, entreprises, investisseurs et partenaires : proposez un projet, rejoignez le Tech Club ou nouez un partenariat technologique avec l'ESIG.</p>
+    <div class="bloc-cta__actions">
+      <a class="btn btn--accent btn--large" href="proposer.html">Proposer un projet</a>
+      <a class="btn btn--fantome btn--large" href="partenaires.html">Devenir partenaire</a>
+    </div>
+  </div></div></section>
+</main>
+
+<!--#inclure:footer-->
+<script>window.ESIG_CONFIG={whatsapp:"+22893033351"};window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur l'univers tech de l'ESIG ? Je vous oriente.",whatsapp:"+22893033351"};</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/projets-tech.js" defer></script>
+<script src="/shared/js/emissions-tech.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

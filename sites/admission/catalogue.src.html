@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue des formations — BTS, Licence, Master | ESIG Global Success</title>
+  <meta name="description" content="Le catalogue complet des formations diplômantes de l'ESIG Global Success : BTS, Licences et Masters, filtrables par niveau et domaine.">
+  <link rel="canonical" href="https://admission.esig.tg/catalogue.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Catalogue des formations — ESIG Global Success">
+  <meta property="og:description" content="BTS, Licences et Masters filtrables par niveau et domaine.">
+  <meta property="og:url" content="https://admission.esig.tg/catalogue.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Nos formations</span></li></ol></nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">BTS · Licence · Master</p>
+        <h1>Catalogue des formations</h1>
+        <hr class="filet-or">
+        <p class="chapo">66 formations diplômantes réparties en cinq domaines. Filtrez par niveau et domaine, puis ouvrez la fiche détaillée de chaque formation.</p>
+      </div>
+      <div data-recherche-formations data-poles="academique" data-source="/data/formations.json"></div>
+    </div>
+  </section>
+
+  <section class="section"><div class="conteneur"><div class="bloc-cta">
+    <p class="kicker">Build Your Future</p>
+    <h2>Un doute sur le bon choix ?</h2>
+    <p>Notre équipe et l'assistant ESIG NOVA vous aident à trouver la formation adaptée à votre projet.</p>
+    <div class="bloc-cta__actions">
+      <a class="btn btn--accent btn--large" href="index.html#preinscription">Faire ma préinscription</a>
+      <a class="btn btn--fantome btn--large" href="index.html#contact">Parler à un conseiller</a>
+    </div>
+  </div></div></section>
+</main>
+
+<!--#inclure:footer-->
+<script>
+  window.ESIG_CONFIG={whatsapp:"+22893033351"};
+  window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur nos formations ? Je vous oriente.",whatsapp:"+22893033351"};
+</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/recherche-formations.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualités technologiques — ESIG TECH</title>
+  <meta name="description" content="L'actualité technologique de l'ESIG Global Success : intelligence artificielle, cybersécurité, industrie, énergies renouvelables, robotique et numérique.">
+  <link rel="canonical" href="https://tech.esig.tg/actualites.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ESIG TECH">
+  <meta property="og:title" content="Actualités technologiques — ESIG TECH">
+  <meta property="og:description" content="IA, cybersécurité, industrie, énergies, robotique et numérique.">
+  <meta property="og:url" content="https://tech.esig.tg/actualites.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/css/tech.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <section class="hero-tech">
+    <div class="conteneur" style="padding-block:var(--e-8)">
+      <p class="eyebrow-tech">Veille &amp; innovation</p>
+      <h1>Actualités technologiques</h1>
+      <hr class="filet-or">
+      <p style="max-width:60ch">Intelligence artificielle, cybersécurité, industrie, énergies renouvelables, robotique et numérique — l'actualité tech vue de l'ESIG.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div data-actualites-liste data-source="/data/actualites-tech.json">
+        <p class="texte-doux">Chargement des actualités…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--clair"><div class="conteneur texte-centre">
+    <p class="kicker">Toute la vie de l'école</p>
+    <h2>Au-delà de la tech</h2>
+    <p class="chapo" style="margin-inline:auto">Retrouvez l'actualité institutionnelle, la vie étudiante et les événements de l'ESIG sur ESIG News.</p>
+    <p style="margin-top:var(--e-4)"><a class="btn btn--secondaire" href="https://news.esig.tg">Aller sur ESIG News</a></p>
+  </div></section>
+</main>
+
+<!--#inclure:footer-->
+<script>window.ESIG_CONFIG={whatsapp:"+22893033351"};window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur l'actualité tech ? Je vous oriente.",whatsapp:"+22893033351"};</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/actualites.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

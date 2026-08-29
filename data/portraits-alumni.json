@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Portraits de diplômés. À compléter via ce fichier (ou le CMS). Ne publier que des témoignages RÉELS, avec l'accord de la personne — aucune invention."
+  },
+  "portraits": [
+    {
+      "slug": "aubin-alstom",
+      "nom": "Aubin",
+      "poste": "Technicien SAV chez ALSTOM",
+      "lieu": "Paris, France",
+      "filiere": "Génie Industriel & Maintenance",
+      "citation": "De Lomé aux ateliers d'ALSTOM à Paris : mon parcours a commencé à l'ESIG. Grâce au partenariat avec l'Université Paris-Est Créteil, j'ai poursuivi en Génie Industriel et Maintenance avec une bourse. L'ESIG m'a ouvert les portes d'une carrière internationale.",
+      "photo": ""
+    }
+  ]
+}

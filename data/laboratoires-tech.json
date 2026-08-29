@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Laboratoires & plateaux techniques d'ESIG TECH. Champs : nom, resume, equipements[], image. Exemples à compléter par la direction."
+  },
+  "laboratoires": [
+    {
+      "nom": "Laboratoire informatique & réseaux",
+      "resume": "Salles équipées pour le développement, l'administration système et les travaux pratiques réseaux et cybersécurité.",
+      "equipements": ["Postes de travail", "Écrans interactifs", "Matériel réseau (Cisco)", "Serveurs de TP", "Environnements virtualisés"],
+      "image": "/medias/campus/campus-03.jpg"
+    },
+    {
+      "nom": "Atelier de mécanique & fabrication",
+      "resume": "Machines-outils et moyens de fabrication pour l'usinage, la maintenance industrielle et le prototypage.",
+      "equipements": ["Machines-outils", "Commande numérique (CNC)", "Impression 3D", "Outillage de maintenance"],
+      "image": "/medias/innovation/atelier-mecanique.jpg"
+    },
+    {
+      "nom": "Plateau énergies & électrotechnique",
+      "resume": "Bancs d'essai et installations pour l'électrotechnique, les énergies renouvelables et l'efficacité énergétique.",
+      "equipements": ["Bancs électrotechniques", "Installation photovoltaïque", "Instruments de mesure", "Variateurs de vitesse"],
+      "image": "/medias/innovation/panneaux-solaires.jpg"
+    },
+    {
+      "nom": "Espace robotique & automatismes",
+      "resume": "Automates, capteurs et robots pour l'apprentissage de l'automatisation et de la robotique industrielle.",
+      "equipements": ["Automates programmables", "Bras robotisés", "Capteurs & actionneurs (IoT)", "Supervision (SCADA)"],
+      "image": "/medias/innovation/robotique.jpg"
+    },
+    {
+      "nom": "Topographie & génie civil",
+      "resume": "Matériel de terrain pour la topographie, les levés et la conception d'infrastructures.",
+      "equipements": ["Station totale", "GPS RTK", "Drone de cartographie", "Logiciels DAO/BIM"],
+      "image": "/medias/innovation/topographie.jpg"
+    }
+  ]
+}

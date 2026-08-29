@@ -1,0 +1,99 @@
+# =========================================================================
+#  .htaccess — ESIG Global Success
+#  Sécurité, performance, redirections et page d'erreur.
+#  Compatible hébergement Apache (cPanel / LWS / OVH mutualisé).
+# =========================================================================
+
+# ----- Page d'erreur 404 personnalisée -----
+ErrorDocument 404 /404.html
+
+# ----- Encodage par défaut -----
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ----- Forcer HTTPS -----
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ----- /index.html -> / (URL canonique unique) -----
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+
+  # ----- Anciennes fiches dynamiques -> pages statiques (301) -----
+  # fiche.html?f=bts-xxx        -> /formations/bts/xxx.html
+  # fiche.html?f=langue-xxx     -> /formations/langues/xxx.html
+  RewriteCond %{QUERY_STRING} ^f=langue-([a-z0-9-]+)$ [NC]
+  RewriteRule ^fiche\.html$ /formations/langues/%1.html? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^f=(bts|licence|master|continue|modulaire)-([a-z0-9-]+)$ [NC]
+  RewriteRule ^fiche\.html$ /formations/%1/%2.html? [R=301,L]
+
+  # =====================================================================
+  #  MIGRATION VERS esig.tg — À ACTIVER LE JOUR DE LA BASCULE
+  #  Décommentez le bloc ci-dessous une fois le site déployé sur esig.tg
+  #  (il redirige www.esig.tg et news.esig.tg vers esig.tg en conservant
+  #  les chemins — les anciennes URLs restent donc fonctionnelles).
+  # =====================================================================
+  # RewriteCond %{HTTP_HOST} ^www\.esig\.tg$ [NC,OR]
+  # RewriteCond %{HTTP_HOST} ^news\.esig\.tg$ [NC]
+  # RewriteRule ^(.*)$ https://esig.tg/$1 [R=301,L]
+</IfModule>
+
+# ----- En-têtes de sécurité -----
+<IfModule mod_headers.c>
+  # Anti-clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+  # Pas de reniflage de type MIME
+  Header always set X-Content-Type-Options "nosniff"
+  # Référent limité
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Fonctionnalités navigateur limitées
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  # HSTS — activer seulement quand HTTPS est stable sur tous les sous-domaines
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+  # Politique de sécurité du contenu
+  # (autorise les polices Google, Formspree, Google Maps, GA4 conditionnel)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com; frame-src https://www.google.com https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+# ----- Compression -----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json application/xml
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
+# ----- Cache navigateur -----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/avif "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 365 days"
+</IfModule>
+
+# ----- Protection des fichiers sensibles -----
+<FilesMatch "^\.(htaccess|htpasswd|env)">
+  Require all denied
+</FilesMatch>
+# Documentation interne non servie au public
+<FilesMatch "\.md$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(CHANGELOG|VERSION|LISEZ-MOI)\.txt$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "\.env">
+  Require all denied
+</FilesMatch>

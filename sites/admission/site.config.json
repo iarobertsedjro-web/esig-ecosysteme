@@ -1,0 +1,7 @@
+{
+  "ECO_ADMISSION": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}catalogue.html\">Nos formations</a></li><li><a href=\"{{BASE}}admission.html\">Admission</a></li><li><a href=\"{{BASE}}comparateur.html\">Comparer</a></li><li><a href=\"{{BASE}}rendez-vous.html\">Rendez-vous</a></li><li><a href=\"{{BASE}}index.html#contact\">Contact</a></li>",
+  "CTA_URL": "{{BASE}}index.html#preinscription",
+  "CTA_LIBELLE": "Préinscription",
+  "LEGAL": "https://esig.tg/"
+}

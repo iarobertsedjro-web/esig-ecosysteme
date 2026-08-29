@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un devis — Formations intra-entreprises | ESIG Global Success</title>
+  <meta name="description" content="Recevez une proposition et un devis personnalisés pour la formation de vos équipes : formations intra-entreprises sur mesure, à vos dates et dans vos locaux ou en visioconférence.">
+  <link rel="canonical" href="https://executive.esig.tg/devis.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Demander un devis — Formations intra-entreprises | ESIG Global Success">
+  <meta property="og:description" content="Un programme sur mesure et un devis personnalisés pour vos équipes.">
+  <meta property="og:url" content="https://executive.esig.tg/devis.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Devis entreprise</span></li></ol></nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">Formations intra-entreprises</p>
+        <h1>Demander un devis personnalisé</h1>
+        <hr class="filet-or">
+        <p class="chapo">Décrivez votre besoin : nous vous adressons une proposition pédagogique et un devis adaptés, sous 48 h ouvrées. Sans engagement.</p>
+      </div>
+
+      <div class="deux-colonnes">
+        <form class="carte" id="form-devis" data-formulaire="devis" data-confirmation="Votre demande de devis a bien été reçue. Notre équipe formation continue vous adresse une proposition sous 48 h ouvrées." novalidate><div class="carte__corps">
+          <fieldset>
+            <legend>Votre entreprise</legend>
+            <div class="champ"><label for="d-entreprise">Raison sociale <span class="requis" aria-hidden="true">*</span></label><input id="d-entreprise" name="entreprise" type="text" autocomplete="organization" required></div>
+            <div class="grille grille--2" style="gap:var(--e-3)">
+              <div class="champ"><label for="d-secteur">Secteur d'activité</label><input id="d-secteur" name="secteur" type="text"></div>
+              <div class="champ"><label for="d-effectif">Effectif</label>
+                <select id="d-effectif" name="effectif"><option>1 à 10</option><option>11 à 50</option><option>51 à 250</option><option>Plus de 250</option></select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Votre contact</legend>
+            <div class="grille grille--2" style="gap:var(--e-3)">
+              <div class="champ"><label for="d-nom">Nom complet <span class="requis" aria-hidden="true">*</span></label><input id="d-nom" name="nom" type="text" autocomplete="name" required></div>
+              <div class="champ"><label for="d-fonction">Fonction</label><input id="d-fonction" name="fonction" type="text" autocomplete="organization-title"></div>
+            </div>
+            <div class="grille grille--2" style="gap:var(--e-3)">
+              <div class="champ"><label for="d-mail">E-mail professionnel <span class="requis" aria-hidden="true">*</span></label><input id="d-mail" name="email" type="email" autocomplete="email" required></div>
+              <div class="champ"><label for="d-tel">Téléphone <span class="requis" aria-hidden="true">*</span></label><input id="d-tel" name="telephone" type="tel" autocomplete="tel" required></div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Votre besoin</legend>
+            <div class="champ"><label for="d-type">Type de prestation</label>
+              <select id="d-type" name="type">
+                <option>Formation intra-entreprise sur mesure</option>
+                <option>Inscription à un module du catalogue</option>
+                <option>Formation en langues</option>
+                <option>VAE / VAP</option>
+                <option>Executive Education (cadres &amp; dirigeants)</option>
+              </select>
+            </div>
+            <div class="champ"><label for="d-theme">Thématique ou formation visée</label><input id="d-theme" name="theme" type="text" placeholder="Ex. Cybersécurité, Data, Management…"></div>
+            <div class="grille grille--2" style="gap:var(--e-3)">
+              <div class="champ"><label for="d-participants">Nombre de participants</label><input id="d-participants" name="participants" type="number" min="1" inputmode="numeric"></div>
+              <div class="champ"><label for="d-format">Format souhaité</label>
+                <select id="d-format" name="format"><option>Présentiel (dans nos locaux)</option><option>Présentiel (dans vos locaux)</option><option>Visioconférence</option><option>Hybride</option></select>
+              </div>
+            </div>
+            <div class="champ"><label for="d-periode">Période souhaitée</label><input id="d-periode" name="periode" type="text" placeholder="Ex. septembre 2026"></div>
+            <div class="champ"><label for="d-msg">Précisez votre besoin</label><textarea id="d-msg" name="message" placeholder="Objectifs, contexte, contraintes…"></textarea></div>
+          </fieldset>
+
+          <label class="hp-field" aria-hidden="true">Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          <div class="champ-choix"><input id="d-rgpd" name="consentement" type="checkbox" required><label for="d-rgpd">J'accepte que ces informations soient utilisées pour établir ma proposition (<a href="https://esig.tg/confidentialite.html">confidentialité</a>). <span class="requis" aria-hidden="true">*</span></label></div>
+          <p class="message-erreur" id="d-erreur" role="alert" hidden>Merci de renseigner les champs obligatoires (entreprise, nom, e-mail, téléphone, consentement).</p>
+          <button type="submit" class="btn btn--accent btn--bloc btn--large">Recevoir ma proposition</button>
+          <p class="aide" style="margin-top:var(--e-2)">Réponse sous 48 h ouvrées. Traitement du formulaire activé à la mise en ligne.</p>
+        </div></form>
+
+        <aside class="pile">
+          <div class="carte"><div class="carte__corps">
+            <h2 class="carte__titre" style="font-size:var(--fs-md)">Pourquoi l'ESIG ?</h2>
+            <ul class="pile-s">
+              <li>Un établissement agréé, aligné ISO 9001:2015.</li>
+              <li>13 académies et 59 modules certifiants.</li>
+              <li>Des formateurs praticiens, un ancrage régional fort.</li>
+              <li>Des formats flexibles : présentiel, visio, hybride.</li>
+            </ul>
+          </div></div>
+          <div class="carte"><div class="carte__corps">
+            <h2 class="carte__titre" style="font-size:var(--fs-md)">Un échange direct ?</h2>
+            <p class="pile-s">
+              <a class="btn btn--bloc" href="https://wa.me/22879773636">WhatsApp (+228) 79 77 36 36</a>
+              <a class="btn btn--secondaire btn--bloc" href="mailto:formation@esig.tg">formation@esig.tg</a>
+            </p>
+          </div></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--#inclure:footer-->
+<script>
+  window.ESIG_CONFIG={whatsapp:"+22879773636"};
+  window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur nos formations entreprises ? Je vous oriente.",whatsapp:"+22879773636"};
+  window.FORM_CONFIG={endpoint:"http://localhost:8788/api/formulaire"};
+</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/formulaires.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

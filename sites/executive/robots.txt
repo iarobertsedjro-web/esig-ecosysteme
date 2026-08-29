@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://executive.esig.tg/sitemap.xml

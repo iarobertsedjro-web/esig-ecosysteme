@@ -1,0 +1,7 @@
+{
+  "ECO_COOPERATION": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}partenaires.html\">Partenaires</a></li><li><a href=\"{{BASE}}mobilite.html\">Mobilité</a></li><li><a href=\"{{BASE}}projets.html\">Projets</a></li><li><a href=\"{{BASE}}etudiants-internationaux.html\">Étudiants internationaux</a></li><li><a href=\"{{BASE}}devenir-partenaire.html\">Devenir partenaire</a></li>",
+  "CTA_URL": "{{BASE}}devenir-partenaire.html",
+  "CTA_LIBELLE": "Devenir partenaire",
+  "LEGAL": "https://esig.tg/"
+}

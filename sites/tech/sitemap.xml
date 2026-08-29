@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tech.esig.tg/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tech.esig.tg/innovations.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tech.esig.tg/filieres.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tech.esig.tg/club.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tech.esig.tg/actualites.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tech.esig.tg/emissions.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tech.esig.tg/evenements.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tech.esig.tg/laboratoires.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tech.esig.tg/partenaires.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tech.esig.tg/proposer.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- projet.html et article.html : gabarits de détail (noindex), exclus du sitemap. -->
+</urlset>

@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Actualités technologiques d'ESIG TECH (mêmes champs que data/actualites.json — moteur partagé). Exemples à adapter. Reliées à ESIG News pour l'actualité institutionnelle générale.",
+    "categories": ["Intelligence artificielle", "Cybersécurité", "Industrie", "Énergies", "Robotique", "Numérique"]
+  },
+  "actualites": [
+    {
+      "slug": "atelier-ia-generative-etudiants",
+      "date": "2026-07-30",
+      "date_texte": "30 juillet 2026",
+      "categorie": "Intelligence artificielle",
+      "titre": "Atelier IA générative : les étudiants passent à la pratique",
+      "resume": "Un atelier dédié aux outils d'IA générative a réuni les étudiants autour de cas d'usage concrets : productivité, code assisté et création de contenus.",
+      "contenu": [
+        "Le Tech Club de l'ESIG a organisé un atelier pratique consacré aux outils d'intelligence artificielle générative.",
+        "Au programme : prompts efficaces, automatisation de tâches, assistance au développement et bonnes pratiques d'usage responsable de l'IA."
+      ],
+      "image": "/medias/vie-etudiante/etudiants-laptop.jpg",
+      "lieu": "Campus ESIG, Lomé"
+    },
+    {
+      "slug": "mois-cybersecurite-esig",
+      "date": "2026-07-12",
+      "date_texte": "12 juillet 2026",
+      "categorie": "Cybersécurité",
+      "titre": "Sensibilisation cybersécurité sur le campus",
+      "resume": "Bonnes pratiques, hygiène numérique et introduction au pentest : une série de sessions pour renforcer la culture cyber des étudiants.",
+      "contenu": [
+        "Les filières réseaux et sécurité ont animé des sessions de sensibilisation à la cybersécurité ouvertes à tous les étudiants.",
+        "Mots de passe, hameçonnage, sécurité des réseaux et découverte du test d'intrusion étaient au cœur des échanges."
+      ],
+      "image": "/medias/campus/campus-03.jpg",
+      "lieu": "Campus ESIG, Lomé"
+    },
+    {
+      "slug": "energies-renouvelables-projet-solaire",
+      "date": "2026-06-25",
+      "date_texte": "25 juin 2026",
+      "categorie": "Énergies",
+      "titre": "Énergies renouvelables : un projet solaire grandeur nature",
+      "resume": "Les étudiants en énergies renouvelables ont instrumenté une installation solaire pour en suivre la production en conditions réelles.",
+      "contenu": [
+        "Dans le cadre des plateaux techniques, les étudiants ont mis en service une station solaire instrumentée.",
+        "Le suivi des données de production alimente désormais les travaux pratiques sur l'efficacité énergétique."
+      ],
+      "image": "/medias/innovation/panneaux-solaires.jpg",
+      "lieu": "Campus ESIG, Lomé"
+    }
+  ]
+}

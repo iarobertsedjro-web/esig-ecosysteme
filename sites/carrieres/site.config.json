@@ -1,0 +1,7 @@
+{
+  "ECO_CARRIERES": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}offres.html\">Offres</a></li><li><a href=\"{{BASE}}accompagnement.html\">Accompagnement</a></li><li><a href=\"{{BASE}}entreprises-partenaires.html\">Entreprises partenaires</a></li><li><a href=\"{{BASE}}recruteurs.html\">Recruteurs</a></li>",
+  "CTA_URL": "{{BASE}}recruteurs.html",
+  "CTA_LIBELLE": "Déposer une offre",
+  "LEGAL": "https://esig.tg/"
+}

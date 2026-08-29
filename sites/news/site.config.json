@@ -1,0 +1,7 @@
+{
+  "ECO_NEWS": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}index.html\">Toutes les actus</a></li><li><a href=\"{{BASE}}agenda.html\">Agenda</a></li><li><a href=\"{{BASE}}index.html?cat=Événement\">Événements</a></li><li><a href=\"{{BASE}}index.html?cat=Partenariat\">Partenariats</a></li><li><a href=\"{{BASE}}index.html?cat=Annonce\">Annonces</a></li>",
+  "CTA_URL": "https://admission.esig.tg",
+  "CTA_LIBELLE": "Préinscription",
+  "LEGAL": "https://esig.tg/"
+}

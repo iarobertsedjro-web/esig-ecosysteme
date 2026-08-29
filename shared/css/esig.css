@@ -1,0 +1,16 @@
+/* =========================================================================
+   ESIG — Design System · POINT D'ENTRÉE
+   -------------------------------------------------------------------------
+   Feuille de style unique à référencer dans les pages :
+       <link rel="stylesheet" href="/shared/css/esig.css">
+
+   En développement, ce fichier assemble les 4 briques par @import.
+   En production, le script build/ produit une version concaténée (esig.min.css)
+   pour de meilleures performances (Lighthouse).
+
+   Ordre impératif : jetons → base → mise en page → composants.
+   ========================================================================= */
+@import "tokens.css";
+@import "base.css";
+@import "layout.css";
+@import "composants.css";

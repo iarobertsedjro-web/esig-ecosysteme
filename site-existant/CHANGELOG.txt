@@ -1,0 +1,197 @@
+========================================================================
+  SITE WEB ESIG GLOBAL SUCCESS
+  JOURNAL DES VERSIONS (CHANGELOG)
+========================================================================
+
+  Ce fichier consigne l'historique des versions du site.
+  Format du numéro : MAJEUR.MINEUR.CORRECTIF
+    - CORRECTIF : correction ou petit ajustement (1.0.0 -> 1.0.1)
+    - MINEUR    : ajout de contenu ou de fonctionnalité (1.0.0 -> 1.1.0)
+    - MAJEUR    : refonte importante (1.0.0 -> 2.0.0)
+
+  À chaque nouvelle livraison, ajoutez un bloc EN HAUT de la liste.
+
+========================================================================
+
+
+------------------------------------------------------------------------
+  VERSION 1.5.0 — 14 juillet 2026
+------------------------------------------------------------------------
+  REFONTE TECHNIQUE MAJEURE (préparation migration vers esig.tg)
+
+  AJOUTÉ
+    - 145 fiches de formation en pages HTML statiques indexables
+      (/formations/...), générées par tools/generer-fiches.js,
+      avec données structurées Course et fil d'Ariane.
+    - Index du catalogue (/formations/), recherche et filtres sur les
+      pages catalogue, entrées par profil sur l'accueil.
+    - Page 404 avec moteur de recherche ; .htaccess complet (sécurité,
+      HTTPS, cache, compression, redirections 301 des anciennes fiches).
+    - Pages légales modèles : mentions légales, confidentialité,
+      cookies, accessibilité, CGU (à valider par la direction).
+    - Formulaires durcis : antispam honeypot, consentement RGPD,
+      autocomplete, conservation des UTM, erreurs accessibles.
+    - Bouton WhatsApp flottant ; suivi des conversions (GA4 configurable
+      avec bannière de consentement, inactif par défaut).
+    - ESIG Success Assistant : widget conversationnel (inactif tant que
+      l'endpoint n'est pas configuré), base documentaire, prompt système
+      anti-invention, API d'exemple (dossier assistant/).
+    - Outils : generer-fiches.js, generer-sitemap.js, changer-domaine.js.
+    - Documentation : README-REFONTE-ESIG.md, docs/CRM-PROSPECTS.md,
+      .env.example.
+
+  MODIFIÉ
+    - Domaine canonique : https://esig.tg partout (canonicals, sitemap,
+      robots.txt, Schema.org) ; bloc de migration prêt dans .htaccess.
+    - Accessibilité WCAG 2.2 AA : lien d'évitement, <main>, navigation
+      clavier, modale accessible, pause du carrousel, focus visible,
+      prefers-reduced-motion, figure/figcaption, aria-expanded.
+    - Chiffres clés inscrits dans le HTML (plus de 0 avant animation) et
+      cohérents : 145 formations (calcul automatique), 18 ans (depuis
+      2008) ; étudiants et insertion marqués « à valider ».
+    - Performance : WebP (+ repli JPEG), preload du visuel principal,
+      dimensions d'images explicites, première diapositive sans JS.
+    - Suppression de tous les gestionnaires JavaScript inline
+      (compatibilité Content-Security-Policy stricte).
+
+  CORRIGÉ
+    - Contenu des fiches invisible pour les moteurs de recherche
+      (rendu 100 % JavaScript) : résolu par les pages statiques.
+    - Incohérence 42 formations affichées / 145 au catalogue.
+    - Sitemap pointant vers des pages sans contenu indexable.
+
+
+------------------------------------------------------------------------
+  VERSION 1.4.0 — 3 juillet 2026
+------------------------------------------------------------------------
+  AJOUTÉ
+    - Réseaux sociaux renseignés avec les adresses réelles de l'ESIG :
+      Facebook, LinkedIn, Instagram et TikTok. Les icônes s'affichent
+      désormais dans le pied de page et sur la page Contact.
+    - Ces adresses enrichissent automatiquement le balisage Schema.org
+      (champ sameAs), signalant aux moteurs de recherche les profils
+      officiels de l'établissement.
+
+  NOTE
+    - YouTube reste sans adresse : son icône est masquée jusqu'à ce
+      qu'une chaîne soit renseignée dans config-site.js.
+
+
+------------------------------------------------------------------------
+  VERSION 1.3.2 — 3 juillet 2026
+------------------------------------------------------------------------
+  CORRIGÉ
+    - Cartes de parcours : le nombre de spécialités affiché était
+      figé dans le code (la carte Master indiquait encore 34 alors
+      que le catalogue en comptait 25).
+    - Ces compteurs sont désormais calculés automatiquement à partir
+      du catalogue : ils suivront toute évolution future de l'offre
+      sans intervention.
+
+
+------------------------------------------------------------------------
+  VERSION 1.3.1 — 3 juillet 2026
+------------------------------------------------------------------------
+  CORRIGÉ
+    - Offre Master mise à jour depuis la version corrigée du document
+      de référence : 25 spécialités (le doublon "Arts et publicité"
+      a été résolu à la source).
+    - Remplacement intégral de la section Master, sans fusion avec
+      d'anciennes listes.
+
+  Le catalogue compte 145 formations. Plan de site régénéré (152 URLs).
+
+
+------------------------------------------------------------------------
+  VERSION 1.3.0 — 3 juillet 2026
+------------------------------------------------------------------------
+  MODIFIÉ
+    - Offre Master rétablie et complétée : 26 spécialités
+      professionnelles (au lieu de 8), conformément au document de
+      référence "Fiches synthétiques des Masters professionnels".
+    - Répartition sur 5 domaines et 7 mentions.
+    - Chaque fiche renseignée : positionnement, 6 compétences,
+      débouchés, 16 modules cœur de compétence, professionnalisation
+      (projet tutoré, stage et mémoire), conditions d'admission.
+    - Les adresses (URL) des 22 Masters déjà indexés ont été
+      préservées, protégeant leur référencement acquis.
+
+  Le catalogue compte désormais 146 formations.
+  Le plan de site a été régénéré (153 URLs).
+
+
+------------------------------------------------------------------------
+  VERSION 1.2.0 — 3 juillet 2026
+------------------------------------------------------------------------
+  MODIFIÉ
+    - Refonte de l'offre Master : le catalogue ne présente plus que
+      les 8 Masters professionnels de la maquette actualisée, en
+      remplacement des 34 spécialités précédentes.
+    - Les 8 Masters sont entièrement renseignés (objectif, profil
+      d'entrée, compétences, débouchés, 16 modules, admission).
+    - Mentions Master restructurées sur 2 domaines : Sciences
+      économiques et de Gestion, Sciences et Technologies.
+
+  Le catalogue compte désormais 128 formations (contre 154).
+  Le plan de site (sitemap.xml) a été régénéré en conséquence.
+
+
+------------------------------------------------------------------------
+  VERSION 1.1.1 — 3 juillet 2026
+------------------------------------------------------------------------
+  CORRIGÉ
+    - Carrousel de la page d'accueil : le voile sombre masquait les
+      photos. Opacité du voile réduite (les photos sont maintenant
+      bien visibles) et ombre portée ajoutée sur le texte pour
+      garantir sa lisibilité sur toutes les images.
+
+
+------------------------------------------------------------------------
+  VERSION 1.1.0 — 3 juillet 2026
+------------------------------------------------------------------------
+  AJOUTÉ
+    - Carrousel de photos sur la page d'accueil : 5 images défilent
+      automatiquement (défilement toutes les 5s), avec flèches et
+      points de navigation cliquables. Les photos se gèrent depuis
+      config-site.js (liste CARROUSEL_ACCUEIL).
+
+
+------------------------------------------------------------------------
+  VERSION 1.0.0 — 3 juillet 2026
+------------------------------------------------------------------------
+  Première version formellement gouvernée. Consolidation de
+  l'ensemble du travail réalisé.
+
+  AJOUTÉ
+    - Intégration des fiches BTS (15) et Masters (29) à partir de la
+      maquette officielle ESIG 2026-2027
+    - Mise en place du dispositif de versionnage (ce fichier,
+      VERSION.txt, numéro de version en pied de page)
+
+  Le catalogue compte désormais 61 fiches entièrement enrichies
+  sur 154 formations.
+
+
+------------------------------------------------------------------------
+  ÉTAPES ANTÉRIEURES (reconstituées)
+------------------------------------------------------------------------
+  Avant la mise en place du versionnage formel, le site a connu les
+  évolutions successives suivantes :
+
+    - Intégration des réseaux sociaux (pied de page + page Contact),
+      pilotés depuis le fichier de configuration
+    - Module Actualités & Galerie, avec autonomie éditoriale
+      (photos hébergées, vidéos YouTube intégrées)
+    - Intégration des 17 fiches de Licence à partir de la maquette
+      officielle, et sections de mention sur la page Parcours
+    - Volet référencement (SEO) : sitemap.xml, robots.txt, données
+      structurées Schema.org, balisage Open Graph, procédure
+      Google Search Console
+    - Gabarit de fiche détaillée à onglets, avec bandeau illustré
+    - Pages Admission et Contact
+    - Architecture initiale : deux pôles, catalogue de 154
+      formations, fiches cliquables, formulaires Formspree
+
+========================================================================
+  ESIG Global Success — Lomé, Togo — esig.tg
+========================================================================

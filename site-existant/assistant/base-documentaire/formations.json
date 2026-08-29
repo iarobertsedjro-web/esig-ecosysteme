@@ -1,0 +1,872 @@
+[
+  {
+    "titre": "Action commerciale & force de vente",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/action-commerciale-force-de-vente.html"
+  },
+  {
+    "titre": "Comptabilité & gestion des entreprises",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/comptabilite-gestion-des-entreprises.html"
+  },
+  {
+    "titre": "Assistant de gestion PMI/PME",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/assistant-de-gestion-pmi-pme.html"
+  },
+  {
+    "titre": "Finance – Banque",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/finance-banque.html"
+  },
+  {
+    "titre": "Assurance",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/assurance.html"
+  },
+  {
+    "titre": "Commerce international",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/commerce-international.html"
+  },
+  {
+    "titre": "Transport, logistique & transit",
+    "niveau": "BTS",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/bts/transport-logistique-transit.html"
+  },
+  {
+    "titre": "Administrateur de réseaux locaux d'entreprise",
+    "niveau": "BTS",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/bts/administrateur-de-reseaux-locaux-d-entreprise.html"
+  },
+  {
+    "titre": "Maintenance informatique & réseaux",
+    "niveau": "BTS",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/bts/maintenance-informatique-reseaux.html"
+  },
+  {
+    "titre": "Développeur d'application",
+    "niveau": "BTS",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/bts/developpeur-d-application.html"
+  },
+  {
+    "titre": "Télécommunication",
+    "niveau": "BTS",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/bts/telecommunication.html"
+  },
+  {
+    "titre": "Électromécanique",
+    "niveau": "BTS",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/bts/electromecanique.html"
+  },
+  {
+    "titre": "Communication des entreprises",
+    "niveau": "BTS",
+    "domaine": "Sciences de l'Homme et de la Société",
+    "url": "https://esig.tg/formations/bts/communication-des-entreprises.html"
+  },
+  {
+    "titre": "Tourisme",
+    "niveau": "BTS",
+    "domaine": "Tourisme et Hôtellerie",
+    "url": "https://esig.tg/formations/bts/tourisme.html"
+  },
+  {
+    "titre": "Secrétaire de direction",
+    "niveau": "BTS",
+    "domaine": "Sciences juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/bts/secretaire-de-direction.html"
+  },
+  {
+    "titre": "Assistant de direction",
+    "niveau": "BTS",
+    "domaine": "Sciences juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/bts/assistant-de-direction.html"
+  },
+  {
+    "titre": "Comptabilité – Contrôle – Audit",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/comptabilite-controle-audit.html"
+  },
+  {
+    "titre": "Finance, Banque et Assurance",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/finance-banque-et-assurance.html"
+  },
+  {
+    "titre": "Organisation et Gestion des Ressources Humaines",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/organisation-et-gestion-des-ressources-humaines.html"
+  },
+  {
+    "titre": "Commerce International et Transit",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/commerce-international-et-transit.html"
+  },
+  {
+    "titre": "Gestion Commerciale et Marketing",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/gestion-commerciale-et-marketing.html"
+  },
+  {
+    "titre": "Marketing digital",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/marketing-digital.html"
+  },
+  {
+    "titre": "Exploitation Logistique et Transport",
+    "niveau": "Licence",
+    "domaine": "Sciences Économiques et de Gestion",
+    "url": "https://esig.tg/formations/licence/exploitation-logistique-et-transport.html"
+  },
+  {
+    "titre": "Développement d'applications",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/developpement-d-applications.html"
+  },
+  {
+    "titre": "Systèmes et Réseaux Informatiques",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/systemes-et-reseaux-informatiques.html"
+  },
+  {
+    "titre": "Sécurité Informatique",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/securite-informatique.html"
+  },
+  {
+    "titre": "Intelligence Artificielle et Big Data",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/intelligence-artificielle-et-big-data.html"
+  },
+  {
+    "titre": "Réseaux et Télécommunications",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/reseaux-et-telecommunications.html"
+  },
+  {
+    "titre": "Électronique et Système Embarqué",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/electronique-et-systeme-embarque.html"
+  },
+  {
+    "titre": "Électrotechnique (Électricité)",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/electrotechnique-electricite.html"
+  },
+  {
+    "titre": "Énergies Renouvelables",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/energies-renouvelables.html"
+  },
+  {
+    "titre": "Automatisme et Informatique industrielle",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/automatisme-et-informatique-industrielle.html"
+  },
+  {
+    "titre": "Génie Mécanique",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/genie-mecanique.html"
+  },
+  {
+    "titre": "Génie Industriel",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/genie-industriel.html"
+  },
+  {
+    "titre": "Maintenance des systèmes Mécaniques – Automobiles",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/maintenance-des-systemes-mecaniques-automobiles.html"
+  },
+  {
+    "titre": "Génie Civil",
+    "niveau": "Licence",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/licence/genie-civil.html"
+  },
+  {
+    "titre": "Communication des Organisations",
+    "niveau": "Licence",
+    "domaine": "Sciences de l'Homme et de la Société",
+    "url": "https://esig.tg/formations/licence/communication-des-organisations.html"
+  },
+  {
+    "titre": "Journalisme",
+    "niveau": "Licence",
+    "domaine": "Sciences de l'Homme et de la Société",
+    "url": "https://esig.tg/formations/licence/journalisme.html"
+  },
+  {
+    "titre": "Assistant Administratif",
+    "niveau": "Licence",
+    "domaine": "Sciences Juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/licence/assistant-administratif.html"
+  },
+  {
+    "titre": "Carrière Juridique – Assistant Juridique",
+    "niveau": "Licence",
+    "domaine": "Sciences Juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/licence/carriere-juridique-assistant-juridique.html"
+  },
+  {
+    "titre": "Carrière Juridique – Marchés Publics",
+    "niveau": "Licence",
+    "domaine": "Sciences Juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/licence/carriere-juridique-marches-publics.html"
+  },
+  {
+    "titre": "Programmation et logiciels sûrs",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/programmation-et-logiciels-surs.html"
+  },
+  {
+    "titre": "Expert cybersécurité",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/expert-cybersecurite.html"
+  },
+  {
+    "titre": "Expert big data",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/expert-big-data.html"
+  },
+  {
+    "titre": "Électronique radio fréquence et télécommunication",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/electronique-radiofrequence-et-telecommunication.html"
+  },
+  {
+    "titre": "Électrotechnique",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/electrotechnique.html"
+  },
+  {
+    "titre": "Automatique approfondie",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/automatique-approfondie.html"
+  },
+  {
+    "titre": "Énergies renouvelables et efficacités énergétiques",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/energies-renouvelables-et-efficacite-energetique.html"
+  },
+  {
+    "titre": "Conception mécanique-Génie industriel",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/conception-mecanique-genie-industriel.html"
+  },
+  {
+    "titre": "Gestion de la production industrielle",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences et Technologies",
+    "url": "https://esig.tg/formations/master/gestion-de-la-production-industrielle.html"
+  },
+  {
+    "titre": "Comptabilité contrôle audit",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/comptabilite-controle-audit.html"
+  },
+  {
+    "titre": "Comptabilité-Fiscalité",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/comptabilite-fiscalite.html"
+  },
+  {
+    "titre": "Gestion des ressources humaines",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/gestion-des-ressources-humaines.html"
+  },
+  {
+    "titre": "Pilotage suivi et évaluation des projets",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/pilotage-suivi-et-evaluation-des-projets.html"
+  },
+  {
+    "titre": "Ingénierie logistique et transport",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/ingenierie-logistique-et-transport.html"
+  },
+  {
+    "titre": "Marketing généraliste",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/marketing-generaliste.html"
+  },
+  {
+    "titre": "Marketing digital et e-Commerce",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/marketing-digital-et-e-commerce.html"
+  },
+  {
+    "titre": "Assurance-Finance-Banque",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/assurance-finance-banque.html"
+  },
+  {
+    "titre": "Management et commerce international",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/management-et-commerce-international.html"
+  },
+  {
+    "titre": "Agrobusiness management",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences économiques et de Gestion",
+    "url": "https://esig.tg/formations/master/agrobusiness-management.html"
+  },
+  {
+    "titre": "Administration et promotion des collectivités territoriales",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/master/administration-et-promotion-des-collectivites-territoriales.html"
+  },
+  {
+    "titre": "Carrière juridique",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences juridiques et de l'Administration",
+    "url": "https://esig.tg/formations/master/carriere-juridique.html"
+  },
+  {
+    "titre": "Management des entreprises de presse",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences de l'Homme et de la Société",
+    "url": "https://esig.tg/formations/master/management-des-entreprises-de-presse.html"
+  },
+  {
+    "titre": "Arts et publicités",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences de l'Homme et de la Société",
+    "url": "https://esig.tg/formations/master/arts-et-publicites.html"
+  },
+  {
+    "titre": "Journalisme médias et réseaux sociaux",
+    "niveau": "Master / MBA",
+    "domaine": "Sciences de l'Homme et de la Société",
+    "url": "https://esig.tg/formations/master/journalisme-medias-et-reseaux-sociaux.html"
+  },
+  {
+    "titre": "Management hôtelier",
+    "niveau": "Master / MBA",
+    "domaine": "Tourisme et Hôtellerie",
+    "url": "https://esig.tg/formations/master/management-hotelier.html"
+  },
+  {
+    "titre": "IA générative & Prompt Engineering",
+    "niveau": "Formation continue",
+    "domaine": "Académie 1 — Intelligence Artificielle & Data",
+    "url": "https://esig.tg/formations/continue/ia-generative-prompt-engineering.html"
+  },
+  {
+    "titre": "Data Science & Python pour l'IA",
+    "niveau": "Formation continue",
+    "domaine": "Académie 1 — Intelligence Artificielle & Data",
+    "url": "https://esig.tg/formations/continue/data-science-python-pour-l-ia.html"
+  },
+  {
+    "titre": "Power BI & Tableau",
+    "niveau": "Formation continue",
+    "domaine": "Académie 1 — Intelligence Artificielle & Data",
+    "url": "https://esig.tg/formations/continue/power-bi-tableau.html"
+  },
+  {
+    "titre": "Machine Learning (initiation)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 1 — Intelligence Artificielle & Data",
+    "url": "https://esig.tg/formations/continue/machine-learning-initiation.html"
+  },
+  {
+    "titre": "IA pour les entreprises",
+    "niveau": "Formation continue",
+    "domaine": "Académie 1 — Intelligence Artificielle & Data",
+    "url": "https://esig.tg/formations/continue/ia-pour-les-entreprises.html"
+  },
+  {
+    "titre": "Ethical Hacking & Pentest",
+    "niveau": "Formation continue",
+    "domaine": "Académie 2 — Cybersécurité",
+    "url": "https://esig.tg/formations/continue/ethical-hacking-pentest.html"
+  },
+  {
+    "titre": "SOC Analyst",
+    "niveau": "Formation continue",
+    "domaine": "Académie 2 — Cybersécurité",
+    "url": "https://esig.tg/formations/continue/soc-analyst.html"
+  },
+  {
+    "titre": "Sécurité des réseaux & des applications",
+    "niveau": "Formation continue",
+    "domaine": "Académie 2 — Cybersécurité",
+    "url": "https://esig.tg/formations/continue/securite-des-reseaux-des-applications.html"
+  },
+  {
+    "titre": "ISO 27001 & gestion des risques cyber",
+    "niveau": "Formation continue",
+    "domaine": "Académie 2 — Cybersécurité",
+    "url": "https://esig.tg/formations/continue/iso-27001-gestion-des-risques-cyber.html"
+  },
+  {
+    "titre": "Réponse aux incidents",
+    "niveau": "Formation continue",
+    "domaine": "Académie 2 — Cybersécurité",
+    "url": "https://esig.tg/formations/continue/reponse-aux-incidents.html"
+  },
+  {
+    "titre": "Développement Web Full Stack",
+    "niveau": "Formation continue",
+    "domaine": "Académie 3 — Développement Logiciel",
+    "url": "https://esig.tg/formations/continue/developpement-web-full-stack.html"
+  },
+  {
+    "titre": "Développement Mobile",
+    "niveau": "Formation continue",
+    "domaine": "Académie 3 — Développement Logiciel",
+    "url": "https://esig.tg/formations/continue/developpement-mobile.html"
+  },
+  {
+    "titre": "Git/GitHub & API",
+    "niveau": "Formation continue",
+    "domaine": "Académie 3 — Développement Logiciel",
+    "url": "https://esig.tg/formations/continue/git-github-api.html"
+  },
+  {
+    "titre": "DevOps & Docker (bases)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 3 — Développement Logiciel",
+    "url": "https://esig.tg/formations/continue/devops-docker-bases.html"
+  },
+  {
+    "titre": "Tests & qualité logicielle",
+    "niveau": "Formation continue",
+    "domaine": "Académie 3 — Développement Logiciel",
+    "url": "https://esig.tg/formations/continue/tests-qualite-logicielle.html"
+  },
+  {
+    "titre": "Marketing Digital & E-commerce",
+    "niveau": "Formation continue",
+    "domaine": "Académie 4 — Marketing & Communication Digitale",
+    "url": "https://esig.tg/formations/continue/marketing-digital-e-commerce.html"
+  },
+  {
+    "titre": "Community Management",
+    "niveau": "Formation continue",
+    "domaine": "Académie 4 — Marketing & Communication Digitale",
+    "url": "https://esig.tg/formations/continue/community-management.html"
+  },
+  {
+    "titre": "SEO & SEA (Google Ads, Meta Ads)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 4 — Marketing & Communication Digitale",
+    "url": "https://esig.tg/formations/continue/seo-sea-google-ads-meta-ads.html"
+  },
+  {
+    "titre": "Design graphique (Canva, Photoshop, Illustrator)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 4 — Marketing & Communication Digitale",
+    "url": "https://esig.tg/formations/continue/design-graphique-canva-photoshop-illustrator.html"
+  },
+  {
+    "titre": "Montage vidéo & Branding",
+    "niveau": "Formation continue",
+    "domaine": "Académie 4 — Marketing & Communication Digitale",
+    "url": "https://esig.tg/formations/continue/montage-video-branding.html"
+  },
+  {
+    "titre": "Transit douanier",
+    "niveau": "Formation continue",
+    "domaine": "Académie 5 — Supply Chain & Logistique",
+    "url": "https://esig.tg/formations/continue/transit-douanier.html"
+  },
+  {
+    "titre": "Supply Chain & gestion des stocks",
+    "niveau": "Formation continue",
+    "domaine": "Académie 5 — Supply Chain & Logistique",
+    "url": "https://esig.tg/formations/continue/supply-chain-gestion-des-stocks.html"
+  },
+  {
+    "titre": "Gestion des entrepôts",
+    "niveau": "Formation continue",
+    "domaine": "Académie 5 — Supply Chain & Logistique",
+    "url": "https://esig.tg/formations/continue/gestion-des-entrepots.html"
+  },
+  {
+    "titre": "Transport international & Incoterms",
+    "niveau": "Formation continue",
+    "domaine": "Académie 5 — Supply Chain & Logistique",
+    "url": "https://esig.tg/formations/continue/transport-international-incoterms.html"
+  },
+  {
+    "titre": "Achats & Lean Logistics",
+    "niveau": "Formation continue",
+    "domaine": "Académie 5 — Supply Chain & Logistique",
+    "url": "https://esig.tg/formations/continue/achats-lean-logistics.html"
+  },
+  {
+    "titre": "Contrôle de gestion & Tableaux de bord",
+    "niveau": "Formation continue",
+    "domaine": "Académie 6 — Management & Finance",
+    "url": "https://esig.tg/formations/continue/controle-de-gestion-tableaux-de-bord.html"
+  },
+  {
+    "titre": "Audit & Comptabilité",
+    "niveau": "Formation continue",
+    "domaine": "Académie 6 — Management & Finance",
+    "url": "https://esig.tg/formations/continue/audit-comptabilite.html"
+  },
+  {
+    "titre": "Finance d'entreprise & Trésorerie",
+    "niveau": "Formation continue",
+    "domaine": "Académie 6 — Management & Finance",
+    "url": "https://esig.tg/formations/continue/finance-d-entreprise-tresorerie.html"
+  },
+  {
+    "titre": "Fiscalité",
+    "niveau": "Formation continue",
+    "domaine": "Académie 6 — Management & Finance",
+    "url": "https://esig.tg/formations/continue/fiscalite.html"
+  },
+  {
+    "titre": "Leadership & Gestion RH",
+    "niveau": "Formation continue",
+    "domaine": "Académie 6 — Management & Finance",
+    "url": "https://esig.tg/formations/continue/leadership-gestion-rh.html"
+  },
+  {
+    "titre": "Cisco CCNA",
+    "niveau": "Formation continue",
+    "domaine": "Académie 7 — Réseaux & Télécommunications",
+    "url": "https://esig.tg/formations/continue/cisco-ccna.html"
+  },
+  {
+    "titre": "Administration Linux & Windows Server",
+    "niveau": "Formation continue",
+    "domaine": "Académie 7 — Réseaux & Télécommunications",
+    "url": "https://esig.tg/formations/continue/administration-linux-windows-server.html"
+  },
+  {
+    "titre": "Virtualisation",
+    "niveau": "Formation continue",
+    "domaine": "Académie 7 — Réseaux & Télécommunications",
+    "url": "https://esig.tg/formations/continue/virtualisation.html"
+  },
+  {
+    "titre": "MikroTik & VoIP",
+    "niveau": "Formation continue",
+    "domaine": "Académie 7 — Réseaux & Télécommunications",
+    "url": "https://esig.tg/formations/continue/mikrotik-voip.html"
+  },
+  {
+    "titre": "Création d'entreprise & Business Plan",
+    "niveau": "Formation continue",
+    "domaine": "Académie 8 — Entrepreneuriat & Innovation",
+    "url": "https://esig.tg/formations/continue/creation-d-entreprise-business-plan.html"
+  },
+  {
+    "titre": "Gestion de projets",
+    "niveau": "Formation continue",
+    "domaine": "Académie 8 — Entrepreneuriat & Innovation",
+    "url": "https://esig.tg/formations/continue/gestion-de-projets.html"
+  },
+  {
+    "titre": "Design Thinking & Innovation",
+    "niveau": "Formation continue",
+    "domaine": "Académie 8 — Entrepreneuriat & Innovation",
+    "url": "https://esig.tg/formations/continue/design-thinking-innovation.html"
+  },
+  {
+    "titre": "Levée de fonds",
+    "niveau": "Formation continue",
+    "domaine": "Académie 8 — Entrepreneuriat & Innovation",
+    "url": "https://esig.tg/formations/continue/levee-de-fonds.html"
+  },
+  {
+    "titre": "Entrepreneuriat numérique & agricole",
+    "niveau": "Formation continue",
+    "domaine": "Académie 8 — Entrepreneuriat & Innovation",
+    "url": "https://esig.tg/formations/continue/entrepreneuriat-numerique-agricole.html"
+  },
+  {
+    "titre": "Topographie moderne (station totale, GPS RTK, drone)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 9 — Génie Civil & Infrastructures",
+    "url": "https://esig.tg/formations/continue/topographie-moderne-station-totale-gps-rtk-drone.html"
+  },
+  {
+    "titre": "AutoCAD Civil 3D & DAO",
+    "niveau": "Formation continue",
+    "domaine": "Académie 9 — Génie Civil & Infrastructures",
+    "url": "https://esig.tg/formations/continue/autocad-civil-3d-dao.html"
+  },
+  {
+    "titre": "Revit Structure & BIM",
+    "niveau": "Formation continue",
+    "domaine": "Académie 9 — Génie Civil & Infrastructures",
+    "url": "https://esig.tg/formations/continue/revit-structure-bim.html"
+  },
+  {
+    "titre": "Robot Structural Analysis",
+    "niveau": "Formation continue",
+    "domaine": "Académie 9 — Génie Civil & Infrastructures",
+    "url": "https://esig.tg/formations/continue/robot-structural-analysis.html"
+  },
+  {
+    "titre": "Métreur-Vérificateur (MS Project, Primavera)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 9 — Génie Civil & Infrastructures",
+    "url": "https://esig.tg/formations/continue/metreur-verificateur-ms-project-primavera.html"
+  },
+  {
+    "titre": "SolidWorks / Inventor / Fusion 360 (CAO)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 10 — Génie Mécanique & Fabrication Numérique",
+    "url": "https://esig.tg/formations/continue/solidworks-inventor-fusion-360-cao.html"
+  },
+  {
+    "titre": "CAO/FAO & Programmation CNC",
+    "niveau": "Formation continue",
+    "domaine": "Académie 10 — Génie Mécanique & Fabrication Numérique",
+    "url": "https://esig.tg/formations/continue/cao-fao-programmation-cnc.html"
+  },
+  {
+    "titre": "Métrologie industrielle",
+    "niveau": "Formation continue",
+    "domaine": "Académie 10 — Génie Mécanique & Fabrication Numérique",
+    "url": "https://esig.tg/formations/continue/metrologie-industrielle.html"
+  },
+  {
+    "titre": "Usinage avec les machines numériques CNC",
+    "niveau": "Formation continue",
+    "domaine": "Académie 10 — Génie Mécanique & Fabrication Numérique",
+    "url": "https://esig.tg/formations/continue/usinage-avec-les-machines-numeriques-cnc.html"
+  },
+  {
+    "titre": "Automates (Siemens, Schneider, ABB) & SCADA",
+    "niveau": "Formation continue",
+    "domaine": "Académie 11 — Génie Électrique & Énergies",
+    "url": "https://esig.tg/formations/continue/automates-siemens-schneider-abb-scada.html"
+  },
+  {
+    "titre": "Électrotechnique & Variateurs de vitesse",
+    "niveau": "Formation continue",
+    "domaine": "Académie 11 — Génie Électrique & Énergies",
+    "url": "https://esig.tg/formations/continue/electrotechnique-variateurs-de-vitesse.html"
+  },
+  {
+    "titre": "Photovoltaïque",
+    "niveau": "Formation continue",
+    "domaine": "Académie 11 — Génie Électrique & Énergies",
+    "url": "https://esig.tg/formations/continue/photovoltaique.html"
+  },
+  {
+    "titre": "Audit énergétique & Smart Grid",
+    "niveau": "Formation continue",
+    "domaine": "Académie 11 — Génie Électrique & Énergies",
+    "url": "https://esig.tg/formations/continue/audit-energetique-smart-grid.html"
+  },
+  {
+    "titre": "Réception & Gestion hôtelière",
+    "niveau": "Formation continue",
+    "domaine": "Académie 12 — Hôtellerie & Tourisme",
+    "url": "https://esig.tg/formations/continue/reception-gestion-hoteliere.html"
+  },
+  {
+    "titre": "Restauration & Housekeeping",
+    "niveau": "Formation continue",
+    "domaine": "Académie 12 — Hôtellerie & Tourisme",
+    "url": "https://esig.tg/formations/continue/restauration-housekeeping.html"
+  },
+  {
+    "titre": "Amadeus & Billetterie aérienne",
+    "niveau": "Formation continue",
+    "domaine": "Académie 12 — Hôtellerie & Tourisme",
+    "url": "https://esig.tg/formations/continue/amadeus-billetterie-aerienne.html"
+  },
+  {
+    "titre": "Tourisme numérique",
+    "niveau": "Formation continue",
+    "domaine": "Académie 12 — Hôtellerie & Tourisme",
+    "url": "https://esig.tg/formations/continue/tourisme-numerique.html"
+  },
+  {
+    "titre": "Pôle laboratoires industriels (RDM, métrologie, CNC, automatisme)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 13 — ESIG Industrial Skills Center",
+    "url": "https://esig.tg/formations/continue/pole-laboratoires-industriels-rdm-metrologie-cnc-automatisme.html"
+  },
+  {
+    "titre": "Pôle énergies & BIM (solaire, BIM, topographie)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 13 — ESIG Industrial Skills Center",
+    "url": "https://esig.tg/formations/continue/pole-energies-bim-solaire-bim-topographie.html"
+  },
+  {
+    "titre": "Pôle technologies avancées (IoT, robotique, IA industrielle)",
+    "niveau": "Formation continue",
+    "domaine": "Académie 13 — ESIG Industrial Skills Center",
+    "url": "https://esig.tg/formations/continue/pole-technologies-avancees-iot-robotique-ia-industrielle.html"
+  },
+  {
+    "titre": "Transit, douanes & dédouanement digital",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle A — Logistique, Transit & Commerce international",
+    "url": "https://esig.tg/formations/modulaire/transit-douanes-dedouanement-digital.html"
+  },
+  {
+    "titre": "Logistique & supply chain",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle A — Logistique, Transit & Commerce international",
+    "url": "https://esig.tg/formations/modulaire/logistique-supply-chain.html"
+  },
+  {
+    "titre": "Commerce international (import-export) & E-Commerce",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle A — Logistique, Transit & Commerce international",
+    "url": "https://esig.tg/formations/modulaire/commerce-international-import-export-e-commerce.html"
+  },
+  {
+    "titre": "Développement web & création de sites avec les outils IA",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle B — Numérique, Data & Intelligence Artificielle appliquée",
+    "url": "https://esig.tg/formations/modulaire/developpement-web-creation-de-sites-avec-les-outils-ia.html"
+  },
+  {
+    "titre": "Marketing digital & community management",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle B — Numérique, Data & Intelligence Artificielle appliquée",
+    "url": "https://esig.tg/formations/modulaire/marketing-digital-community-management.html"
+  },
+  {
+    "titre": "Bureautique poussée & assistanat digital par l'IA",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle B — Numérique, Data & Intelligence Artificielle appliquée",
+    "url": "https://esig.tg/formations/modulaire/bureautique-poussee-assistanat-digital-par-l-ia.html"
+  },
+  {
+    "titre": "Infographie & design assisté par IA",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle B — Numérique, Data & Intelligence Artificielle appliquée",
+    "url": "https://esig.tg/formations/modulaire/infographie-design-assiste-par-ia.html"
+  },
+  {
+    "titre": "Initiation à la data & IA pour les métiers",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle B — Numérique, Data & Intelligence Artificielle appliquée",
+    "url": "https://esig.tg/formations/modulaire/initiation-a-la-data-ia-pour-les-metiers.html"
+  },
+  {
+    "titre": "Comptabilité & gestion sur logiciels (Sage, Excel avancé)",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle C — Gestion, Comptabilité & Entrepreneuriat",
+    "url": "https://esig.tg/formations/modulaire/comptabilite-gestion-sur-logiciels-sage-excel-avance.html"
+  },
+  {
+    "titre": "Entrepreneuriat & Gestion d'entreprise",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle C — Gestion, Comptabilité & Entrepreneuriat",
+    "url": "https://esig.tg/formations/modulaire/entrepreneuriat-gestion-d-entreprise.html"
+  },
+  {
+    "titre": "Assistant administratif & comptable digital",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle C — Gestion, Comptabilité & Entrepreneuriat",
+    "url": "https://esig.tg/formations/modulaire/assistant-administratif-comptable-digital.html"
+  },
+  {
+    "titre": "Maintenance informatique, réseaux & cybersécurité",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle D — Métiers techniques & industriels (passerelle PIA)",
+    "url": "https://esig.tg/formations/modulaire/maintenance-informatique-reseaux-cybersecurite.html"
+  },
+  {
+    "titre": "Maintenance industrielle & électromécanique (mécatronique)",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle D — Métiers techniques & industriels (passerelle PIA)",
+    "url": "https://esig.tg/formations/modulaire/maintenance-industrielle-electromecanique-mecatronique.html"
+  },
+  {
+    "titre": "Énergie renouvelable & efficacité énergétique",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle D — Métiers techniques & industriels (passerelle PIA)",
+    "url": "https://esig.tg/formations/modulaire/energie-renouvelable-efficacite-energetique.html"
+  },
+  {
+    "titre": "Confection industrielle & métiers du textile",
+    "niveau": "Formation modulaire",
+    "domaine": "Pôle D — Métiers techniques & industriels (passerelle PIA)",
+    "url": "https://esig.tg/formations/modulaire/confection-industrielle-metiers-du-textile.html"
+  },
+  {
+    "titre": "Cours de Français",
+    "niveau": "Langues",
+    "domaine": "Centre de langues",
+    "url": "https://esig.tg/formations/langues/francais.html"
+  },
+  {
+    "titre": "Cours de Anglais",
+    "niveau": "Langues",
+    "domaine": "Centre de langues",
+    "url": "https://esig.tg/formations/langues/anglais.html"
+  },
+  {
+    "titre": "Cours de Chinois (mandarin)",
+    "niveau": "Langues",
+    "domaine": "Centre de langues",
+    "url": "https://esig.tg/formations/langues/chinois-mandarin.html"
+  },
+  {
+    "titre": "Cours de Espagnol",
+    "niveau": "Langues",
+    "domaine": "Centre de langues",
+    "url": "https://esig.tg/formations/langues/espagnol.html"
+  },
+  {
+    "titre": "Cours de Allemand",
+    "niveau": "Langues",
+    "domaine": "Centre de langues",
+    "url": "https://esig.tg/formations/langues/allemand.html"
+  }
+]

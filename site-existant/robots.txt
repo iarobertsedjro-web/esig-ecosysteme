@@ -1,0 +1,27 @@
+# robots.txt — ESIG Global Success
+# https://esig.tg
+
+User-agent: *
+Allow: /
+
+# Autoriser explicitement les robots des moteurs conversationnels (IA)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Emplacement du plan de site
+Sitemap: https://esig.tg/sitemap.xml

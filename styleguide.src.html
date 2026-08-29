@@ -1,0 +1,231 @@
+<!--esig-config
+{
+  "ECO_WWW": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"#couleurs\">Couleurs</a></li><li><a href=\"#typographie\">Typographie</a></li><li><a href=\"#boutons\">Boutons</a></li><li><a href=\"#cartes\">Cartes</a></li><li><a href=\"#recherche\">Recherche</a></li><li><a href=\"#formulaires\">Formulaires</a></li>",
+  "CTA_URL": "#recherche",
+  "CTA_LIBELLE": "Préinscription"
+}
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — ESIG Global Success</title>
+  <meta name="description" content="Page de démonstration du système de design de l'écosystème numérique ESIG Global Success : couleurs, typographie et composants partagés.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+  <style>
+    /* Styles propres à la page de démonstration (échantillons typographiques) */
+    .echelle-titres p { font-family: var(--police-titre); font-weight: 700; color: var(--esig-navy); line-height: 1.2; margin: 0 0 var(--e-3); }
+    .echelle-titres .ex-t1 { font-size: var(--fs-2xl); }
+    .echelle-titres .ex-t2 { font-size: var(--fs-xl); }
+    .echelle-titres .ex-t3 { font-size: var(--fs-lg); }
+    .echelle-titres .ex-t4 { font-size: var(--fs-md); }
+  </style>
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+
+  <!-- Héros -->
+  <section class="section section--navy">
+    <div class="conteneur">
+      <p class="kicker">ESIG OS · Brand OS</p>
+      <h1>Système de design de l'écosystème ESIG</h1>
+      <p class="chapo">La boîte à outils graphique partagée par les six sites. Couleurs, typographies et composants sont définis une seule fois, ici, puis réutilisés partout — pour une marque cohérente et une maintenance simple.</p>
+      <hr class="filet-or">
+      <p style="color:rgba(255,255,255,0.85)"><strong>Bleu Marine #2A4291</strong> · <strong>Or #B0862B</strong> · Georgia + Calibri · <em>Build Your Future</em></p>
+    </div>
+  </section>
+
+  <!-- Fil d'Ariane (démonstration) -->
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane">
+      <ol>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="#">Ressources</a></li>
+        <li><span aria-current="page">Design System</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- COULEURS -->
+  <section class="section" id="couleurs">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">Palette officielle</p>
+        <h2>Les couleurs de la marque</h2>
+        <hr class="filet-or">
+        <p class="chapo">Discipline 60 / 20 / 20 : le bleu marine domine, l'or accentue (rare), le clair respire.</p>
+      </div>
+      <div class="grille grille--auto">
+        <div class="carte"><div style="height:96px;background:#2A4291"></div><div class="carte__corps"><strong>Bleu Marine ESIG</strong><code>#2A4291</code><span class="carte__texte">Primaire · ~60 %</span></div></div>
+        <div class="carte"><div style="height:96px;background:#B0862B"></div><div class="carte__corps"><strong>Or Institutionnel</strong><code>#B0862B</code><span class="carte__texte">Accent · ~20 %</span></div></div>
+        <div class="carte"><div style="height:96px;background:#EEF1F6;border-bottom:1px solid #d6dce8"></div><div class="carte__corps"><strong>Gris clair</strong><code>#EEF1F6</code><span class="carte__texte">Fonds secondaires</span></div></div>
+        <div class="carte"><div style="height:96px;background:#1F2933"></div><div class="carte__corps"><strong>Texte (près-noir)</strong><code>#1F2933</code><span class="carte__texte">Corps de texte</span></div></div>
+        <div class="carte"><div style="height:96px;background:#5A6472"></div><div class="carte__corps"><strong>Gris légende</strong><code>#5A6472</code><span class="carte__texte">Mentions secondaires</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHIE -->
+  <section class="section section--clair" id="typographie">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">Deux familles, pas une de plus</p>
+        <h2>Typographie</h2>
+        <hr class="filet-or">
+        <p class="chapo">Georgia porte l'autorité des titres ; Calibri assure le confort du texte. Polices système : aucun chargement externe.</p>
+      </div>
+      <div class="deux-colonnes">
+        <div class="carte"><div class="carte__corps echelle-titres">
+          <!-- Démonstration visuelle : paragraphes stylés (pas de vrais titres,
+               afin de conserver un seul h1 par page). -->
+          <p class="ex-t1">Titre 1 — Georgia</p>
+          <p class="ex-t2">Titre 2 — Georgia</p>
+          <p class="ex-t3">Titre 3 — Georgia</p>
+          <p class="ex-t4">Titre 4 — Georgia</p>
+        </div></div>
+        <div class="carte"><div class="carte__corps">
+          <p>Corps de texte en <strong>Calibri</strong>. L'ESIG Global Success forme des femmes et des hommes compétents, innovants et responsables. La <a href="#">lecture reste confortable</a>, les liens sont clairement identifiables, et la longueur de ligne est maîtrisée pour le confort de lecture.</p>
+          <blockquote>« Construire des trajectoires crédibles. » — l'essence de la marque.</blockquote>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOUTONS -->
+  <section class="section" id="boutons">
+    <div class="conteneur">
+      <div class="section-entete"><p class="kicker">Actions</p><h2>Boutons</h2><hr class="filet-or"></div>
+      <div class="flex flex--enroule flex--centre">
+        <a href="#" class="btn">Bouton primaire</a>
+        <a href="#" class="btn btn--secondaire">Secondaire</a>
+        <a href="#" class="btn btn--accent">Accent (or)</a>
+        <a href="#" class="btn btn--large">Grand bouton</a>
+        <button class="btn" disabled>Désactivé</button>
+      </div>
+      <p class="texte-doux" style="margin-top:var(--e-4)">Les appels à l'action forts utilisent l'accent or ; le bleu marine reste la couleur de référence.</p>
+    </div>
+  </section>
+
+  <!-- BADGES + CARTES -->
+  <section class="section section--clair" id="cartes">
+    <div class="conteneur">
+      <div class="section-entete"><p class="kicker">Contenu</p><h2>Badges &amp; cartes formation</h2><hr class="filet-or">
+        <p class="chapo">Exemples statiques. En pratique, ces cartes sont générées automatiquement à partir de <code>data/formations.json</code> (voir la recherche ci-dessous).</p>
+      </div>
+      <div class="flex flex--enroule flex--centre" style="margin-bottom:var(--e-6)">
+        <span class="badge badge--academique">Parcours académique</span>
+        <span class="badge badge--continue">Formation continue</span>
+        <span class="badge badge--or">Nouveauté</span>
+        <span class="badge badge--contour">CECRL</span>
+      </div>
+      <div class="grille grille--3">
+        <article class="carte carte-formation"><div class="carte__corps">
+          <div class="carte__meta"><span class="badge badge--academique">Licence</span><span class="badge badge--contour">Sciences &amp; Technologies</span></div>
+          <h3 class="carte__titre"><a href="#">Développement d'applications</a></h3>
+          <p class="carte__texte">Concevoir, développer et déployer des applications web et mobiles robustes.</p>
+          <ul class="debouches" aria-label="Débouchés"><li>Développeur</li><li>Analyste</li><li>Chef de projet</li></ul>
+          <div class="carte__pied"><a href="#" class="btn btn--secondaire">Découvrir la formation</a></div>
+        </div></article>
+        <article class="carte carte-formation"><div class="carte__corps">
+          <div class="carte__meta"><span class="badge badge--academique">Master</span><span class="badge badge--contour">Sciences de gestion</span></div>
+          <h3 class="carte__titre"><a href="#">Comptabilité, Contrôle, Audit</a></h3>
+          <p class="carte__texte">Maîtriser l'audit, le contrôle de gestion et la comptabilité approfondie.</p>
+          <ul class="debouches" aria-label="Débouchés"><li>Auditeur</li><li>Contrôleur</li><li>DAF</li></ul>
+          <div class="carte__pied"><a href="#" class="btn btn--secondaire">Découvrir la formation</a></div>
+        </div></article>
+        <article class="carte carte-formation"><div class="carte__corps">
+          <div class="carte__meta"><span class="badge badge--continue">Continue</span><span class="badge badge--contour">IA &amp; Data</span></div>
+          <h3 class="carte__titre"><a href="#">IA générative &amp; Prompt Engineering</a></h3>
+          <p class="carte__texte">Exploiter les IA génératives pour produire, analyser et automatiser.</p>
+          <ul class="debouches" aria-label="Débouchés"><li>Chargé d'automatisation</li><li>Analyste</li></ul>
+          <div class="carte__pied"><a href="#" class="btn btn--secondaire">Découvrir la formation</a></div>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECHERCHE LIVE -->
+  <section class="section" id="recherche">
+    <div class="conteneur">
+      <div class="section-entete"><p class="kicker">Source unique de vérité</p><h2>Moteur de recherche des formations</h2><hr class="filet-or">
+        <p class="chapo">Alimenté en direct par <code>data/formations.json</code> : les 145 formations réelles, filtrables par mot-clé, niveau et domaine.</p>
+      </div>
+      <div data-recherche-formations data-source="/data/formations.json"></div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRES -->
+  <section class="section section--clair" id="formulaires">
+    <div class="conteneur">
+      <div class="section-entete"><p class="kicker">Conversion</p><h2>Formulaires</h2><hr class="filet-or"></div>
+      <div class="deux-colonnes">
+        <form class="carte" novalidate><div class="carte__corps">
+          <div class="champ"><label for="d-nom">Nom complet <span class="requis" aria-hidden="true">*</span></label><input id="d-nom" type="text" autocomplete="name" required></div>
+          <div class="champ"><label for="d-mail">E-mail <span class="requis" aria-hidden="true">*</span></label><input id="d-mail" type="email" autocomplete="email" required><span class="aide">Nous ne partagerons jamais votre adresse.</span></div>
+          <div class="champ champ--erreur"><label for="d-tel">Téléphone</label><input id="d-tel" type="tel" value="12"><span class="message-erreur">Numéro invalide (exemple d'état d'erreur).</span></div>
+          <div class="champ"><label for="d-form">Formation visée</label><select id="d-form"><option>BTS — Développeur d'application</option><option>Licence — Comptabilité</option><option>Master — Marketing digital</option></select></div>
+          <div class="champ"><label for="d-msg">Votre message</label><textarea id="d-msg" placeholder="Votre question…"></textarea></div>
+          <div class="champ-choix"><input id="d-rgpd" type="checkbox"><label for="d-rgpd">J'accepte que mes informations soient utilisées pour être recontacté(e).</label></div>
+          <button type="submit" class="btn btn--bloc">Envoyer ma demande</button>
+        </div></form>
+        <div class="pile">
+          <div class="alerte"><div class="alerte__contenu"><strong>Information.</strong> Voici à quoi ressemble un message d'information.</div></div>
+          <div class="alerte alerte--succes"><div class="alerte__contenu"><strong>Succès.</strong> Votre demande a bien été envoyée.</div></div>
+          <div class="alerte alerte--alerte"><div class="alerte__contenu"><strong>Attention.</strong> Un champ obligatoire n'est pas renseigné.</div></div>
+          <div class="tableau-conteneur">
+            <table class="tableau">
+              <caption>Exemple de tableau — niveaux d'entrée</caption>
+              <thead><tr><th>Diplôme</th><th>Niveau requis</th><th>Durée</th></tr></thead>
+              <tbody>
+                <tr><td>BTS</td><td>Baccalauréat</td><td>2 ans</td></tr>
+                <tr><td>Licence</td><td>Bac+2</td><td>1 à 3 ans</td></tr>
+                <tr><td>Master</td><td>Bac+3</td><td>2 ans</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOC CTA -->
+  <section class="section">
+    <div class="conteneur">
+      <div class="bloc-cta">
+        <p class="kicker">Build Your Future</p>
+        <h2>Prêt à construire votre trajectoire ?</h2>
+        <p>Découvrez nos 145 formations et déposez votre préinscription en quelques minutes.</p>
+        <div class="bloc-cta__actions">
+          <a href="#recherche" class="btn btn--accent btn--large">Voir les formations</a>
+          <a href="#" class="btn btn--fantome btn--large">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--#inclure:footer-->
+
+<!-- Configuration de démonstration (site réel : dans config-site.js) -->
+<script>
+  window.ESIG_CONFIG = { whatsapp: "+22893033351" };
+  window.NOVA_CONFIG = {
+    endpoint: "http://localhost:8787/api/assistant",
+    nom: "ESIG NOVA",
+    accroche: "Bonjour ! Une question sur nos formations, l'admission ou la VAE ? Je vous oriente.",
+    whatsapp: "+22893033351"
+  };
+</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/recherche-formations.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

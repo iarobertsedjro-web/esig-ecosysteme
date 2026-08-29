@@ -1,0 +1,69 @@
+/* =========================================================================
+   shared/css/tech.css — Couche visuelle « immersive » du sous-domaine ESIG TECH
+   -------------------------------------------------------------------------
+   Chargée APRÈS esig.css, uniquement sur les pages de tech.esig.tg.
+   Reste strictement dans la charte (bleu marine + or) : elle ajoute un
+   traitement technologique (trame, halo, libellés mono, statistiques,
+   cartes de rubriques, éléments de fiche projet) sans rien redéfinir.
+   ========================================================================= */
+
+/* Libellé technique en police à chasse fixe */
+.eyebrow-tech { font-family: var(--police-mono, Consolas, "SF Mono", ui-monospace, monospace); text-transform: uppercase; letter-spacing: 0.18em; font-size: var(--fs-xs); font-weight: var(--poids-gras); color: var(--esig-or-700); }
+
+/* Héros immersif : trame technique + halo doré sur navy profond */
+.hero-tech { position: relative; background: var(--esig-navy-900); color: var(--blanc); overflow: hidden; }
+.hero-tech::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(120% 90% at 78% 15%, #000 40%, transparent 78%);
+  mask-image: radial-gradient(120% 90% at 78% 15%, #000 40%, transparent 78%); }
+.hero-tech::after { content: ""; position: absolute; top: -140px; right: -120px; width: 520px; height: 520px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(211,166,63,0.25), transparent 62%); }
+.hero-tech > * { position: relative; z-index: 1; }
+.hero-tech .kicker, .hero-tech .eyebrow-tech { color: var(--esig-or-100); }
+.hero-tech h1 { color: var(--blanc); }
+.hero-tech h1 .accent { color: #d3a63f; }
+.hero-tech p { color: rgba(255,255,255,0.88); }
+/* Diaporama d'arrière-plan du héros ESIG Tech : sous le contenu (z-index:0),
+   voile navy fort pour conserver l'identité immersive ; le halo doré reste visible. */
+.hero-tech__media { position: absolute; inset: 0; z-index: 0; }
+.hero-tech__media .diapo { position: absolute; inset: 0; background-size: cover;
+  background-position: center; opacity: 0; will-change: opacity, transform;
+  animation: diapoFondu 12s infinite; }
+.hero-tech__media .diapo:nth-of-type(1) { animation-delay: 0s; }
+.hero-tech__media .diapo:nth-of-type(2) { animation-delay: 4s; }
+.hero-tech__media .diapo:nth-of-type(3) { animation-delay: 8s; }
+.hero-tech__media::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(120deg, rgba(23,36,79,0.93) 0%, rgba(23,36,79,0.84) 55%, rgba(23,36,79,0.74) 100%); }
+@media (prefers-reduced-motion: reduce) {
+  .hero-tech__media .diapo { animation: none; opacity: 0; }
+  .hero-tech__media .diapo:nth-of-type(1) { opacity: 1; }
+}
+
+/* Bande de statistiques (dans le héros) */
+.stats-tech { border-top: 1px solid rgba(255,255,255,0.14); margin-top: var(--e-8); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--e-4); padding-top: var(--e-5); }
+.stats-tech b { display: block; font-family: var(--police-titre); font-size: var(--fs-xl); color: #d3a63f; line-height: 1; }
+.stats-tech span { font-size: var(--fs-sm); color: rgba(255,255,255,0.7); }
+@media (max-width: 600px) { .stats-tech { grid-template-columns: 1fr 1fr; } }
+
+/* Cartes de rubriques (accueil) */
+.rlink { display: flex; gap: var(--e-3); align-items: flex-start; background: var(--blanc); border: 1px solid var(--gris-bordure); border-radius: var(--rayon-l); padding: var(--e-4); text-decoration: none; color: inherit; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
+.rlink:hover { border-color: var(--esig-or); transform: translateY(-2px); box-shadow: var(--ombre-2); color: inherit; }
+.rlink__ico { flex: none; width: 44px; height: 44px; border-radius: 10px; background: var(--esig-navy-050); color: var(--esig-navy); display: grid; place-items: center; }
+.rlink__ico svg { width: 22px; height: 22px; }
+.rlink h3 { font-family: var(--police-texte); font-size: var(--fs-base); color: var(--esig-navy); margin: 0; }
+.rlink p { font-size: var(--fs-sm); color: var(--texte-doux); margin: 0.2em 0 0; }
+
+/* Fiche projet : technologies, niveau d'avancement, encadré besoins */
+.tech-tags { display: flex; flex-wrap: wrap; gap: var(--e-2); list-style: none; padding: 0; margin: 0; }
+.tech-tags li { font-family: var(--police-mono, Consolas, monospace); font-size: var(--fs-xs); font-weight: var(--poids-gras); color: var(--esig-navy); background: var(--esig-navy-050); border: 1px solid var(--gris-bordure); border-radius: var(--rayon-plein); padding: 0.3em 0.8em; }
+.avancement { background: var(--gris-clair); border-radius: var(--rayon-plein); height: 10px; overflow: hidden; }
+.avancement > span { display: block; height: 100%; background: var(--esig-or); border-radius: var(--rayon-plein); }
+.encadre-besoin { background: var(--esig-navy-050); border-left: 4px solid var(--esig-or); border-radius: 0 var(--rayon-m) var(--rayon-m) 0; padding: var(--e-4); }
+
+/* Boutons de partage social */
+.partage { display: flex; flex-wrap: wrap; gap: var(--e-2); align-items: center; }
+.partage__lbl { font-size: var(--fs-sm); color: var(--texte-doux); font-weight: var(--poids-gras); }
+.partage a, .partage button { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--rayon-plein); border: 1px solid var(--gris-bordure); background: var(--blanc); color: var(--esig-navy); cursor: pointer; transition: background var(--transition), color var(--transition), border-color var(--transition); }
+.partage a:hover, .partage button:hover { background: var(--esig-navy); color: var(--blanc); border-color: var(--esig-navy); }
+.partage svg { width: 18px; height: 18px; fill: currentColor; }

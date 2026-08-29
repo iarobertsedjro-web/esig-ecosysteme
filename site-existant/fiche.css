@@ -1,0 +1,113 @@
+/* ===== PAGE FICHE FORMATION ===== */
+.fiche-hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dark) 100%);color:#fff;padding:40px 0 48px;position:relative;overflow:hidden}
+.fiche-hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 88% 25%,rgba(184,134,11,.12) 0,transparent 45%);pointer-events:none}
+.breadcrumb{font-size:14px;color:#9FB6CE;margin-bottom:22px;position:relative}
+.breadcrumb a{color:#9FB6CE;transition:color .2s}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb span{margin:0 7px;color:#5d7a9c}
+.breadcrumb .current{color:#C8D6E8}
+.fiche-level-badge{display:inline-block;background:rgba(184,134,11,.18);color:#E5C158;font-weight:600;font-size:13px;padding:5px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:.5px;position:relative}
+.fiche-hero h1{font-size:34px;margin-bottom:20px;position:relative;max-width:800px}
+.fiche-meta{display:flex;gap:30px;flex-wrap:wrap;position:relative}
+.fiche-meta-item{display:flex;flex-direction:column;gap:3px;font-size:15px;color:#C8D6E8}
+.fiche-meta-item strong{font-size:12px;color:#8FB8D8;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+
+.fiche-body{padding:48px 20px 70px}
+.fiche-grid{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start}
+.fiche-main{min-width:0}
+.fiche-block{margin-bottom:34px}
+.fiche-block h2{font-size:21px;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.fiche-ico{width:34px;height:34px;border-radius:9px;background:rgba(14,124,123,.1);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fiche-ico svg{width:18px;height:18px}
+.fiche-comp{font-size:16px;color:var(--ink);line-height:1.7;background:var(--light);padding:18px 20px;border-radius:12px;border-left:4px solid var(--teal)}
+.fiche-jobs{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.fiche-jobs li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:13px 16px;font-size:15px;font-weight:500;color:var(--navy);display:flex;align-items:center;gap:9px}
+.fiche-jobs li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0}
+
+.fiche-soon{background:#FFF8E6;border:1px solid #F0D98A;border-radius:12px;padding:18px 22px;margin-top:8px}
+.soon-tag{display:inline-block;background:var(--gold);color:#fff;font-size:12px;font-weight:600;padding:3px 12px;border-radius:20px;margin-bottom:8px;letter-spacing:.3px}
+.fiche-soon p{font-size:14px;color:#6b5800;line-height:1.5;margin:0}
+
+/* Sidebar */
+.fiche-side{position:sticky;top:90px;display:flex;flex-direction:column;gap:18px}
+.fiche-card-cta{background:var(--navy);color:#fff;border-radius:16px;padding:26px}
+.fiche-card-cta h3{font-size:19px;margin-bottom:8px}
+.fiche-card-cta p{font-size:14px;color:#C8D6E8;margin-bottom:18px;line-height:1.5}
+.fiche-card-cta .btn{width:100%;text-align:center;margin-bottom:10px}
+.fiche-card-cta .btn:last-child{margin-bottom:0}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.fiche-facts{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:8px 20px}
+.fact{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--border)}
+.fact:last-child{border-bottom:none}
+.fact-label{font-size:13px;color:var(--grey);font-weight:500}
+.fact-val{font-size:14px;color:var(--navy);font-weight:600;text-align:right}
+
+.fiche-notfound{text-align:center;padding:90px 20px}
+.fiche-notfound h1{font-size:30px;color:var(--navy);margin-bottom:12px}
+.fiche-notfound p{font-size:17px;color:var(--grey);margin-bottom:24px}
+
+@media(max-width:860px){
+  .fiche-hero h1{font-size:27px}
+  .fiche-grid{grid-template-columns:1fr;gap:30px}
+  .fiche-side{position:static}
+  .fiche-meta{gap:20px}
+}
+
+/* ===== FICHE ENRICHIE — bandeau image + onglets (ajout Scénario 1) ===== */
+
+/* Bandeau hero avec photo en fond */
+.fiche-hero-img{background-size:cover;background-position:center;padding:48px 0 54px}
+
+/* Système d'onglets */
+.fiche-tabs{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.tab-bar{display:flex;flex-wrap:wrap;gap:2px;background:var(--light);padding:6px;border-bottom:1px solid var(--border)}
+.tab-btn{flex:1 1 auto;min-width:110px;background:transparent;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:14.5px;font-weight:600;color:var(--grey);padding:12px 16px;border-radius:10px;transition:all .18s;white-space:nowrap}
+.tab-btn:hover{color:var(--navy);background:rgba(255,255,255,.6)}
+.tab-btn.active{background:var(--navy);color:#fff;box-shadow:0 3px 10px rgba(31,56,100,.18)}
+
+.tab-panels{padding:30px 30px 34px}
+.tab-panel{display:none;animation:fadeTab .25s ease}
+.tab-panel.active{display:block}
+@keyframes fadeTab{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.tab-panel p{font-size:16px;color:var(--ink);line-height:1.75;margin-bottom:14px}
+.tab-panel p:last-child{margin-bottom:0}
+.tab-panel a{color:var(--teal);font-weight:600}
+.tab-panel a:hover{text-decoration:underline}
+.tab-panel h3{font-size:17px;color:var(--navy);margin:22px 0 12px}
+.tab-panel h3:first-child{margin-top:0}
+
+/* Liste de compétences détaillées (coches) */
+.fiche-check-list{list-style:none;display:grid;gap:11px}
+.fiche-check-list li{position:relative;padding-left:32px;font-size:15.5px;color:var(--ink);line-height:1.6}
+.fiche-check-list li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:6px;background:rgba(14,124,123,.12);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E7C7B' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:13px}
+
+/* Programme : blocs (semestres) + modules */
+.prog-bloc{margin-bottom:24px}
+.prog-bloc:last-child{margin-bottom:0}
+.fiche-module-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:9px}
+.fiche-module-list li{background:var(--light);border-left:3px solid var(--teal);border-radius:8px;padding:11px 14px;font-size:14.5px;color:var(--navy);font-weight:500}
+
+/* Poursuite d'études */
+.fiche-poursuite{margin-top:24px;background:rgba(184,134,11,.07);border:1px solid rgba(184,134,11,.25);border-radius:12px;padding:18px 20px}
+.fiche-poursuite h3{margin-top:0;color:var(--gold-dark,#8a6608)}
+.fiche-poursuite p{font-size:15px;margin-bottom:0}
+
+@media(max-width:860px){
+  .fiche-hero-img{padding:36px 0 40px}
+  .tab-panels{padding:22px 20px 26px}
+  .tab-btn{min-width:0;flex:1 1 40%;font-size:13.5px;padding:10px 10px}
+}
+
+/* Renforcement du contraste texte sur bandeau photo (opacité voile réduite) */
+.fiche-hero-img h1{text-shadow:0 1px 12px rgba(11,22,44,.55)}
+.fiche-hero-img .breadcrumb,
+.fiche-hero-img .fiche-meta-item,
+.fiche-hero-img .fiche-meta-item strong{text-shadow:0 1px 6px rgba(11,22,44,.5)}
+.fiche-hero-img .fiche-level-badge{background:rgba(184,134,11,.28);text-shadow:0 1px 4px rgba(11,22,44,.4)}
+
+/* Profil d'entrée dans l'onglet Admission */
+.fiche-profil{background:rgba(14,124,123,.06);border:1px solid rgba(14,124,123,.2);border-radius:10px;padding:16px 20px;margin-bottom:18px}
+.fiche-profil h3{margin-top:0;color:var(--teal);font-size:16px}
+.fiche-profil p{margin-bottom:0;font-size:15px}

@@ -1,0 +1,80 @@
+/* =========================================================================
+   ESIG NOVA — Assistant conversationnel · styles
+   -------------------------------------------------------------------------
+   Dépend des jetons du design system (shared/css/tokens.css).
+   Aucune couleur hors palette de marque.
+   ========================================================================= */
+
+/* ---- Lanceur (bouton flottant) ------------------------------------- */
+.nova-lanceur {
+  position: fixed; right: var(--e-4); bottom: var(--e-4); z-index: var(--z-nova);
+  display: inline-flex; align-items: center; gap: var(--e-2);
+  height: 56px; padding: 0 var(--e-4);
+  background: var(--esig-navy); color: var(--blanc);
+  border: 2px solid var(--esig-navy); border-radius: var(--rayon-plein);
+  box-shadow: var(--ombre-2); cursor: pointer;
+  font-family: var(--police-texte); font-weight: var(--poids-gras); font-size: var(--fs-sm);
+  transition: transform var(--transition), background var(--transition);
+}
+.nova-lanceur:hover { background: var(--esig-navy-700); transform: translateY(-1px); }
+.nova-lanceur svg { width: 26px; height: 26px; stroke: var(--esig-or); stroke-width: 1.7; fill: none; }
+.nova-lanceur__texte { white-space: nowrap; }
+@media (max-width: 480px) {
+  .nova-lanceur { padding: 0; width: 56px; justify-content: center; }
+  .nova-lanceur__texte { display: none; }
+}
+
+/* ---- Panneau de discussion ----------------------------------------- */
+.nova-panneau {
+  position: fixed; right: var(--e-4); bottom: calc(var(--e-4) + 68px); z-index: var(--z-nova);
+  width: min(380px, calc(100vw - 2 * var(--e-4)));
+  max-height: min(640px, calc(100vh - 120px));
+  display: flex; flex-direction: column;
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure); border-radius: var(--rayon-l);
+  box-shadow: var(--ombre-3); overflow: hidden;
+}
+.nova-panneau[hidden] { display: none; }
+
+.nova-entete {
+  display: flex; align-items: center; gap: var(--e-2);
+  padding: var(--e-3) var(--e-4);
+  background: var(--esig-navy); color: var(--blanc);
+}
+.nova-entete__titre { font-family: var(--police-titre); font-weight: var(--poids-gras); font-size: var(--fs-base); }
+.nova-entete__sous { font-size: var(--fs-xs); color: rgba(255,255,255,0.75); }
+.nova-entete .nova-fermer {
+  margin-left: auto; width: 36px; height: 36px;
+  background: transparent; border: 0; color: var(--blanc); cursor: pointer;
+  border-radius: var(--rayon-s); font-size: 1.4rem; line-height: 1;
+}
+.nova-entete .nova-fermer:hover { background: rgba(255,255,255,0.15); }
+
+.nova-messages {
+  flex: 1; overflow-y: auto; padding: var(--e-4);
+  display: flex; flex-direction: column; gap: var(--e-3);
+  background: var(--gris-clair);
+}
+.nova-msg { max-width: 85%; padding: var(--e-3) var(--e-4); border-radius: var(--rayon-l); font-size: var(--fs-sm); line-height: 1.5; }
+.nova-msg-bot { align-self: flex-start; background: var(--blanc); border: 1px solid var(--gris-bordure); border-bottom-left-radius: var(--rayon-s); }
+.nova-msg-utilisateur { align-self: flex-end; background: var(--esig-navy); color: var(--blanc); border-bottom-right-radius: var(--rayon-s); }
+.nova-msg a { color: inherit; text-decoration: underline; }
+
+.nova-form { display: flex; gap: var(--e-2); padding: var(--e-3); border-top: 1px solid var(--gris-bordure); background: var(--blanc); }
+.nova-form input {
+  flex: 1; padding: 0.6em 0.8em; border: 1.5px solid var(--gris-bordure);
+  border-radius: var(--rayon-plein); background: var(--blanc);
+}
+.nova-form input:focus { outline: none; border-color: var(--esig-navy); box-shadow: 0 0 0 3px rgba(42,66,145,0.15); }
+.nova-form button {
+  flex-shrink: 0; width: 44px; height: 44px; border: 0; border-radius: var(--rayon-plein);
+  background: var(--esig-navy); color: var(--blanc); cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.nova-form button:hover { background: var(--esig-navy-700); }
+.nova-form button svg { width: 20px; height: 20px; fill: currentColor; }
+
+.nova-note {
+  font-size: var(--fs-xs); color: var(--texte-doux);
+  padding: var(--e-2) var(--e-4) var(--e-3); background: var(--blanc); margin: 0;
+}

@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossier de déploiement — Écosystème ESIG</title>
+<style>
+:root{--navy:#2A4291;--navy900:#17244f;--or:#B0862B;--or700:#8a6a22;
+--texte:#1f2933;--doux:#5a6472;--bord:#d6dce8;--clair:#eef1f6;}
+*{box-sizing:border-box}
+body{font-family:Calibri,'Segoe UI',system-ui,Arial,sans-serif;color:var(--texte);
+line-height:1.6;max-width:900px;margin:0 auto;padding:32px 28px 64px;background:#fff;}
+h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;color:var(--navy);line-height:1.25;}
+h1{font-size:1.9rem;margin:.2em 0 .1em;border-bottom:3px solid var(--or);padding-bottom:.25em;}
+h2{font-size:1.35rem;margin:1.8em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--bord);}
+h3{font-size:1.1rem;margin:1.3em 0 .4em;color:var(--navy900);}
+a{color:var(--navy)}
+p,li{font-size:.98rem}
+blockquote{border-left:4px solid var(--or);background:var(--clair);margin:1em 0;
+padding:.6em 1em;color:#33404d;border-radius:0 6px 6px 0;}
+blockquote p{margin:.3em 0}
+code{font-family:Consolas,'Courier New',monospace;background:#f2f5fa;color:#243;
+padding:.1em .35em;border-radius:4px;font-size:.86em;}
+pre{background:#f6f8fc;border:1px solid var(--bord);border-left:4px solid var(--navy);
+border-radius:6px;padding:14px 16px;overflow-x:auto;}
+pre code{background:none;padding:0;font-size:.82rem;color:#1c2733;
+white-space:pre-wrap;word-break:break-word;}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.9rem;}
+th,td{border:1px solid var(--bord);padding:.5em .7em;text-align:left;vertical-align:top;}
+thead th{background:var(--navy);color:#fff;font-family:Georgia,serif;}
+tbody tr:nth-child(even){background:var(--clair);}
+hr{border:none;border-top:1px solid var(--bord);margin:2em 0;}
+.entete-doc{background:var(--navy);color:#fff;border-radius:8px;padding:16px 20px;margin-bottom:24px;}
+.entete-doc .marque{font-family:Georgia,serif;font-weight:700;letter-spacing:.02em;}
+.entete-doc .sous{color:#d8deef;font-size:.85rem;margin-top:2px;}
+.astuce{border:1px dashed var(--or700);background:#fbf6ea;border-radius:6px;
+padding:10px 14px;font-size:.9rem;margin-bottom:22px;color:#5a4a1f;}
+@media print{
+  @page{margin:16mm;}
+  body{max-width:none;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  h2{page-break-after:avoid;}
+  table,pre,blockquote{page-break-inside:avoid;}
+  .astuce{display:none;}
+  a{color:var(--navy);text-decoration:none;}
+}
+</style></head><body>
+<div class="entete-doc"><div class="marque">ESIG Global Success</div>
+<div class="sous">Dossier de déploiement de l'écosystème web — destiné à M. Kalipé</div></div>
+<div class="astuce">💡 Pour obtenir un PDF : ouvrez ce fichier dans un navigateur, puis
+<strong>Imprimer → Enregistrer au format PDF</strong>. Les blocs de commandes restent copiables.</div>
+<h1>Dossier de déploiement — Écosystème ESIG (pour M. Kalipé)</h1>
+<p>Écosystème de <strong>8 sites statiques</strong> (HTML/CSS/JS, aucun framework) + <strong>2 services Node</strong> (assistant
+NOVA et traitement des formulaires). <strong>206 pages</strong> au total (dont 145 fiches formation). Ce document
+est le mode d'emploi complet de la mise en ligne, de la préparation des livrables aux tests finaux.</p>
+<blockquote>
+<p><strong>Version du dossier : 11/08/2026</strong> — réorganisation du portail en <strong>8 espaces</strong> : « International »
+devient <strong>Coopération &amp; Relations internationales</strong> (<code>cooperation.esig.tg</code>), « Entreprises » est
+absorbé par <strong>Carrières &amp; Insertion</strong> (<code>carrieres.esig.tg</code>), et un espace <strong>Alumni</strong>
+(<code>alumni.esig.tg</code>) est créé (cf. CHANGELOG v2.2.0). Fichiers de référence en <strong>§16 (Annexe)</strong>.</p>
+</blockquote>
+<hr />
+<h2>0. Pré-requis</h2>
+<ul>
+<li><strong>Accès serveurs</strong> : accès SSH au serveur de déploiement (<strong>B</strong>) et compte administrateur sur le
+  Nginx Proxy Manager (<strong>A</strong>).</li>
+<li><strong>DNS</strong> : les <strong>8 sous-domaines</strong> doivent pointer vers le NPM (serveur A) —
+  <code>esig.tg</code>, <code>admission.</code>, <code>executive.</code>, <code>cooperation.</code>, <code>carrieres.</code>, <code>alumni.</code>, <code>news.</code>, <code>tech.esig.tg</code>.
+  Prévoir la redirection des anciens <code>international.esig.tg</code> et <code>entreprises.esig.tg</code> (§12), et un
+  sous-domaine <strong>privé</strong> pour l'administration de contenu (ex. <code>admin.esig.tg</code>, §10).</li>
+<li><strong>Poste de préparation</strong> : Node ≥ 18 (pour générer les livrables et lancer les services).</li>
+<li><strong>Clé API du modèle</strong> (pour NOVA) : à détenir <strong>côté serveur uniquement</strong> (jamais dans le code).</li>
+<li><strong>Compte SMTP</strong> (pour l'envoi des formulaires par e-mail) : hôte, port, identifiant, mot de passe.</li>
+</ul>
+<hr />
+<h2>1. Architecture de déploiement (importante)</h2>
+<p>L'application est publiée <strong>derrière un reverse proxy Nginx Proxy Manager (NPM)</strong> déjà en place sur
+un <strong>serveur distinct</strong>, relié au serveur de déploiement par une <strong>interface locale (réseau privé)</strong>.</p>
+<pre><code>Internet ─HTTPS─▶ [ Serveur A : Nginx Proxy Manager ] ─interface locale (HTTP)─▶ [ Serveur B : déploiement ]
+                   • termine le SSL (certificats)                                 • sert les 8 sites statiques (Nginx, SANS SSL)
+                   • route chaque sous-domaine vers B                             • héberge le relais NOVA (Node, 127.0.0.1:8787)
+                   • pose HSTS + en-têtes (option)                                • héberge le service formulaires (Node, 127.0.0.1:8788)
+</code></pre>
+<p><strong>Conséquences à respecter :</strong>
+- Le serveur B <strong>ne fait PAS de SSL</strong> : pas de certbot, et <strong>surtout aucun Caddy</strong> (qui générerait
+  du TLS en doublon). Le SSL est <strong>entièrement géré par NPM</strong> (serveur A).
+- Le serveur B sert les fichiers via un <strong>Nginx simple, en HTTP</strong>, sur l'interface locale ; NPM lui
+  transmet les requêtes en conservant l'en-tête <code>Host</code>.
+- <strong>Routes API (NOVA + formulaires) : same-origin par sous-domaine.</strong> Le navigateur appelle
+  <code>/api/assistant</code> et <code>/api/formulaire</code> (chemins <strong>relatifs</strong>) sur son propre sous-domaine ; le Nginx
+  du serveur B proxifie ces chemins vers les services locaux. Aucune requête cross-origin → aucune
+  dépendance au CORS (voir §7 et §8).</p>
+<hr />
+<h2>2. Vue d'ensemble des sites</h2>
+<table>
+<thead>
+<tr>
+<th>Sous-domaine</th>
+<th>Dossier source</th>
+<th>Contenu</th>
+<th>Pages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>esig.tg</code> (www)</td>
+<td><code>sites/www</code></td>
+<td>Institutionnel (gouvernance, parcours académique, pages légales, demande de document)</td>
+<td>16</td>
+</tr>
+<tr>
+<td><code>admission.esig.tg</code></td>
+<td><code>sites/admission</code></td>
+<td>Commercial + 66 fiches formation académique</td>
+<td>71</td>
+</tr>
+<tr>
+<td><code>executive.esig.tg</code></td>
+<td><code>sites/executive</code></td>
+<td>Formation continue + 79 fiches</td>
+<td>88</td>
+</tr>
+<tr>
+<td><code>cooperation.esig.tg</code></td>
+<td><code>sites/cooperation</code></td>
+<td>Coopération &amp; Relations internationales (← International)</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>carrieres.esig.tg</code></td>
+<td><code>sites/carrieres</code></td>
+<td>Carrières &amp; Insertion professionnelle (← Entreprises, élargi)</td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>alumni.esig.tg</code></td>
+<td><code>sites/alumni</code></td>
+<td>Réseau des diplômés (nouveau)</td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>news.esig.tg</code></td>
+<td><code>sites/news</code></td>
+<td>Média « ESIG News » + Agenda</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>tech.esig.tg</code></td>
+<td><code>sites/tech</code></td>
+<td><strong>ESIG TECH</strong> — innovations, projets étudiants, labos, partenaires</td>
+<td>12</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>206</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Les <strong>pages légales</strong> (mentions, confidentialité, cookies, accessibilité) sont hébergées <strong>une seule
+fois sur <code>esig.tg</code></strong> ; les autres sites y renvoient en absolu. À prévoir plus tard : un sous-domaine
+<strong>privé</strong> d'administration de contenu (§10).</p>
+<hr />
+<h2>3. Générer les livrables (poste de préparation, Node ≥ 18)</h2>
+<p>Depuis la racine du projet, dans l'ordre :</p>
+<pre><code class="language-bash">node build/convertir-formations.js      # data/formations.json (145 formations)
+node build/generer-fiches.js admission  # 66 fiches académiques
+node build/generer-fiches.js executive  # 79 fiches continues
+node build/build.js                     # assemble toutes les pages (.src.html -&gt; .html)
+node build/audit.js                     # contrôle structure + accessibilité (doit être 206/206)
+node build/assembler.js                 # crée dist/&lt;site&gt;/ AUTONOMES (à déployer)
+node build/verifier-liens.js            # vérifie les liens/ressources internes (doit être 0 cassé)
+</code></pre>
+<p>Chaque <code>dist/&lt;site&gt;/</code> contient déjà <code>shared/</code>, <code>data/</code>, <code>medias/</code>, <code>robots.txt</code>, <code>sitemap.xml</code> :
+<strong>il se copie tel quel à la racine web du sous-domaine.</strong> Les dossiers internes (<code>medias/_*</code>) et les
+gabarits de build (<code>shared/components/*.html</code>) sont <strong>automatiquement exclus</strong> du paquet (voir §9).</p>
+<h3>3.1 — Régler l'assistant NOVA avant déploiement</h3>
+<p>Les pages pointent, en développement, vers <code>http://localhost:8787/api/assistant</code>. <strong>Avant de
+déployer</strong>, remplacez cette valeur dans <code>dist/</code> :</p>
+<pre><code class="language-bash"># Pour ACTIVER NOVA (relais déployé, voir §7) — endpoint RELATIF, same-origin par sous-domaine :
+find dist -name &quot;*.html&quot; -exec sed -i 's|http://localhost:8787/api/assistant|/api/assistant|g' {} +
+
+# Ou pour le GARDER MASQUÉ tant que le relais n'est pas prêt (endpoint vide) :
+find dist -name &quot;*.html&quot; -exec sed -i 's|http://localhost:8787/api/assistant||g' {} +
+</code></pre>
+<p>(Endpoint <code>/api/assistant</code> = appelé sur le sous-domaine courant, proxifié vers le relais par le
+Nginx du serveur B, voir §7. Endpoint vide = widget invisible, sans erreur.)</p>
+<h3>3.2 — Régler le service des formulaires avant déploiement</h3>
+<p>Même logique pour les formulaires (§8) : en développement ils pointent vers
+<code>http://localhost:8788/api/formulaire</code>. Passez l'endpoint en <strong>relatif</strong> (same-origin) :</p>
+<pre><code class="language-bash">find dist -name &quot;*.html&quot; -exec sed -i 's|http://localhost:8788/api/formulaire|/api/formulaire|g' {} +
+</code></pre>
+<blockquote>
+<p>Ces deux <code>sed</code> couvrent <strong>tous</strong> les sous-domaines, y compris <code>tech</code> (widget NOVA + formulaire
+« Proposer un projet »).</p>
+</blockquote>
+<hr />
+<h2>4. Déploiement des fichiers</h2>
+<p>Pour chaque site, copier le contenu de <code>dist/&lt;site&gt;/</code> vers la racine du sous-domaine, par ex. :</p>
+<pre><code class="language-bash">rsync -av --delete dist/www/          deploy@serveur:/var/www/esig.tg/
+rsync -av --delete dist/admission/    deploy@serveur:/var/www/admission.esig.tg/
+rsync -av --delete dist/executive/    deploy@serveur:/var/www/executive.esig.tg/
+rsync -av --delete dist/cooperation/  deploy@serveur:/var/www/cooperation.esig.tg/
+rsync -av --delete dist/carrieres/    deploy@serveur:/var/www/carrieres.esig.tg/
+rsync -av --delete dist/alumni/       deploy@serveur:/var/www/alumni.esig.tg/
+rsync -av --delete dist/news/         deploy@serveur:/var/www/news.esig.tg/
+rsync -av --delete dist/tech/         deploy@serveur:/var/www/tech.esig.tg/
+</code></pre>
+<blockquote>
+<p><code>--delete</code> supprime côté serveur les fichiers absents du paquet : la racine du sous-domaine doit
+donc ne contenir <strong>que</strong> le site (pas de fichier étranger).</p>
+</blockquote>
+<hr />
+<h2>5. Serveur B — Nginx statique (SANS SSL, derrière NPM)</h2>
+<p>Le serveur de déploiement fait tourner <strong>un Nginx simple</strong>, en <strong>HTTP</strong> sur l'interface locale, qui
+sert les 8 sites différenciés par l'en-tête <code>Host</code> (transmis par NPM). <strong>Aucun bloc SSL ici.</strong></p>
+<p>Bloc type (à décliner pour les <strong>8 sous-domaines</strong> en changeant <code>server_name</code> et <code>root</code>) :</p>
+<pre><code class="language-nginx">server {
+  listen 80;                                # interface locale ; NPM proxifie vers ce port
+  server_name esig.tg;                      # ← adapter par sous-domaine (Host transmis par NPM)
+  root /var/www/esig.tg;                    # ← adapter par sous-domaine
+  index index.html;
+
+  # Relais NOVA — MÊME ORIGINE : /api/assistant -&gt; relais Node local (voir §7)
+  location = /api/assistant {
+    proxy_pass http://127.0.0.1:8787;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto https;
+  }
+
+  # Service formulaires — MÊME ORIGINE : /api/formulaire -&gt; service Node local (voir §8)
+  location = /api/formulaire {
+    proxy_pass http://127.0.0.1:8788;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto https;
+  }
+
+  # En-têtes de sécurité (voir §11) — OU à poser dans NPM (onglet « Advanced »), sans doublon
+  add_header X-Content-Type-Options &quot;nosniff&quot; always;
+  add_header X-Frame-Options &quot;DENY&quot; always;
+  add_header Referrer-Policy &quot;strict-origin-when-cross-origin&quot; always;
+  add_header Permissions-Policy &quot;geolocation=(), microphone=(), camera=()&quot; always;
+  add_header Content-Security-Policy &quot;default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; form-action 'self' https:; frame-ancestors 'none'; base-uri 'self'&quot; always;
+
+  # Cache des actifs
+  location ~* \.(css|js|png|jpg|jpeg|webp|svg|ico|woff2?)$ { expires 30d; add_header Cache-Control &quot;public&quot;; }
+  location = /sitemap.xml { expires 1d; }
+  location = /robots.txt  { expires 1d; }
+
+  gzip on; gzip_types text/css application/javascript application/json image/svg+xml;
+  error_page 404 /404.html;   # (le www embarque une 404 ; sinon /index.html)
+}
+</code></pre>
+<p><strong>Côté NPM (serveur A), pour chaque sous-domaine :</strong> créer un <em>Proxy Host</em> pointant vers l'IP locale
+du serveur B (port 80), <strong>Host conservé</strong>, SSL activé (§6), <em>Block Common Exploits</em> activé. NPM
+transmet <strong>tout</strong> (pages + <code>/api/assistant</code> + <code>/api/formulaire</code>) à Nginx B, qui route les API vers les
+services localement. <strong>Les nouveaux sous-domaines <code>cooperation.esig.tg</code>, <code>carrieres.esig.tg</code>,
+<code>alumni.esig.tg</code> et <code>tech.esig.tg</code> suivent le même modèle</strong> : même bloc, en adaptant <code>server_name</code> et <code>root</code>.</p>
+<blockquote>
+<p><strong>Note CSP.</strong> <code>connect-src 'self'</code> suffit : NOVA et le service formulaires (§8) sont appelés en
+<strong>même origine</strong>. Les vignettes vidéo des pages « Émissions » sont des <strong>images locales</strong> ; le clic
+ouvre YouTube en <strong>nouvel onglet</strong> (navigation, pas d'iframe) → <code>img-src 'self'</code> et <code>frame-ancestors
+'none'</code> restent valables. <code>script-src 'unsafe-inline'</code> reste requis pour les scripts inline (config,
+validation de formulaires) — externalisables plus tard pour durcir la CSP.</p>
+</blockquote>
+<hr />
+<h2>6. SSL — géré par Nginx Proxy Manager (serveur A)</h2>
+<p><strong>Aucune configuration SSL sur le serveur de déploiement (B).</strong> Tout se fait dans NPM :
+- Pour chaque <em>Proxy Host</em>, onglet <strong>SSL</strong> → « Request a new SSL Certificate » (Let's Encrypt),
+  puis activer <strong>Force SSL</strong>, <strong>HTTP/2 Support</strong> et <strong>HSTS Enabled</strong>.
+- Renouvellement automatique assuré par NPM.
+- Un certificat <strong>wildcard</strong> <code>*.esig.tg</code> (DNS Challenge) est possible pour couvrir les 8 sous-domaines
+  (et le sous-domaine d'administration, §10) en une fois.</p>
+<hr />
+<h2>7. Relais NOVA (assistant IA)</h2>
+<p>Le widget ne parle <strong>jamais</strong> directement à l'IA : il appelle un relais hébergé par l'ESIG, qui
+détient seul la clé API. Voir <code>shared/components/nova/README-NOVA.md</code>.</p>
+<pre><code class="language-bash"># 1. Copier data/formations.json dans la base documentaire du relais
+cp data/formations.json shared/components/nova/base-documentaire/
+
+# 2. Lancer le relais avec la clé API en variable d'environnement (jamais dans le code)
+CLE_API_MODELE=sk-ant-xxxx \
+ORIGINES_AUTORISEES=&quot;https://esig.tg,https://admission.esig.tg,https://executive.esig.tg,https://cooperation.esig.tg,https://carrieres.esig.tg,https://alumni.esig.tg,https://news.esig.tg,https://tech.esig.tg&quot; \
+  node shared/components/nova/serveur-relais.js
+</code></pre>
+<p>Le mettre en <strong>service systemd</strong> (redémarrage auto) sur le serveur B, écoutant sur <code>127.0.0.1:8787</code>.
+Il est exposé <strong>par le Nginx du serveur B</strong> en <code>/api/assistant</code>, <strong>sur chaque sous-domaine</strong> (bloc
+<code>location = /api/assistant</code> du §5) — donc en <strong>même origine</strong> que le widget. NPM transmet la requête
+au serveur B comme n'importe quelle page ; <strong>aucune route API supplémentaire à créer dans NPM</strong>.</p>
+<p><strong>Modèle par défaut</strong> : <code>claude-haiku-4-5-20251001</code> (modifiable via la variable <code>MODELE</code>).</p>
+<p><strong>Chaîne d'IP (limitation de débit).</strong> Le relais lit <code>X-Forwarded-For</code> pour retrouver l'IP réelle du
+visiteur. La chaîne est : visiteur → NPM → Nginx (B) → relais. NPM et Nginx B doivent <strong>transmettre
+<code>X-Forwarded-For</code></strong> (NPM le fait par défaut ; côté B, <code>proxy_add_x_forwarded_for</code> au §5). Le relais
+prend la <strong>première</strong> IP de la liste (déjà géré dans <code>serveur-relais.js</code>).</p>
+<p>Puis activer l'endpoint <strong>relatif</strong> dans les pages (§3.1).</p>
+<blockquote>
+<p><strong>CORS.</strong> L'appel étant same-origin, le CORS n'est plus sur le chemin critique. La liste
+<code>ORIGINES_AUTORISEES</code> du relais reste utile comme défense (elle inclut déjà <code>tech.esig.tg</code>).</p>
+</blockquote>
+<hr />
+<h2>8. Formulaires — service de traitement (fourni)</h2>
+<p>Le site comporte <strong>11 formulaires</strong> : <strong>préinscription</strong>, <strong>rendez-vous conseiller</strong>, <strong>demande
+d'information</strong> (admission), <strong>devis</strong> (executive), <strong>contact</strong>, <strong>demande de document officiel</strong>
+(§9), <strong>candidature internationale</strong> et <strong>devenir partenaire</strong> (coopération), <strong>dépôt d'offre</strong> (carrières),
+<strong>proposer un projet / partenariat</strong> (tech), <strong>rejoindre / mettre à jour un profil Alumni</strong> (alumni).
+Ils sont tous branchés sur un <strong>service de traitement fourni</strong> :
+<code>shared/components/formulaires/serveur-formulaires.js</code> (mode d'emploi complet :
+<code>shared/components/formulaires/README-FORMULAIRES.md</code>).</p>
+<p><strong>Principe</strong> (identique au relais NOVA) : le client (<code>shared/js/formulaires.js</code>) envoie la demande en
+<code>POST /api/formulaire</code> (même origine) ; le service la transmet <strong>par e-mail</strong> au bon service selon le
+formulaire. Pot de miel anti-spam, limitation de débit (6/10 min/IP), consentement RGPD, <strong>secrets
+(SMTP) en variables d'environnement</strong>.</p>
+<p><strong>Acheminement e-mail par défaut</strong> (objet <code>DESTINATAIRES</code>, modifiable) :
+- <code>admissions@esig.tg</code> ← préinscription, demande d'info, rendez-vous, candidature internationale
+- <code>formation@esig.tg</code> ← devis
+- <code>contact@esig.tg</code> ← contact, demande de document, dépôt d'offre (carrières), <strong>devenir partenaire
+  (coopération)</strong>, <strong>proposer un projet (tech)</strong>, <strong>rejoindre le réseau Alumni</strong></p>
+<p><strong>Mise en service (serveur B) :</strong></p>
+<pre><code class="language-bash">npm install nodemailer      # une fois (pour l'envoi e-mail)
+SMTP_HOTE=smtp.esig.tg SMTP_PORT=587 SMTP_USER=site@esig.tg SMTP_MDP=*** EXPEDITEUR=site@esig.tg \
+  node shared/components/formulaires/serveur-formulaires.js
+</code></pre>
+<ul>
+<li>À placer en <strong>service systemd</strong>, écoutant sur <code>127.0.0.1:8788</code>, exposé via Nginx en <code>/api/formulaire</code>
+  (bloc du §5). Endpoint des pages passé en <strong>relatif</strong> au déploiement (§3.2).</li>
+<li>La liste des origines autorisées du service inclut déjà les <strong>8 sous-domaines</strong> (dont <code>tech.esig.tg</code>) ;
+  ajustable via la variable <code>ORIGINES_AUTORISEES</code>.</li>
+<li><strong>Sans SMTP configuré</strong>, le service tourne quand même et enregistre les demandes dans
+  <code>_boite-reception/</code> (repli, aucune demande perdue ; dossier <code>_*</code> exclu du déploiement — à sécuriser
+  et purger).</li>
+</ul>
+<blockquote>
+<p><strong>RGPD</strong> : les données restent sur l'infrastructure ESIG (aucun tiers). Détails dans le README.</p>
+</blockquote>
+<hr />
+<h2>9. Documents officiels réservés (agrément, certificat)</h2>
+<p>Décision de la direction : <strong>l'agrément d'État et le certificat de qualité ne sont PAS en
+téléchargement libre</strong>. Ils sont remis <strong>sur demande motivée, après autorisation</strong>.</p>
+<ul>
+<li>Les deux PDF sont rangés dans <code>medias/_documents-reserves/</code> et <strong>exclus automatiquement du
+  déploiement</strong> (<code>assembler.js</code> retire <strong>tout dossier <code>medias/_*</code></strong>, ainsi que <code>_boite-reception</code>).
+  <strong>Ne jamais les recopier</strong> dans un dossier public (<code>medias/documents/</code>, etc.).</li>
+<li>Le site propose une page <strong>« Demander un document officiel »</strong> (<code>demande-document.html</code>, <code>noindex</code>) :
+  demande motivée → <strong>vérification/autorisation</strong> par l'établissement → <strong>remise manuelle</strong> du document.</li>
+<li><strong>Contrôle à faire après déploiement</strong> : <code>https://esig.tg/medias/documents/agrement-esig.pdf</code> doit
+  renvoyer <strong>404</strong> (le fichier ne doit pas être en ligne).</li>
+</ul>
+<hr />
+<h2>10. Espace d'administration du contenu (CMS)</h2>
+<p>Pour permettre à la Direction Marketing &amp; Communication et à l'Administrateur général de <strong>publier sans
+toucher au code</strong> (actualités, agenda, médias), un <strong>CMS léger auto-hébergé</strong> est prévu (décision :
+option A). <strong>Spécification complète : <code>docs/CMS-SPEC.md</code></strong> ; modèle de données :
+<code>docs/CMS-MODELE-CONTENU.md</code>.</p>
+<p>Points d'installation (équipe technique) :
+- Installer le CMS (<strong>Directus</strong> recommandé ; alternative PocketBase) sur le serveur B.
+- L'exposer via NPM sur un <strong>sous-domaine privé</strong> (ex. <code>admin.esig.tg</code> / <code>cms.esig.tg</code>), <strong>SSL + accès
+  restreint</strong> (IP/VPN si possible). Le CMS n'est <strong>pas</strong> public au même titre que les 8 sites.
+- Brancher le script de synchronisation <strong><code>build/sync-cms.js</code></strong> (récupère le contenu → <code>data/*.json</code>),
+  puis régénérer/redéployer (build + assembler).
+- <strong>Comptes &amp; rôles</strong> (voir §14) : créer le super-administrateur, activer la <strong>2FA</strong>, <strong>inviter</strong> les
+  personnes. <strong>Chaque personne définit elle-même son mot de passe</strong> (aucun mot de passe créé par un
+  tiers).</p>
+<hr />
+<h2>11. En-têtes de sécurité — récapitulatif</h2>
+<p><code>X-Content-Type-Options: nosniff</code> · <code>X-Frame-Options: DENY</code> · <code>Referrer-Policy: strict-origin-when-cross-origin</code>
+· <code>Permissions-Policy</code> restrictif · <code>Content-Security-Policy</code> (cf. §5, <code>connect-src 'self'</code>).
+<strong><code>Strict-Transport-Security</code> (HSTS) est posé par NPM</strong> (serveur A, avec le SSL). Les autres en-têtes
+se posent soit dans le Nginx du serveur B (§5), soit dans NPM (onglet <em>Advanced</em>) — <strong>ne pas les
+dupliquer</strong> aux deux endroits.</p>
+<hr />
+<h2>12. Redirections 301 depuis l'ancien site</h2>
+<p>L'ancien site mono-page (hébergé temporairement sur <code>news.esig.tg</code>) doit rediriger vers les
+nouvelles pages. Exemples à placer dans le vhost concerné :</p>
+<pre><code class="language-nginx">location = /formation-continue.html  { return 301 https://executive.esig.tg/; }
+location = /admission.html           { return 301 https://admission.esig.tg/admission.html; }
+location = /actualites.html          { return 301 https://news.esig.tg/; }
+location = /contact.html             { return 301 https://esig.tg/contact.html; }
+location ^~ /formations/bts/         { return 301 https://admission.esig.tg$request_uri; }
+location ^~ /formations/licence/     { return 301 https://admission.esig.tg$request_uri; }
+location ^~ /formations/master/      { return 301 https://admission.esig.tg$request_uri; }
+location ^~ /formations/continue/    { return 301 https://executive.esig.tg$request_uri; }
+location ^~ /formations/modulaire/   { return 301 https://executive.esig.tg$request_uri; }
+location ^~ /formations/langues/     { return 301 https://executive.esig.tg$request_uri; }
+</code></pre>
+<h3>12.1 — Anciens sous-domaines renommés (transition)</h3>
+<p>« International » devient <strong>Coopération</strong> et « Entreprises » est absorbé par <strong>Carrières</strong>. Conserver
+le DNS de <code>international.esig.tg</code> et <code>entreprises.esig.tg</code> le temps de la transition, et créer dans NPM
+(serveur A) deux hôtes qui <strong>redirigent (301)</strong> tout leur trafic vers les nouveaux espaces :</p>
+<pre><code class="language-nginx">server { server_name international.esig.tg; return 301 https://cooperation.esig.tg$request_uri; }
+server { server_name entreprises.esig.tg;  return 301 https://carrieres.esig.tg$request_uri; }
+</code></pre>
+<p>(SSL de ces deux hôtes également géré par NPM.)</p>
+<hr />
+<h2>13. Tests post-déploiement (liste de contrôle)</h2>
+<ul>
+<li>☐ Les <strong>8 sous-domaines</strong> répondent en <strong>HTTPS</strong> (cadenas valide, redirection HTTP→HTTPS).</li>
+<li>☐ Page d'accueil de chaque site : logo, menu, <strong>bandeau écosystème</strong>, pied de page, widget WhatsApp OK.</li>
+<li>☐ <code>admission</code> : recherche des 66 formations, ouverture d'une <strong>fiche</strong>, formulaire de préinscription.</li>
+<li>☐ <code>executive</code> : recherche des 79 formations, page Langues, formulaire de <strong>devis</strong>.</li>
+<li>☐ <code>news</code> : magazine + ouverture d'un <strong>article</strong> (URL <code>?slug=…</code>) + page <strong>Agenda</strong> (7 événements).</li>
+<li>☐ <code>tech</code> : galerie <strong>Innovations</strong> (filtres recherche/domaine/statut), ouverture d'une <strong>fiche
+      projet</strong> (<code>?slug=…</code>), formulaire <strong>« Proposer un projet »</strong>.</li>
+<li>☐ <code>cooperation</code> : Partenaires, Mobilité, page <strong>Projets</strong>, formulaire <strong>« Devenir partenaire »</strong>.</li>
+<li>☐ <code>carrieres</code> : page <strong>Offres</strong> (filtre Stage / Emploi / Alternance), <strong>Espace recruteurs</strong> (dépôt d'offre).</li>
+<li>☐ <code>alumni</code> : <strong>Portraits</strong>, formulaire <strong>« Rejoindre le réseau »</strong>.</li>
+<li>☐ <strong>Redirections</strong> : <code>international.esig.tg</code> → <code>cooperation</code>, <code>entreprises.esig.tg</code> → <code>carrieres</code> (§12.1).</li>
+<li>☐ Liens du <strong>bandeau écosystème</strong> (8 espaces) entre sous-domaines : aucun 404 (double par <code>verifier-liens.js</code>).</li>
+<li>☐ <strong>Documents réservés</strong> : <code>…/medias/documents/agrement-esig.pdf</code> renvoie <strong>404</strong> ; la page
+      « Demander un document » s'affiche.</li>
+<li>☐ <code>https://&lt;site&gt;/sitemap.xml</code> et <code>/robots.txt</code> accessibles sur chaque sous-domaine.</li>
+<li>☐ En-têtes de sécurité présents (outils du navigateur ou securityheaders.com).</li>
+<li>☐ <strong>NOVA</strong> : si activé, une question obtient une réponse ; sinon le widget est masqué (sur les 8 sites).</li>
+<li>☐ <strong>Formulaires</strong> : si le traitement (§8) est branché, un envoi test arrive bien par e-mail
+      (tester au moins un formulaire par destinataire : <code>admissions@</code>, <code>formation@</code>, <code>contact@</code>).</li>
+<li>☐ Validation <strong>W3C</strong> (validator.w3.org) et <strong>Lighthouse</strong> sur les pages d'accueil (objectif ≥ 90).</li>
+<li>☐ Redirections 301 depuis les anciennes URLs testées.</li>
+</ul>
+<hr />
+<h2>14. Rôles &amp; accès</h2>
+<p>Détail complet : <strong><code>docs/ADMINISTRATION-ROLES.md</code></strong>. En résumé, deux couches :
+- <strong>Contenu</strong> (CMS, §10) : Administrateur général (super-admin) + Administrateur éditorial (DMC).
+- <strong>Infrastructure</strong> (serveur, NPM, SSL, sauvegardes) : Admin technique (Digital Hub) + <strong>Admin
+  réseau senior (M. Kalipé)</strong>. Ce sont des <strong>accès serveur/NPM</strong>, pas des comptes du site.</p>
+<p>Règles : <strong>moindre privilège</strong>, <strong>2FA</strong> partout, <strong>aucun mot de passe créé par un tiers</strong> (invitation
++ mot de passe défini par chacun), journalisation des actions sensibles.</p>
+<hr />
+<h2>15. Mettre à jour le site plus tard</h2>
+<ul>
+<li><strong>Contenu formations</strong> : éditer la source, relancer <code>convertir-formations.js</code> + <code>generer-fiches.js</code>
+  (admission + executive) + <code>build.js</code> + <code>assembler.js</code> + <code>verifier-liens.js</code>.</li>
+<li><strong>Actualités</strong> : éditer <code>data/actualites.json</code> (voir <code>sites/news/COMMENT-AJOUTER-UNE-ACTU.md</code>), puis
+  <code>assembler.js</code>.</li>
+<li><strong>Agenda</strong> : éditer <code>data/agenda.json</code> (voir <code>sites/news/COMMENT-AJOUTER-UN-EVENEMENT.md</code>), puis
+  <code>assembler.js</code>.</li>
+<li><strong>Contenu ESIG TECH</strong> (sans code) : éditer <code>data/projets-tech.json</code>, <code>actualites-tech.json</code>,
+  <code>emissions-tech.json</code> (<strong>y remplacer les liens YouTube par les vraies URL des vidéos</strong>),
+  <code>evenements-tech.json</code>, <code>laboratoires-tech.json</code>, <code>partenaires-tech.json</code>, puis <code>assembler.js</code>.</li>
+<li><strong>Pages</strong> : éditer les <code>.src.html</code>, relancer <code>build.js</code> + <code>assembler.js</code> + <code>verifier-liens.js</code>.</li>
+<li><strong>Via le CMS</strong> (une fois en place, §10) : la publication régénère les données et le site.</li>
+</ul>
+<hr />
+<h2>16. Annexe — documents de référence</h2>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Objet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/CMS-SPEC.md</code></td>
+<td>Spécification de l'espace d'administration (CMS)</td>
+</tr>
+<tr>
+<td><code>docs/CMS-MODELE-CONTENU.md</code></td>
+<td>Modèle de données du CMS (collections &amp; champs)</td>
+</tr>
+<tr>
+<td><code>docs/ADMINISTRATION-ROLES.md</code></td>
+<td>Les profils et la matrice de droits</td>
+</tr>
+<tr>
+<td><code>docs/api-spec.md</code></td>
+<td>Contrat de l'API du relais NOVA</td>
+</tr>
+<tr>
+<td><code>shared/components/nova/README-NOVA.md</code></td>
+<td>Fonctionnement et sécurité du relais NOVA</td>
+</tr>
+<tr>
+<td><code>shared/components/formulaires/README-FORMULAIRES.md</code></td>
+<td>Service de traitement des formulaires</td>
+</tr>
+<tr>
+<td><code>docs/CHANGELOG.md</code></td>
+<td>Historique des versions (dont v2.2.0 — réorganisation en 8 espaces)</td>
+</tr>
+<tr>
+<td><code>medias/_documents-reserves/LISEZ-MOI.md</code></td>
+<td>Rappel : documents réservés, ne pas exposer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Écosystème ESIG Global Success — 8 sites, 206 pages. Site statique sécurisé, relais IA à clé
+protégée, formulaires en même origine, SSL et HSTS via NPM. Bon déploiement.</em></p>
+</body></html>

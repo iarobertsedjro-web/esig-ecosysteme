@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un document officiel — ESIG Global Success</title>
+  <meta name="description" content="Demandez un document officiel de l'ESIG Global Success (agrément d'État, certificat de qualité). Remise sur demande motivée, après autorisation de l'établissement.">
+  <link rel="canonical" href="https://esig.tg/demande-document.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta name="robots" content="noindex, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Demander un document officiel — ESIG Global Success">
+  <meta property="og:description" content="Remise des documents officiels sur demande motivée, après autorisation.">
+  <meta property="og:url" content="https://esig.tg/demande-document.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><a href="documents.html">Documents officiels</a></li><li><span aria-current="page">Demander un document</span></li></ol></nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">Documents officiels</p>
+        <h1>Demander un document officiel</h1>
+        <hr class="filet-or">
+        <p class="chapo">L'agrément d'État et le certificat de qualité sont des documents officiels. Ils ne sont pas en téléchargement libre : ils vous sont remis <strong>sur demande motivée, après autorisation</strong> de l'établissement. Renseignez le formulaire ci-dessous — nous revenons vers vous.</p>
+      </div>
+
+      <div class="deux-colonnes">
+        <form class="carte" id="form-doc" data-formulaire="demande-document" data-confirmation="Votre demande a bien été transmise. Après vérification et autorisation de l'établissement, le document vous sera remis. Nous revenons vers vous rapidement." novalidate><div class="carte__corps">
+          <div class="champ"><label for="d-doc">Document demandé <span class="requis" aria-hidden="true">*</span></label>
+            <select id="d-doc" name="document" required>
+              <option value="">— Choisir —</option>
+              <option value="agrement">Agrément de l'ESIG</option>
+              <option value="certificat">Certificat de qualité (n° 99 135 00 55)</option>
+              <option value="cisco">Attestation Cisco Networking Academy</option>
+              <option value="autre">Autre document officiel</option>
+            </select>
+          </div>
+          <div class="champ"><label for="d-nom">Nom complet <span class="requis" aria-hidden="true">*</span></label><input id="d-nom" name="nom" type="text" autocomplete="name" required></div>
+          <div class="champ"><label for="d-qualite">Vous êtes / organisation <span class="requis" aria-hidden="true">*</span></label><input id="d-qualite" name="qualite" type="text" placeholder="Ex. étudiant, employeur, administration, partenaire…" required></div>
+          <div class="grille grille--2" style="gap:var(--e-3)">
+            <div class="champ"><label for="d-mail">E-mail <span class="requis" aria-hidden="true">*</span></label><input id="d-mail" name="email" type="email" autocomplete="email" required></div>
+            <div class="champ"><label for="d-tel">Téléphone / WhatsApp</label><input id="d-tel" name="telephone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="champ"><label for="d-motif">Motif de la demande <span class="requis" aria-hidden="true">*</span></label>
+            <textarea id="d-motif" name="motif" required placeholder="Précisez l'usage prévu (dossier, vérification, partenariat…)."></textarea>
+          </div>
+          <label class="hp-field" aria-hidden="true">Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          <div class="champ-choix"><input id="d-rgpd" name="consentement" type="checkbox" required><label for="d-rgpd">J'accepte que mes données soient utilisées pour traiter cette demande (<a href="https://esig.tg/confidentialite.html">confidentialité</a>).</label></div>
+          <p class="message-erreur" id="d-erreur" role="alert" hidden>Merci de renseigner les champs obligatoires.</p>
+          <button type="submit" class="btn btn--accent btn--bloc">Envoyer ma demande</button>
+          <p class="aide" style="margin-top:var(--e-2)">Après vérification et autorisation, le document vous est transmis. Traitement activé à la mise en ligne.</p>
+        </div></form>
+
+        <div>
+          <h2>Comment ça se passe</h2>
+          <hr class="filet-or">
+          <ol class="pile-s">
+            <li>Vous envoyez votre demande motivée.</li>
+            <li>L'établissement <strong>vérifie et autorise</strong> la remise.</li>
+            <li>Le document vous est transmis par e-mail ou remis sur place.</li>
+          </ol>
+          <p class="texte-doux">Une question ? Écrivez à <a href="mailto:contact@esig.tg">contact@esig.tg</a> ou appelez le <a href="tel:+22822711717">(+228) 22 71 17 17</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--#inclure:footer-->
+<script>
+  window.ESIG_CONFIG={whatsapp:"+22893033351"};
+  window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur nos documents officiels ? Je vous oriente.",whatsapp:"+22893033351"};
+  window.FORM_CONFIG={endpoint:"http://localhost:8788/api/formulaire"};
+  document.addEventListener('DOMContentLoaded',function(){
+    // Pré-sélection du document via ?doc=agrement|certificat|cisco
+    var f=document.getElementById('form-doc'); if(!f) return;
+    var doc=new URLSearchParams(location.search).get('doc');
+    if(doc){var sel=f.querySelector('#d-doc'); if(sel&&sel.querySelector('option[value="'+doc+'"]')) sel.value=doc;}
+  });
+</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/formulaires.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

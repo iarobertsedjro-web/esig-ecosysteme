@@ -1,0 +1,6 @@
+{
+  "ECO_WWW": "aria-current=\"true\"",
+  "NAV": "<li><a href=\"{{BASE}}identite.html\">Identité</a></li><li><a href=\"{{BASE}}parcours-academique.html\">Parcours académique</a></li><li><a href=\"{{BASE}}gouvernance.html\">Gouvernance</a></li><li><a href=\"{{BASE}}qualite.html\">Qualité</a></li><li><a href=\"{{BASE}}agrements.html\">Agréments</a></li><li><a href=\"{{BASE}}campus.html\">Campus</a></li><li><a href=\"{{BASE}}partenariats.html\">Partenariats</a></li><li><a href=\"{{BASE}}contact.html\">Contact</a></li>",
+  "CTA_URL": "https://admission.esig.tg",
+  "CTA_LIBELLE": "Préinscription"
+}

@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Partenaires technologiques d'ESIG TECH. Champs : nom, type, resume, logo (optionnel), lien (optionnel). Exemples à valider/compléter par la direction.",
+    "types": ["Académie partenaire", "Université partenaire", "Entreprise", "Institution"]
+  },
+  "partenaires": [
+    {
+      "nom": "Cisco Networking Academy",
+      "type": "Académie partenaire",
+      "resume": "Programme d'académie pour les certifications réseaux (CCNA) et la cybersécurité.",
+      "logo": "",
+      "lien": ""
+    },
+    {
+      "nom": "Sorbonne Paris Nord",
+      "type": "Université partenaire",
+      "resume": "Coopération universitaire et poursuite d'études pour les filières technologiques.",
+      "logo": "/medias/partenaires/sorbonne-paris-nord.jpg",
+      "lien": ""
+    },
+    {
+      "nom": "UPEC — Université Paris-Est Créteil",
+      "type": "Université partenaire",
+      "resume": "Passerelles et mobilité, notamment en génie industriel et maintenance.",
+      "logo": "/medias/partenaires/upec.jpg",
+      "lien": ""
+    },
+    {
+      "nom": "Le Havre Normandie",
+      "type": "Université partenaire",
+      "resume": "Partenariat académique et mobilité internationale.",
+      "logo": "/medias/partenaires/le-havre-normandie.jpg",
+      "lien": ""
+    },
+    {
+      "nom": "Paris School of Tech & Business",
+      "type": "Université partenaire",
+      "resume": "Coopération sur les cursus numériques et le management de la tech.",
+      "logo": "/medias/partenaires/paris-school-tech-business.jpg",
+      "lien": ""
+    }
+  ]
+}

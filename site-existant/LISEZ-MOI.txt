@@ -1,0 +1,60 @@
+# Site web ESIG Global Success
+
+Bienvenue ! Ce dossier contient votre site web complet, prêt à être mis en ligne.
+
+## Comment voir le site sur votre ordinateur
+
+IMPORTANT : extrayez d'abord tout le dossier du ZIP (clic droit sur le ZIP >
+"Extraire tout"), PUIS double-cliquez sur index.html. N'ouvrez jamais le site
+directement depuis l'intérieur du ZIP, sinon les images et les pages liées ne
+s'afficheront pas.
+
+## Les pages du site
+
+- index.html ..................... Page d'accueil
+- parcours-academique.html ....... Pôle 1 : BTS, Licence, Master (cursus diplômant)
+- formation-continue.html ........ Pôle 2 : Formation continue (13 académies),
+                                   Formation modulaire, Centre de langues
+- fiche.html ..................... Fiche détaillée d'une formation (s'affiche quand
+                                   on clique sur une formation depuis un catalogue)
+
+## L'organisation en 2 pôles
+
+L'offre de formation est organisée en deux grandes voies, comme à l'ESIG :
+  • Pôle 1 — Parcours académique (BTS, Licence, Master)
+  • Pôle 2 — Formation Continue & Modulaire (continue, modulaire, langues)
+La page d'accueil présente ces deux pôles séparément, et chaque pôle a sa
+propre page avec ses onglets.
+
+## Les fichiers techniques (ne pas renommer)
+
+- style.css / script.js ............ Apparence et animations de l'accueil
+- formations.css / formations.js ... Apparence et logique des catalogues
+- fiche.css / fiche.js ............. Apparence et logique des fiches
+- parcours-cards.css / .js ......... Les grandes cartes colorées de parcours
+- formations-data.js ............... TOUTES vos formations (le contenu)
+- images/ .......................... Toutes les photos et logos
+
+## Comment modifier le contenu d'une formation
+
+Tout le contenu des formations (intitulés, compétences, débouchés) se trouve
+dans le fichier formations-data.js. C'est le seul fichier à modifier pour
+mettre à jour une formation.
+
+## Ce que contient l'offre actuelle
+
+  • BTS : 16 spécialités
+  • Licence : 25 spécialités
+  • Master / MBA : 34 spécialités
+  • Formation continue : 13 académies, 59 modules
+  • Formation modulaire : 4 pôles, 15 filières
+  • Langues : 5 (français, anglais, chinois, espagnol, allemand)
+  • Plus la mise en avant du dispositif VAE / VAP sur la page d'accueil
+
+---
+
+À noter : le formulaire de pré-inscription est connecté et envoie les demandes
+vers vos deux adresses email (admissions@esig.tg et Formation@esig.tg) selon
+le type de formation choisi.
+
+ESIG Global Success — Lomé, Togo

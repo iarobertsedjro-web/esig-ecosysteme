@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "version": "2.0.0",
+    "note": "Projets & innovations ESIG TECH — galerie (innovations.html) + fiches (projet.html?slug=…). Exemples à adapter/compléter. Champs : slug, titre, resume, filiere, domaine, statut, annee, avancement (0-100), equipe, encadreur, technologies[], problematique, solution[], image, photos[], video, besoins[].",
+    "statuts": ["Réalisé", "En cours", "À venir"],
+    "domaines": ["Informatique & IA", "Réseaux & Cybersécurité", "Énergies & Électrotechnique", "Génie mécanique & Robotique", "Génie civil & Topographie"]
+  },
+  "projets": [
+    {
+      "slug": "drone-cartographie-topographie",
+      "titre": "Drone de cartographie et topographie",
+      "resume": "Un drone conçu et piloté par les étudiants pour la cartographie aérienne et les levés topographiques.",
+      "filiere": "Licence Génie civil",
+      "domaine": "Génie civil & Topographie",
+      "statut": "Réalisé",
+      "annee": "2025",
+      "avancement": 100,
+      "equipe": "Étudiants en Licence Génie civil",
+      "encadreur": "Encadrement : Direction Pédagogique — filière Génie civil",
+      "technologies": ["Drone", "Photogrammétrie", "QGIS", "AutoCAD Civil 3D", "GPS RTK"],
+      "problematique": "Réaliser des levés topographiques précis et rapides sur de grandes surfaces, à moindre coût, sans matériel lourd.",
+      "solution": [
+        "Assemblage et calibrage d'un drone équipé pour la prise de vues aériennes géoréférencées.",
+        "Traitement photogrammétrique des images pour produire orthophotos et modèles numériques de terrain, exploités sous SIG."
+      ],
+      "image": "/medias/innovation/drone-projet.jpg",
+      "photos": ["/medias/innovation/drone-projet.jpg", "/medias/innovation/topographie.jpg"],
+      "video": "",
+      "besoins": ["Partenariat avec un bureau d'études topographiques", "Financement pour un drone de nouvelle génération"]
+    },
+    {
+      "slug": "bras-robotise-pedagogique",
+      "titre": "Bras robotisé pédagogique",
+      "resume": "Un bras robotisé programmable pour l'apprentissage des automatismes et de la robotique industrielle.",
+      "filiere": "Licence Automatisme & Informatique industrielle",
+      "domaine": "Génie mécanique & Robotique",
+      "statut": "En cours",
+      "annee": "2026",
+      "avancement": 60,
+      "equipe": "ESIG Tech Club — pôle robotique",
+      "encadreur": "Encadrement : filière Automatisme & Informatique industrielle",
+      "technologies": ["Arduino", "Python", "Servomoteurs", "Impression 3D", "Capteurs"],
+      "problematique": "Disposer d'un support de travaux pratiques abordable pour enseigner la cinématique, la programmation d'automates et l'intégration capteurs-actionneurs.",
+      "solution": [
+        "Conception mécanique et impression 3D d'un bras à plusieurs axes.",
+        "Programmation de séquences et pilotage temps réel ; base ouverte pour les projets étudiants."
+      ],
+      "image": "/medias/innovation/robotique.jpg",
+      "photos": ["/medias/innovation/robotique.jpg", "/medias/innovation/atelier-mecanique.jpg"],
+      "video": "",
+      "besoins": ["Composants (moteurs, cartes) pour une V2", "Mentorat d'un ingénieur en robotique"]
+    },
+    {
+      "slug": "station-solaire-connectee",
+      "titre": "Station solaire connectée",
+      "resume": "Une installation photovoltaïque instrumentée pour mesurer et optimiser la production en conditions réelles.",
+      "filiere": "Licence Énergies renouvelables",
+      "domaine": "Énergies & Électrotechnique",
+      "statut": "Réalisé",
+      "annee": "2025",
+      "avancement": 100,
+      "equipe": "Étudiants en Licence Énergies renouvelables",
+      "encadreur": "Encadrement : filière Énergies renouvelables & Électrotechnique",
+      "technologies": ["Photovoltaïque", "Microcontrôleur", "Capteurs (IoT)", "Supervision", "Électrotechnique"],
+      "problematique": "Comprendre et optimiser la production d'une installation solaire dans les conditions climatiques locales.",
+      "solution": [
+        "Installation d'un système photovoltaïque instrumenté avec capteurs (ensoleillement, tension, courant).",
+        "Tableau de bord de supervision et suivi de la production en temps réel."
+      ],
+      "image": "/medias/innovation/panneaux-solaires.jpg",
+      "photos": ["/medias/innovation/panneaux-solaires.jpg"],
+      "video": "",
+      "besoins": ["Partenariat avec un installateur solaire", "Financement d'une station d'essai plus grande"]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Directions et services de l'ESIG — alimente la page Gouvernance (liste) et les fiches (direction.html?slug=…). Pour ENRICHIR une fiche, ajoutez à son entrée : \"description\" (liste de paragraphes), \"missions\" (liste de points), \"image\" (chemin, ex. /medias/campus/campus-06.jpg), \"responsable\" (nom). L'ordre d'affichage suit l'ordre de cette liste.",
+    "categories": ["Pilotage", "Qualité & support", "Métier", "Support"]
+  },
+  "directions": [
+    {
+      "slug": "direction-generale",
+      "nom": "Direction Générale",
+      "categorie": "Pilotage",
+      "responsable": "M. Robert K. SEDJRO",
+      "resume": "Pilotage stratégique institutionnel : plan pluriannuel, objectifs annuels, arbitrages budgétaires, revue de direction et suivi des indicateurs.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "secretariat-general",
+      "nom": "Secrétariat Général",
+      "categorie": "Qualité & support",
+      "resume": "Management du Système Qualité, ressources humaines, conformité réglementaire (agréments, tutelle) et administration générale.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "direction-pedagogique",
+      "nom": "Direction Pédagogique",
+      "categorie": "Métier",
+      "resume": "Conception des programmes, organisation des enseignements, gestion des évaluations, diplomation et certification.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "direction-formation-continue-langues",
+      "nom": "Direction Formation Continue & Langues",
+      "categorie": "Métier",
+      "resume": "Développement de l'offre, commercialisation, organisation des sessions et évaluation de la performance.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "direction-cooperations-partenariats",
+      "nom": "Direction Coopérations & Partenariats",
+      "categorie": "Métier",
+      "resume": "Coopération universitaire et mobilités, relations entreprises et stages, insertion professionnelle et réseau alumni.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "direction-finance-comptabilite",
+      "nom": "Direction Finance & Comptabilité",
+      "categorie": "Support",
+      "resume": "Budget et planification financière, exécution budgétaire, comptabilité et reporting.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "direction-fonctions-supports",
+      "nom": "Direction Fonctions Supports",
+      "categorie": "Support",
+      "resume": "Gestion des infrastructures, logistique académique et sécurité des sites.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "direction-marketing-communication",
+      "nom": "Direction Marketing & Communication",
+      "categorie": "Support",
+      "resume": "Stratégie de marque, communication institutionnelle et digitale, promotion des formations, relations publiques et présence en ligne.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    },
+    {
+      "slug": "service-esig-digital-hub",
+      "nom": "Service ESIG Digital Hub",
+      "categorie": "Support",
+      "resume": "Infrastructure numérique, systèmes d'information et données, sécurité applicative et plateformes digitales de l'établissement.",
+      "description": [],
+      "missions": [],
+      "image": ""
+    }
+  ]
+}

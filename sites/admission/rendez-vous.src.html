@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prendre rendez-vous avec un conseiller — ESIG Global Success</title>
+  <meta name="description" content="Prenez rendez-vous avec un conseiller de l'ESIG Global Success pour être accompagné dans le choix de votre formation et votre admission.">
+  <link rel="canonical" href="https://admission.esig.tg/rendez-vous.html">
+  <link rel="icon" type="image/png" href="/shared/img/logo/logo-esig.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prendre rendez-vous avec un conseiller — ESIG Global Success">
+  <meta property="og:description" content="Échangez avec un conseiller pour choisir votre formation.">
+  <meta property="og:url" content="https://admission.esig.tg/rendez-vous.html">
+  <link rel="stylesheet" href="/shared/css/esig.css">
+  <link rel="stylesheet" href="/shared/components/nova/nova.css">
+</head>
+<body>
+
+<!--#inclure:header-->
+
+<main id="contenu">
+  <div class="conteneur">
+    <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Rendez-vous conseiller</span></li></ol></nav>
+  </div>
+
+  <section class="section" style="padding-top:var(--e-5)">
+    <div class="conteneur">
+      <div class="section-entete">
+        <p class="kicker">On vous accompagne</p>
+        <h1>Prendre rendez-vous avec un conseiller</h1>
+        <hr class="filet-or">
+        <p class="chapo">Un échange personnalisé pour clarifier votre projet, choisir la bonne formation et préparer votre admission — sur place, par téléphone ou en visio.</p>
+      </div>
+
+      <div class="deux-colonnes">
+        <form class="carte" id="form-rdv" data-formulaire="rendez-vous" data-confirmation="Votre demande de rendez-vous a bien été envoyée. Nous vous confirmons le créneau très vite." novalidate><div class="carte__corps">
+          <div class="champ"><label for="r-nom">Nom complet <span class="requis" aria-hidden="true">*</span></label><input id="r-nom" name="nom" type="text" autocomplete="name" required></div>
+          <div class="champ"><label for="r-mail">E-mail <span class="requis" aria-hidden="true">*</span></label><input id="r-mail" name="email" type="email" autocomplete="email" required></div>
+          <div class="champ"><label for="r-tel">Téléphone / WhatsApp <span class="requis" aria-hidden="true">*</span></label><input id="r-tel" name="telephone" type="tel" autocomplete="tel" required></div>
+          <div class="grille grille--2" style="gap:var(--e-3)">
+            <div class="champ"><label for="r-date">Date souhaitée</label><input id="r-date" name="date" type="date"></div>
+            <div class="champ"><label for="r-creneau">Créneau</label>
+              <select id="r-creneau" name="creneau"><option>Matin</option><option>Après-midi</option></select>
+            </div>
+          </div>
+          <div class="champ"><label for="r-canal">Type d'entretien</label>
+            <select id="r-canal" name="canal"><option>Sur place (Lomé)</option><option>Par téléphone</option><option>En visioconférence</option></select>
+          </div>
+          <div class="champ"><label for="r-sujet">Formation ou sujet</label><input id="r-sujet" name="sujet" type="text" placeholder="Ex. Master Marketing digital"></div>
+          <label class="hp-field" aria-hidden="true">Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          <div class="champ-choix"><input id="r-rgpd" name="consentement" type="checkbox" required><label for="r-rgpd">J'accepte que mes données soient utilisées pour organiser ce rendez-vous (<a href="https://esig.tg/confidentialite.html">confidentialité</a>).</label></div>
+          <p class="message-erreur" id="r-erreur" role="alert" hidden>Merci de renseigner les champs obligatoires.</p>
+          <button type="submit" class="btn btn--accent btn--bloc">Demander un rendez-vous</button>
+          <p class="aide" style="margin-top:var(--e-2)">Nous vous confirmons le créneau par e-mail ou WhatsApp. Traitement activé à la mise en ligne.</p>
+        </div></form>
+
+        <div>
+          <h2>Ou joignez-nous directement</h2>
+          <hr class="filet-or">
+          <p class="pile-s">
+            <a class="btn btn--bloc" href="https://wa.me/22893033351">WhatsApp : (+228) 93 03 33 51</a>
+            <a class="btn btn--secondaire btn--bloc" href="tel:+22893033351">Appeler le (+228) 93 03 33 51</a>
+            <a class="btn btn--secondaire btn--bloc" href="mailto:admissions@esig.tg">admissions@esig.tg</a>
+          </p>
+          <p class="texte-doux">Campus : Bè Kpota, Rue 118, Bd. de l'Oti, face Église Catholique Maria-Goretti — Lomé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--#inclure:footer-->
+<script>
+  window.ESIG_CONFIG={whatsapp:"+22893033351"};
+  window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question avant le rendez-vous ? Je vous oriente.",whatsapp:"+22893033351"};
+  window.FORM_CONFIG={endpoint:"http://localhost:8788/api/formulaire"};
+</script>
+<script src="/shared/js/commun.js" defer></script>
+<script src="/shared/js/formulaires.js" defer></script>
+<script src="/shared/components/nova/nova.js" defer></script>
+</body>
+</html>

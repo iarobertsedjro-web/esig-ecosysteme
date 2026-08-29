@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "note": "Agenda / planning d'ESIG News. Dates officielles communiquées par la direction. Pour ajouter/modifier un événement, voir sites/news/COMMENT-AJOUTER-UN-EVENEMENT.md. Tri automatique par « date » (AAAA-MM-JJ) : les événements à venir s'affichent du plus proche au plus lointain, les passés vont dans les archives.",
+    "categories": ["Vie institutionnelle", "Portes ouvertes", "Rentrée", "Formation continue", "Vie étudiante"]
+  },
+  "evenements": [
+    {
+      "slug": "conseil-academique-2026",
+      "date": "2026-09-18",
+      "date_texte": "18 septembre 2026",
+      "categorie": "Vie institutionnelle",
+      "titre": "Session ordinaire du Conseil académique",
+      "resume": "Réunion ordinaire du Conseil académique de l'établissement.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    },
+    {
+      "slug": "portes-ouvertes-2026",
+      "date": "2026-09-24",
+      "date_fin": "2026-09-26",
+      "date_texte": "24, 25 et 26 septembre 2026",
+      "categorie": "Portes ouvertes",
+      "titre": "Journées portes ouvertes",
+      "resume": "Trois journées pour découvrir le campus, rencontrer les équipes pédagogiques et explorer les filières.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé",
+      "lien": "https://admission.esig.tg",
+      "lien_libelle": "Nos formations"
+    },
+    {
+      "slug": "rentree-academique-2026-2027",
+      "date": "2026-10-12",
+      "date_texte": "12 octobre 2026",
+      "categorie": "Rentrée",
+      "titre": "Rentrée académique 2026-2027",
+      "resume": "Lancement officiel de l'année académique 2026-2027.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    },
+    {
+      "slug": "session-vae-octobre-2026",
+      "date": "2026-10-28",
+      "date_fin": "2026-10-30",
+      "date_texte": "28, 29 et 30 octobre 2026",
+      "categorie": "Formation continue",
+      "titre": "Session d'information sur le dispositif de la VAE",
+      "resume": "Rencontres d'information sur le dispositif de Validation des Acquis de l'Expérience (VAE).",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé",
+      "lien": "https://executive.esig.tg/vae-vap.html",
+      "lien_libelle": "Le dispositif VAE"
+    },
+    {
+      "slug": "journee-integration-2026",
+      "date": "2026-12-18",
+      "date_texte": "18 décembre 2026",
+      "categorie": "Vie étudiante",
+      "titre": "Journée d'intégration",
+      "resume": "Accueil et intégration des nouveaux étudiants.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    },
+    {
+      "slug": "semaine-etudiant-2027",
+      "date": "2027-03-17",
+      "date_fin": "2027-03-24",
+      "date_texte": "du 17 au 24 mars 2027",
+      "categorie": "Vie étudiante",
+      "titre": "Semaine de l'étudiant",
+      "resume": "Une semaine dédiée à la vie étudiante : activités, animations et temps forts.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    },
+    {
+      "slug": "miss-global-success-2027",
+      "date": "2027-03-20",
+      "date_texte": "20 mars 2027",
+      "categorie": "Vie étudiante",
+      "titre": "Miss Global Success",
+      "resume": "Élection Miss Global Success, temps fort de la vie étudiante.",
+      "lieu": "Campus ESIG, Bè Kpota, Lomé"
+    }
+  ]
+}

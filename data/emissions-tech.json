@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "note": "Émissions / replays tech (page Émissions). Exemples : REMPLACEZ le champ \"lien\" par l'URL réelle de chaque vidéo YouTube. \"poster\" = image d'aperçu (dans medias/). Le clic ouvre la vidéo sur YouTube (nouvel onglet).",
+    "categories": ["Tech Talk", "Tutoriel", "Métiers", "Reportage"]
+  },
+  "emissions": [
+    {
+      "slug": "tech-talk-ia-au-quotidien",
+      "titre": "ESIG Tech Talk — L'IA au quotidien",
+      "categorie": "Tech Talk",
+      "date": "2026-06-18",
+      "date_texte": "18 juin 2026",
+      "duree": "18 min",
+      "poster": "/medias/vie-etudiante/etudiants-laptop.jpg",
+      "resume": "Comment l'intelligence artificielle transforme les métiers, expliquée simplement et sans jargon.",
+      "lien": "https://www.youtube.com/results?search_query=ESIG+Global+Success"
+    },
+    {
+      "slug": "metiers-du-numerique",
+      "titre": "Les métiers du numérique",
+      "categorie": "Métiers",
+      "date": "2026-05-07",
+      "date_texte": "7 mai 2026",
+      "duree": "12 min",
+      "poster": "/medias/campus/campus-03.jpg",
+      "resume": "Développement, data, réseaux, cybersécurité : tour d'horizon des débouchés et des compétences recherchées.",
+      "lien": "https://www.youtube.com/results?search_query=ESIG+Global+Success"
+    },
+    {
+      "slug": "cybersecurite-bons-reflexes",
+      "titre": "Cybersécurité : les bons réflexes",
+      "categorie": "Tutoriel",
+      "date": "2026-04-02",
+      "date_texte": "2 avril 2026",
+      "duree": "9 min",
+      "poster": "/medias/actualites/conference-debat.jpg",
+      "resume": "Mots de passe, hameçonnage, sauvegardes : les gestes essentiels pour se protéger en ligne.",
+      "lien": "https://www.youtube.com/results?search_query=ESIG+Global+Success"
+    }
+  ]
+}

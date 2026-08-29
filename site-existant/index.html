@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ESIG Global Success — Université d'excellence à Lomé, Togo</title>
+  <meta name="description" content="École Supérieure d'Informatique et de Gestion à Lomé. BTS, Licence, Master. 80% de pratique, mobilité internationale via nos partenariats (Sorbonne Paris Nord, UPEC, Canada, Belgique).">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ESIG Global Success — Université d'excellence à Lomé, Togo">
+  <meta property="og:description" content="BTS, Licence, Master. 80% de pratique, mobilité internationale via nos partenariats universitaires.">
+  <meta property="og:image" content="https://esig.tg/images/hero/hero-diplomes.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" type="image/png" href="images/logo/logo-esig.png">
+
+  <link rel="preload" as="image" href="images/hero/hero-diplomes.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="parcours-cards.css">
+  <!-- Données structurées Schema.org — Établissement (SEO + moteurs IA) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "ESIG Global Success",
+    "alternateName": "École Supérieure d'Informatique et de Gestion",
+    "url": "https://esig.tg",
+    "logo": "https://esig.tg/images/logo/logo-esig.png",
+    "image": "https://esig.tg/images/hero/hero-diplomes.jpg",
+    "description": "École supérieure à Lomé (Togo) : BTS, Licence, Master, formation continue et modulaire. 80% de pratique, mobilité internationale via des partenariats universitaires en France, au Canada et en Belgique.",
+    "foundingLocation": "Lomé, Togo",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bè Kpota, Rue 118, Bd. de l'Oti, face Église Catholique Maria-Goretti",
+      "postOfficeBoxNumber": "11 BP 149",
+      "addressLocality": "Lomé",
+      "addressCountry": "TG"
+    },
+    "telephone": "+22822711717",
+    "email": "contact@esig.tg",
+    "sameAs": [
+      "https://www.facebook.com/share/1EjS8JdN2g",
+      "https://www.linkedin.com/company/esig-tg",
+      "https://www.instagram.com/esigglobal_success",
+      "https://www.tiktok.com/@esigglobalsuccess"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+22893033351",
+        "email": "admissions@esig.tg",
+        "contactType": "admissions",
+        "availableLanguage": ["French"],
+        "areaServed": "TG"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+22879773636",
+        "email": "formation@esig.tg",
+        "contactType": "customer service",
+        "areaServed": ["TG", "West Africa"],
+        "availableLanguage": ["French"]
+      }
+    ]
+  }
+  </script>
+  <link rel="canonical" href="https://esig.tg/">
+  <meta property="og:url" content="https://esig.tg/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="ESIG Global Success">
+  <link rel="stylesheet" href="social.css">
+  <link rel="stylesheet" href="base-commun.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        ESIG Global Success
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+        <a href="parcours-academique.html">Parcours académique</a>
+        <a href="formation-continue.html">Formation continue</a>
+        <a href="#international">International</a>
+        <a href="#partenaires">Partenaires</a>
+        <a href="#temoignages">Témoignages</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="admission.html">Admission</a>
+        <a href="contact.html">Contact</a>
+        <button type="button" class="btn btn-teal js-preinscription">Pré-inscription</button>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+  <section class="hero">
+    <div class="hero-carousel" id="heroCarousel" aria-hidden="true"><div class="hero-slide active" style="background-image:url('images/hero/hero-diplomes.webp')"></div></div>
+    <button type="button" class="hero-pause" id="heroPause" aria-label="Mettre le diaporama en pause" aria-pressed="false">&#10074;&#10074;</button>
+    <button type="button" class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Image précédente">&#8249;</button>
+    <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="Image suivante">&#8250;</button>
+    <div class="hero-dots" id="heroDots"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">Lomé, Togo — Depuis 2008</span>
+      <h1>L'université qui forme les <em>talents tech et business</em> d'Afrique de l'Ouest</h1>
+      <p>BTS &rarr; Licence &rarr; Master. 80% de pratique. Mobilité internationale vers la France, le Canada et la Belgique grâce à nos partenariats universitaires.</p>
+      <div class="hero-actions">
+        <a href="#parcours" class="btn btn-white">Découvrir nos formations</a>
+        <button type="button" class="btn btn-ghost js-preinscription" style="color:#fff;border-color:rgba(255,255,255,0.4)">Faire une pré-inscription</button>
+      </div>
+      <div class="accreditations">
+        <span>&#10003; Agrément MESR</span>
+        <span>&#10003; ISO 9001:2015</span>
+        <span>&#10003; Cisco Networking Academy</span>
+        <span>&#10003; Palme Internationale 2024</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat"><div class="stat-num" data-target="894">894</div><div class="stat-label">Étudiants</div></div>
+        <div class="stat"><div class="stat-num" data-target="82" data-suffix="%">82%</div><div class="stat-label">Insertion professionnelle</div></div>
+        <div class="stat"><div class="stat-num" data-target="145" data-stat="formations">145</div><div class="stat-label">Formations</div></div>
+        <div class="stat"><div class="stat-num" data-target="18" data-stat="annees" data-depuis="2008">18</div><div class="stat-label">Ans d'excellence</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="parcours">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Notre offre de formation</span>
+        <h2>Deux grandes voies pour votre réussite</h2>
+        <p>Que vous visiez un diplôme ou une montée en compétences ciblée, l'ESIG a une voie pour vous.</p>
+      </div>
+
+      <div class="pole-block">
+        <div class="pole-head">
+          <div class="pole-num">01</div>
+          <div>
+            <h3>Parcours académique</h3>
+            <p>Le cursus diplômant, du BTS au Master — pour construire votre carrière étape par étape.</p>
+          </div>
+          <a href="parcours-academique.html" class="pole-link">Explorer le parcours académique →</a>
+        </div>
+        <div class="parcours-grid" id="poleAcademique"></div>
+      </div>
+
+      <div class="pole-block">
+        <div class="pole-head">
+          <div class="pole-num">02</div>
+          <div>
+            <h3>Formation Continue & Modulaire</h3>
+            <p>Pour les professionnels et les profils en reconversion : académies certifiantes, pôles métiers et langues.</p>
+          </div>
+          <a href="formation-continue.html" class="pole-link">Explorer la formation continue →</a>
+        </div>
+        <div class="parcours-grid" id="poleContinue"></div>
+      </div>
+
+      <div class="banner" id="sorbonne">
+        <div class="banner-text">
+          <h3>Mobilité internationale — France, Canada, Belgique</h3>
+          <p>Les diplômés ESIG éligibles peuvent poursuivre leurs études à l'étranger grâce à nos accords avec des universités françaises (Sorbonne Paris Nord, UPEC, Le Havre), canadiennes et belges. Continuez votre parcours sans quitter l'Afrique de l'Ouest — et partez quand vous êtes prêt.</p>
+        </div>
+        <a href="#partenaires" class="btn btn-primary">Voir nos partenaires</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="profils" aria-labelledby="titreProfils">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Accès rapide</span>
+        <h2 id="titreProfils">Votre profil, votre parcours</h2>
+        <p>Dites-nous qui vous êtes : nous vous guidons directement vers les informations qui vous concernent.</p>
+      </div>
+      <div class="profils-grid">
+        <a class="profil-card" href="parcours-academique.html?tab=bts"><strong>Je suis nouveau bachelier</strong><span>Découvrir les BTS accessibles après le Bac</span></a>
+        <a class="profil-card" href="parcours-academique.html?tab=licence"><strong>Je souhaite intégrer une Licence</strong><span>Licence 1 après le Bac, ou Licence 3 après un Bac+2</span></a>
+        <a class="profil-card" href="parcours-academique.html?tab=master"><strong>Je recherche un Master</strong><span>25 spécialités Master / MBA en 5 domaines</span></a>
+        <a class="profil-card" href="formation-continue.html"><strong>Je suis un professionnel</strong><span>Formation continue, modulaire, VAE/VAP et langues</span></a>
+        <a class="profil-card" href="contact.html"><strong>Je représente une entreprise</strong><span>Formations intra, devis et montée en compétences des équipes</span></a>
+        <a class="profil-card" href="admission.html"><strong>Je suis un étudiant international</strong><span>Accompagnement des candidats de la sous-région et au-delà</span></a>
+        <a class="profil-card" href="contact.html"><strong>Je suis un ancien étudiant</strong><span>Rester en lien avec l'école et le réseau ESIG</span></a>
+        <a class="profil-card" href="contact.html"><strong>Je suis un partenaire institutionnel</strong><span>Coopérations académiques et relations officielles</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vae-section" id="vae">
+    <div class="container">
+      <div class="vae-inner">
+        <div class="vae-content">
+          <span class="vae-tag">VAE / VAP</span>
+          <h2>Transformez votre expérience en diplôme</h2>
+          <p class="vae-lead">Vous avez de l'expérience, des compétences solides, mais pas encore le diplôme correspondant à votre niveau réel ? L'ESIG vous accompagne pour valoriser vos acquis et accéder à un <strong>diplôme d'universités françaises partenaires</strong>.</p>
+          <div class="vae-steps">
+            <div class="vae-step"><span class="vae-step-num">1</span><span class="vae-step-label">Diagnostic</span></div>
+            <div class="vae-step-arrow">→</div>
+            <div class="vae-step"><span class="vae-step-num">2</span><span class="vae-step-label">Choix du diplôme</span></div>
+            <div class="vae-step-arrow">→</div>
+            <div class="vae-step"><span class="vae-step-num">3</span><span class="vae-step-label">Dossier VAE/VAP</span></div>
+            <div class="vae-step-arrow">→</div>
+            <div class="vae-step"><span class="vae-step-num">4</span><span class="vae-step-label">Préparation validation</span></div>
+          </div>
+          <button type="button" class="btn btn-teal js-preinscription">Étudier mon profil VAE/VAP</button>
+        </div>
+        <div class="vae-benefits">
+          <div class="vae-benefit">
+            <span class="vae-benefit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+            <div><strong>Valorisez votre parcours</strong><span>Transformez vos années d'expérience en reconnaissance académique.</span></div>
+          </div>
+          <div class="vae-benefit">
+            <span class="vae-benefit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+            <div><strong>Accédez à un diplôme français</strong><span>Préparez une validation avec des universités partenaires reconnues.</span></div>
+          </div>
+          <div class="vae-benefit">
+            <span class="vae-benefit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
+            <div><strong>Évoluez professionnellement</strong><span>Renforcez votre crédibilité, votre employabilité et vos perspectives.</span></div>
+          </div>
+          <div class="vae-benefit">
+            <span class="vae-benefit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div><strong>Soyez accompagné</strong><span>Bénéficiez d'un appui méthodologique dans la préparation du dossier.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="campus">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">La vie à l'ESIG</span>
+        <h2>Un campus vivant, moderne et international</h2>
+        <p>Salles équipées, travail collaboratif, conférences, sorties culturelles : l'ESIG, c'est une expérience complète.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-01.webp" type="image/webp"><img src="images/campus/campus-01.jpg" alt="Notre campus à Lomé — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Notre campus à Lomé</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-02.webp" type="image/webp"><img src="images/campus/campus-02.jpg" alt="Échange et entraide au quotidien — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Échange et entraide au quotidien</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-03.webp" type="image/webp"><img src="images/campus/campus-03.jpg" alt="Travaux pratiques sur ordinateur — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Travaux pratiques sur ordinateur</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-04.webp" type="image/webp"><img src="images/campus/campus-04.jpg" alt="Concentration et rigueur — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Concentration et rigueur</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-05.webp" type="image/webp"><img src="images/campus/campus-05.jpg" alt="Salles équipées d'écrans interactifs — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Salles équipées d'écrans interactifs</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-06.webp" type="image/webp"><img src="images/campus/campus-06.jpg" alt="Salles de classe modernes — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Salles de classe modernes</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-07.webp" type="image/webp"><img src="images/campus/campus-07.jpg" alt="Une communauté étudiante engagée — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Une communauté étudiante engagée</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-08.webp" type="image/webp"><img src="images/campus/campus-08.jpg" alt="Amphithéâtres spacieux et lumineux — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Amphithéâtres spacieux et lumineux</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-09.webp" type="image/webp"><img src="images/campus/campus-09.jpg" alt="Conférences et panels d'experts — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Conférences et panels d'experts</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <picture><source srcset="images/campus/campus-10.webp" type="image/webp"><img src="images/campus/campus-10.jpg" alt="Sorties pédagogiques et culturelles — ESIG Global Success" loading="lazy" width="640" height="480"></picture>
+          <figcaption class="gallery-caption">Sorties pédagogiques et culturelles</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="international" id="international">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">L'ESIG sur la scène internationale</span>
+        <h2>Une école présente au-delà des frontières</h2>
+        <p>L'ESIG ne se contente pas de former : elle tisse activement des liens avec les institutions académiques européennes.</p>
+      </div>
+      <div class="intl-grid">
+        <figure class="intl-item">
+          <picture><source srcset="images/international/dg-hall-bruxelles.webp" type="image/webp"><img src="images/international/dg-hall-bruxelles.jpg" alt="Notre Directeur Général à Bruxelles, capitale de l'Europe — ESIG Global Success" loading="lazy" width="720" height="540"></picture>
+          <figcaption class="intl-caption">Notre Directeur Général à Bruxelles, capitale de l'Europe</figcaption>
+        </figure>
+        <figure class="intl-item">
+          <picture><source srcset="images/international/delegation-ares.webp" type="image/webp"><img src="images/international/delegation-ares.jpg" alt="Aux côtés de la Fédération Wallonie-Bruxelles (ARES) et de la HELdB — ESIG Global Success" loading="lazy" width="720" height="540"></picture>
+          <figcaption class="intl-caption">Aux côtés de la Fédération Wallonie-Bruxelles (ARES) et de la HELdB</figcaption>
+        </figure>
+        <figure class="intl-item">
+          <picture><source srcset="images/international/atelier-internationalisation.webp" type="image/webp"><img src="images/international/atelier-internationalisation.jpg" alt="Ateliers sur l'internationalisation de l'enseignement supérieur — ESIG Global Success" loading="lazy" width="720" height="540"></picture>
+          <figcaption class="intl-caption">Ateliers sur l'internationalisation de l'enseignement supérieur</figcaption>
+        </figure>
+        <figure class="intl-item">
+          <picture><source srcset="images/international/sortie-bruxelles.webp" type="image/webp"><img src="images/international/sortie-bruxelles.jpg" alt="Délégation internationale en visite à Bruxelles — ESIG Global Success" loading="lazy" width="720" height="540"></picture>
+          <figcaption class="intl-caption">Délégation internationale en visite à Bruxelles</figcaption>
+        </figure>
+        <figure class="intl-item">
+          <picture><source srcset="images/international/kakemono-ares.webp" type="image/webp"><img src="images/international/kakemono-ares.jpg" alt="Représentation de l'ESIG auprès des partenaires européens — ESIG Global Success" loading="lazy" width="720" height="540"></picture>
+          <figcaption class="intl-caption">Représentation de l'ESIG auprès des partenaires européens</figcaption>
+        </figure>
+        <figure class="intl-item">
+          <picture><source srcset="images/international/groupe-helb.webp" type="image/webp"><img src="images/international/groupe-helb.jpg" alt="La semaine internationale à la Haute École Lucia de Brouckère — ESIG Global Success" loading="lazy" width="720" height="540"></picture>
+          <figcaption class="intl-caption">La semaine internationale à la Haute École Lucia de Brouckère</figcaption>
+        </figure>
+      </div>
+      <div class="intl-highlight">
+        <p><strong>Une présence active à l'international.</strong> L'ESIG Global Success a participé à la Semaine Internationale du Personnel organisée par la Haute École Lucia de Brouckère (Belgique), représentée par son Directeur Général, M. Robert K. SEDJRO. L'occasion de renforcer nos partenariats avec la Fédération Wallonie-Bruxelles (ARES) et les acteurs européens de l'enseignement supérieur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners" id="partenaires">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Partenariats internationaux</span>
+        <h2>Vos études se poursuivent à l'international</h2>
+        <p>Grâce à nos accords avec des universités françaises, canadiennes et belges, nos diplômés poursuivent leur parcours à l'étranger.</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <picture><source srcset="images/partenaires/sorbonne-paris-nord.webp" type="image/webp"><img src="images/partenaires/sorbonne-paris-nord.jpg" alt="Université Sorbonne Paris Nord — partenaire ESIG Global Success" loading="lazy" width="320" height="160"></picture>
+          <div class="partner-name">Université Sorbonne Paris Nord</div>
+          <span class="partner-pays">France</span>
+        </div>
+        <div class="partner-card">
+          <picture><source srcset="images/partenaires/upec.webp" type="image/webp"><img src="images/partenaires/upec.jpg" alt="Université Paris-Est Créteil (UPEC) — partenaire ESIG Global Success" loading="lazy" width="320" height="160"></picture>
+          <div class="partner-name">Université Paris-Est Créteil (UPEC)</div>
+          <span class="partner-pays">France</span>
+        </div>
+        <div class="partner-card">
+          <picture><source srcset="images/partenaires/le-havre-normandie.webp" type="image/webp"><img src="images/partenaires/le-havre-normandie.jpg" alt="Université Le Havre Normandie — partenaire ESIG Global Success" loading="lazy" width="320" height="160"></picture>
+          <div class="partner-name">Université Le Havre Normandie</div>
+          <span class="partner-pays">France</span>
+        </div>
+        <div class="partner-card">
+          <picture><source srcset="images/partenaires/paris-school-tech-business.webp" type="image/webp"><img src="images/partenaires/paris-school-tech-business.jpg" alt="Paris School of Technology &amp; Business — partenaire ESIG Global Success" loading="lazy" width="320" height="160"></picture>
+          <div class="partner-name">Paris School of Technology &amp; Business</div>
+          <span class="partner-pays">France</span>
+        </div>
+        <div class="partner-card">
+          <picture><source srcset="images/partenaires/university-alberta.webp" type="image/webp"><img src="images/partenaires/university-alberta.jpg" alt="University of Alberta — partenaire ESIG Global Success" loading="lazy" width="320" height="160"></picture>
+          <div class="partner-name">University of Alberta</div>
+          <span class="partner-pays">Canada</span>
+        </div>
+        <div class="partner-card">
+          <picture><source srcset="images/partenaires/helb.webp" type="image/webp"><img src="images/partenaires/helb.jpg" alt="Haute École Lucia de Brouckère — partenaire ESIG Global Success" loading="lazy" width="320" height="160"></picture>
+          <div class="partner-name">Haute École Lucia de Brouckère</div>
+          <span class="partner-pays">Belgique</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="temoignages">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Ils témoignent</span>
+        <h2>Ils ont commencé à l'ESIG, ils réussissent aujourd'hui</h2>
+        <p>Des parcours réels et authentiques — de Lomé à Paris, du salariat à l'entrepreneuriat.</p>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p>De Lomé aux ateliers d'ALSTOM à Paris : mon parcours a commencé à l'ESIG. Grâce au partenariat avec l'Université Paris-Est Créteil, j'ai poursuivi en Génie Industriel et Maintenance avec une bourse. L'ESIG m'a ouvert les portes d'une carrière internationale.</p>
+          <div class="quote-author">
+            <div class="avatar" style="background-image:url('images/temoignages/aubin.jpg')"></div>
+            <div>
+              <div class="quote-name">Aubin</div>
+              <div class="quote-role">Technicien SAV chez ALSTOM · Paris, France</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p>Après ma Licence à l'ESIG, j'ai intégré une grande entreprise internationale du commerce alimentaire comme assistante commerciale. Aujourd'hui, je poursuis mon Master 2 tout en travaillant. L'ESIG m'a donné les compétences et la confiance pour réussir.</p>
+          <div class="quote-author">
+            <div class="avatar" style="background-image:url('images/temoignages/nathalie.jpg')"></div>
+            <div>
+              <div class="quote-name">Nathalie</div>
+              <div class="quote-role">Assistante commerciale · Étudiante en Master 2</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p>Après ma Licence en Gestion Logistique et Transport, j'ai créé ma boutique de prêt-à-porter. Je poursuis mon Master 2 en Commerce International et Supply Chain pour développer mon activité. À l'ESIG, j'ai appris qu'un diplôme peut aussi devenir une entreprise.</p>
+          <div class="quote-author">
+            <div class="avatar" style="background-image:url('images/temoignages/reine.jpg')"></div>
+            <div>
+              <div class="quote-name">Reine</div>
+              <div class="quote-role">Auto-entrepreneuse · Étudiante en Master 2</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p>Ancien Délégué Général de l'ESIG, j'exerce aujourd'hui comme Chef Service Logistique dans une grande société de transport de marchandises. Chaque jour, je mets en œuvre les compétences acquises à l'ESIG. L'ESIG forme des professionnels capables de transformer les connaissances en résultats.</p>
+          <div class="quote-author">
+            <div class="avatar" style="background-image:url('images/temoignages/benissan.jpg')"></div>
+            <div>
+              <div class="quote-name">Bénissan Tété</div>
+              <div class="quote-role">Chef Service Logistique</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p>Après mon baccalauréat à Niamey et une année en Tunisie, j'ai rejoint l'ESIG. Je suis pleinement épanouie dans un environnement multiculturel, avec des enseignants disponibles et une formation orientée vers la pratique. Choisir l'ESIG a été l'une des meilleures décisions de mon parcours.</p>
+          <div class="quote-author">
+            <div class="avatar" style="background-image:url('images/temoignages/maiga.jpg')"></div>
+            <div>
+              <div class="quote-name">Mlle Maïga</div>
+              <div class="quote-role">Étudiante nigérienne</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band" id="contact">
+    <div class="container">
+      <h2>Prêt à rejoindre ESIG Global Success ?</h2>
+      <p>La prochaine rentrée commence bientôt. Faites votre pré-inscription en quelques minutes.</p>
+      <button type="button" class="btn btn-white js-preinscription">Faire ma pré-inscription</button>
+    </div>
+  </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-mark"></span>
+          ESIG Global Success
+        </div>
+        <nav class="footer-links" aria-label="Pied de page">
+          <a href="parcours-academique.html">Parcours académique</a>
+          <a href="formation-continue.html">Formation continue</a>
+          <a href="#international">International</a>
+          <a href="#partenaires">Partenaires</a>
+          <a href="#temoignages">Témoignages</a>
+          <a href="actualites.html">Actualités</a>
+        <a href="admission.html">Admission</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <address>Bd. de l'Oti, Bè Kpota · 11 BP 149 · Lomé, Togo · <a href="tel:+22893033351">(+228)&nbsp;93&nbsp;03&nbsp;33&nbsp;51</a></address>
+        <nav class="footer-legal" aria-label="Informations légales">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="accessibilite.html">Déclaration d'accessibilité</a>
+          <a href="cgu.html">CGU</a>
+        </nav>
+        <p>© 2026 ESIG Global Success · Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 id="modalTitle">Demande de pré-inscription</h3>
+        <button type="button" class="modal-close" id="modalClose" aria-label="Fermer la fenêtre de pré-inscription">&times;</button>
+      </div>
+      <p class="modal-sub">Remplissez ce formulaire et notre équipe vous recontactera sous 48h.</p>
+      <form id="preinscriptionForm">
+        <div class="field"><label for="categorie">Type de formation *</label>
+          <select id="categorie" name="categorie" required autocomplete="off">
+            <option value="">Sélectionner...</option>
+            <option value="classique">Formation classique (BTS, Licence, Master)</option>
+            <option value="continue">Formation continue, modulaire ou en langues</option>
+          </select>
+        </div>
+        <div class="field" id="niveauField" style="display:none;"><label for="niveau">Programme visé *</label>
+          <select id="niveau" name="niveau">
+            <option value="">Sélectionner...</option>
+          </select>
+        </div>
+        <div class="field"><label for="nom">Nom complet *</label><input type="text" id="nom" name="nom" required autocomplete="name"></div>
+        <div class="field"><label for="email">Email *</label><input type="email" id="email" name="email" required autocomplete="email" inputmode="email"></div>
+        <div class="field"><label for="tel">Téléphone (WhatsApp de préférence) *</label><input type="tel" id="tel" name="telephone" required autocomplete="tel" inputmode="tel"></div>
+        <div class="field"><label for="message">Message (facultatif)</label><input type="text" id="message" name="message" placeholder="Une question particulière ?"></div>
+        <label class="hp-field" aria-hidden="true">Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="page_origine">
+        <div class="field field-consent">
+          <label for="consentement" class="consent-label">
+            <input type="checkbox" id="consentement" name="consentement" value="oui" required>
+            J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>. *
+          </label>
+        </div>
+        <p class="form-error" id="formError" role="alert" hidden></p>
+        <button type="submit" class="btn btn-teal" id="submitBtn">Envoyer ma demande</button>
+        <p class="form-notice">Les informations recueillies sont destinées aux services admissions et formation continue de l'ESIG, pour le traitement de votre demande et le suivi de votre projet (conservation : 24 mois maximum). Vous disposez de droits d'accès, de rectification et de suppression : <a href="mailto:contact@esig.tg">contact@esig.tg</a>.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="check">&#10003;</div>
+        <h3 style="margin-bottom:8px">Demande envoyée !</h3>
+        <p style="color:var(--grey);font-size:15px">Merci. Notre équipe vous recontactera sous 48h.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="formations-data.js"></script>
+  <script src="parcours-cards.js"></script>
+  <script src="script.js"></script>
+  <script src="config-site.js"></script>
+  <script src="carousel.js"></script>
+  <script src="social.js"></script>
+<script src="assistant.js"></script>
+<script src="commun.js"></script>
+</body>
+</html>
