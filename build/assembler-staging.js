@@ -91,6 +91,25 @@ for (const part of PARTAGES) {
 const frag = path.join(OUT, 'shared', 'components');
 if (fs.existsSync(frag)) for (const n of fs.readdirSync(frag)) if (n.endsWith('.html')) fs.rmSync(path.join(frag, n), { force: true });
 
+// Correctif D8 (2026-08-29) : les fichiers SERVEUR des composants ne doivent
+// JAMAIS figurer dans le dossier publié. Seuls nova.js et nova.css sont des
+// assets d'exécution navigateur. Le prompt système, les relais Node, leurs
+// README techniques et la base documentaire du relais restent côté serveur.
+// (Leur secret n'est pas une barrière de sécurité — les contrôles restent
+// côté serveur — mais leur publication facilite inutilement l'analyse.)
+const FICHIERS_SERVEUR = [
+  'shared/components/nova/prompt-systeme.md',
+  'shared/components/nova/serveur-relais.js',
+  'shared/components/nova/README-NOVA.md',
+  'shared/components/nova/base-documentaire',
+  'shared/components/formulaires/serveur-formulaires.js',
+  'shared/components/formulaires/README-FORMULAIRES.md',
+];
+for (const rel of FICHIERS_SERVEUR) {
+  const p = path.join(OUT, rel);
+  if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
+}
+
 // 2. pages : www à la racine, les autres en sous-dossier
 copierPages('www', OUT);
 for (const site of SITES) if (site !== 'www') copierPages(site, path.join(OUT, site));

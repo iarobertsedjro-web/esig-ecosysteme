@@ -70,6 +70,20 @@ for (const site of SITES) {
       if (nom.endsWith('.html')) fs.rmSync(path.join(fragments, nom), { force: true });
     }
   }
+  // Correctif D8 (2026-08-29) : ne jamais publier les fichiers SERVEUR des
+  // composants (prompt système, relais Node, README techniques, base
+  // documentaire du relais). Seuls nova.js / nova.css sont des assets publics.
+  for (const rel of [
+    'shared/components/nova/prompt-systeme.md',
+    'shared/components/nova/serveur-relais.js',
+    'shared/components/nova/README-NOVA.md',
+    'shared/components/nova/base-documentaire',
+    'shared/components/formulaires/serveur-formulaires.js',
+    'shared/components/formulaires/README-FORMULAIRES.md',
+  ]) {
+    const p = path.join(dest, rel);
+    if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true });
+  }
   console.log('  ✓ dist/' + site + ' (' + (site === 'www' ? 'esig.tg' : site + '.esig.tg') + ')');
 }
 console.log('Paquets de déploiement prêts dans dist/.');
