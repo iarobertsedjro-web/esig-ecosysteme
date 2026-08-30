@@ -4,3 +4,7 @@ dist-staging/
 *.zip
 ~$*
 supabase/.temp/
+# Documents réservés : jamais dans Git (décision V4 du 30/08/2026)
+medias/_documents-reserves/
+Dossier déploiement site web ESIG/
+Dossier de déploiement md*
