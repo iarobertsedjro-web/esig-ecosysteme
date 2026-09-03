@@ -240,7 +240,7 @@ sert les 8 sites différenciés par l'en-tête <code>Host</code> (transmis par N
   add_header X-Frame-Options &quot;DENY&quot; always;
   add_header Referrer-Policy &quot;strict-origin-when-cross-origin&quot; always;
   add_header Permissions-Policy &quot;geolocation=(), microphone=(), camera=()&quot; always;
-  add_header Content-Security-Policy &quot;default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; form-action 'self' https:; frame-ancestors 'none'; base-uri 'self'&quot; always;
+  add_header Content-Security-Policy &quot;default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; form-action 'self' https:; frame-ancestors 'none'; base-uri 'self'&quot; always;
 
   # Cache des actifs
   location ~* \.(css|js|png|jpg|jpeg|webp|svg|ico|woff2?)$ { expires 30d; add_header Cache-Control &quot;public&quot;; }
@@ -363,10 +363,27 @@ option A). <strong>Spécification complète : <code>docs/CMS-SPEC.md</code></str
 <hr />
 <h2>11. En-têtes de sécurité — récapitulatif</h2>
 <p><code>X-Content-Type-Options: nosniff</code> · <code>X-Frame-Options: DENY</code> · <code>Referrer-Policy: strict-origin-when-cross-origin</code>
-· <code>Permissions-Policy</code> restrictif · <code>Content-Security-Policy</code> (cf. §5, <code>connect-src 'self'</code>).
+· <code>Permissions-Policy</code> restrictif · <code>Content-Security-Policy</code> (cf. §5).
 <strong><code>Strict-Transport-Security</code> (HSTS) est posé par NPM</strong> (serveur A, avec le SSL). Les autres en-têtes
 se posent soit dans le Nginx du serveur B (§5), soit dans NPM (onglet <em>Advanced</em>) — <strong>ne pas les
 dupliquer</strong> aux deux endroits.</p>
+<blockquote>
+<p>La CSP autorise <strong>Cloudflare Web Analytics</strong> : <code>script-src … https://static.cloudflareinsights.com</code>
+et <code>connect-src 'self' https://cloudflareinsights.com</code> (§11 bis).</p>
+</blockquote>
+<hr />
+<h2>11 bis. Web analytics — Cloudflare Web Analytics (sans cookie, RGPD)</h2>
+<p>Solution retenue : <strong>Cloudflare Web Analytics</strong> — gratuite, <strong>sans cookie</strong>, sans bandeau de
+consentement supplémentaire, aucune donnée envoyée à un tiers publicitaire.</p>
+<ul>
+<li>Le <strong>beacon</strong> est déjà intégré au <strong>pied de page partagé</strong> (<code>shared/components/footer.html</code>) → présent
+  sur les <strong>8 sous-domaines</strong> et les 206 pages. La <strong>CSP</strong> l'autorise déjà (§5).</li>
+<li><strong>Reste à faire</strong> : Cloudflare → <em>Analytics &amp; Logs → Web Analytics → Add a site</em> (<code>esig.tg</code>), copier le
+  <strong>token</strong>, puis remplacer <code>CF_BEACON_TOKEN_A_REMPLACER</code> dans <code>footer.html</code> (une seule fois) et relancer
+  le déploiement (<code>deploiement/deploy.sh</code>).</li>
+<li>Le beacon est <strong>retiré automatiquement de la préviz Netlify</strong> (les statistiques ne concernent que la
+  production). Détails : <code>deploiement/COMMANDES.md</code> (§5 bis).</li>
+</ul>
 <hr />
 <h2>12. Redirections 301 depuis l'ancien site</h2>
 <p>L'ancien site mono-page (hébergé temporairement sur <code>news.esig.tg</code>) doit rediriger vers les

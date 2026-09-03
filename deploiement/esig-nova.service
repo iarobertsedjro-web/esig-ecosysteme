@@ -1,0 +1,22 @@
+# ESIG NOVA — relais IA (127.0.0.1:8787)
+# À copier dans /etc/systemd/system/esig-nova.service (serveur B).
+# Adapter WorkingDirectory (emplacement du dépôt) et la CLÉ API.
+#   sudo systemctl daemon-reload && sudo systemctl enable --now esig-nova
+[Unit]
+Description=ESIG NOVA - relais IA
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/esig-ecosysteme
+Environment=PORT=8787
+Environment=CLE_API_MODELE=REMPLACER_PAR_LA_CLE_API
+Environment=MODELE=claude-haiku-4-5-20251001
+Environment=ORIGINES_AUTORISEES=https://esig.tg,https://admission.esig.tg,https://executive.esig.tg,https://cooperation.esig.tg,https://carrieres.esig.tg,https://alumni.esig.tg,https://news.esig.tg,https://tech.esig.tg
+ExecStart=/usr/bin/node shared/components/nova/serveur-relais.js
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

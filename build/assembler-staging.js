@@ -67,6 +67,8 @@ function reecrire(html) {
     .replace(/https:\/\/international\.esig\.tg\/?/g, '/cooperation/')
     .replace(/https:\/\/entreprises\.esig\.tg\/?/g, '/carrieres/')
     .replace(/https:\/\/esig\.tg\/?/g, '/')
+    // Retirer le beacon Cloudflare Web Analytics de la préviz (stats = prod uniquement)
+    .replace(/<!-- Cloudflare Web Analytics[\s\S]*?<!-- Fin Cloudflare Web Analytics -->/g, '')
     .replace(/http:\/\/localhost:8787\/api\/assistant/g, '/api/assistant')   // NOVA visible (dégradé : « indisponible » si on l'interroge, faute de backend)
     .replace(/http:\/\/localhost:8788\/api\/formulaire/g, ''); // formulaires : confirmation directe
 }

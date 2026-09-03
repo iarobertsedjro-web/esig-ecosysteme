@@ -1,0 +1,26 @@
+# ESIG — service de traitement des formulaires (127.0.0.1:8788)
+# À copier dans /etc/systemd/system/esig-formulaires.service (serveur B).
+# Adapter WorkingDirectory et les identifiants SMTP.
+# Pré-requis : npm install nodemailer (dans le dépôt) pour l'envoi e-mail.
+#   sudo systemctl daemon-reload && sudo systemctl enable --now esig-formulaires
+[Unit]
+Description=ESIG - service formulaires
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/esig-ecosysteme
+Environment=PORT_FORMULAIRES=8788
+Environment=SMTP_HOTE=smtp.esig.tg
+Environment=SMTP_PORT=587
+Environment=SMTP_USER=site@esig.tg
+Environment=SMTP_MDP=REMPLACER_PAR_LE_MOT_DE_PASSE_SMTP
+Environment=EXPEDITEUR=site@esig.tg
+Environment=ORIGINES_AUTORISEES=https://esig.tg,https://admission.esig.tg,https://executive.esig.tg,https://cooperation.esig.tg,https://carrieres.esig.tg,https://alumni.esig.tg,https://news.esig.tg,https://tech.esig.tg
+ExecStart=/usr/bin/node shared/components/formulaires/serveur-formulaires.js
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -169,7 +169,7 @@ server {
   add_header X-Frame-Options "DENY" always;
   add_header Referrer-Policy "strict-origin-when-cross-origin" always;
   add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
-  add_header Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; form-action 'self' https:; frame-ancestors 'none'; base-uri 'self'" always;
+  add_header Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; form-action 'self' https:; frame-ancestors 'none'; base-uri 'self'" always;
 
   # Cache des actifs
   location ~* \.(css|js|png|jpg|jpeg|webp|svg|ico|woff2?)$ { expires 30d; add_header Cache-Control "public"; }
@@ -314,10 +314,28 @@ Points d'installation (équipe technique) :
 
 ## 11. En-têtes de sécurité — récapitulatif
 `X-Content-Type-Options: nosniff` · `X-Frame-Options: DENY` · `Referrer-Policy: strict-origin-when-cross-origin`
-· `Permissions-Policy` restrictif · `Content-Security-Policy` (cf. §5, `connect-src 'self'`).
+· `Permissions-Policy` restrictif · `Content-Security-Policy` (cf. §5).
 **`Strict-Transport-Security` (HSTS) est posé par NPM** (serveur A, avec le SSL). Les autres en-têtes
 se posent soit dans le Nginx du serveur B (§5), soit dans NPM (onglet *Advanced*) — **ne pas les
 dupliquer** aux deux endroits.
+
+> La CSP autorise **Cloudflare Web Analytics** : `script-src … https://static.cloudflareinsights.com`
+> et `connect-src 'self' https://cloudflareinsights.com` (§11 bis).
+
+---
+
+## 11 bis. Web analytics — Cloudflare Web Analytics (sans cookie, RGPD)
+
+Solution retenue : **Cloudflare Web Analytics** — gratuite, **sans cookie**, sans bandeau de
+consentement supplémentaire, aucune donnée envoyée à un tiers publicitaire.
+
+- Le **beacon** est déjà intégré au **pied de page partagé** (`shared/components/footer.html`) → présent
+  sur les **8 sous-domaines** et les 206 pages. La **CSP** l'autorise déjà (§5).
+- **Reste à faire** : Cloudflare → *Analytics & Logs → Web Analytics → Add a site* (`esig.tg`), copier le
+  **token**, puis remplacer `CF_BEACON_TOKEN_A_REMPLACER` dans `footer.html` (une seule fois) et relancer
+  le déploiement (`deploiement/deploy.sh`).
+- Le beacon est **retiré automatiquement de la préviz Netlify** (les statistiques ne concernent que la
+  production). Détails : `deploiement/COMMANDES.md` (§5 bis).
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "genere_le": "2026-07-22",
+    "genere_le": "2026-09-03",
     "source": "site-existant/formations-data.js (v1.5.0)",
     "note": "Source de vérité unique — ne pas éditer à la main. Régénérer via build/convertir-formations.js.",
     "total": 145,

@@ -1,0 +1,92 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Note de remise — Déploiement de l'écosystème web (pour M. Kalipé)</title><style>
+:root{--navy:#2A4291;--navy900:#17244f;--or:#B0862B;--or700:#8a6a22;
+--texte:#1f2933;--doux:#5a6472;--bord:#d6dce8;--clair:#eef1f6;}
+*{box-sizing:border-box}
+body{font-family:Calibri,'Segoe UI',system-ui,Arial,sans-serif;color:var(--texte);
+line-height:1.55;max-width:900px;margin:0 auto;padding:28px 28px 48px;background:#fff;}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--navy);line-height:1.2;}
+h1{font-size:1.7rem;margin:.1em 0;border-bottom:3px solid var(--or);padding-bottom:.2em;}
+h2{font-size:1.2rem;margin:1.3em 0 .4em;padding-bottom:.15em;border-bottom:1px solid var(--bord);}
+a{color:var(--navy)} p,li{font-size:.95rem} li{margin:.15em 0} strong{color:var(--navy900)}
+code{font-family:Consolas,'Courier New',monospace;background:#f2f5fa;padding:.1em .35em;border-radius:4px;font-size:.85em;}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.9rem;}
+th,td{border:1px solid var(--bord);padding:.45em .65em;text-align:left;vertical-align:top;}
+thead th{background:var(--navy);color:#fff;font-family:Georgia,serif;}
+tbody tr:nth-child(even){background:var(--clair);}
+hr{border:none;border-top:1px solid var(--bord);margin:1.6em 0;}
+em{color:var(--doux)}
+.entete-doc{background:var(--navy);color:#fff;border-radius:8px;padding:14px 18px;margin-bottom:20px;}
+.entete-doc .marque{font-family:Georgia,serif;font-weight:700;}
+.entete-doc .sous{color:#d8deef;font-size:.85rem;margin-top:2px;}
+@media print{@page{margin:14mm;} body{max-width:none;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ h2{page-break-after:avoid;} table{page-break-inside:avoid;} a{color:var(--navy);text-decoration:none;}}
+</style></head><body>
+<div class="entete-doc"><div class="marque">ESIG Global Success</div>
+<div class="sous">Note de remise — Déploiement de l'écosystème web (pour M. Kalipé)</div></div>
+<h1>À remettre à M. Kalipé — Mise en ligne de l'écosystème ESIG</h1>
+<p>Récapitulatif de tout ce qui est fourni pour déployer le site sur <strong>Scaleway</strong>.
+Mode d'emploi détaillé : <strong><code>docs/DEPLOIEMENT_KALIPE.pdf</code></strong> (16 sections).</p>
+<h2>1. Le projet (le paquet)</h2>
+<p>Le dossier complet <strong><code>esig-ecosysteme</code></strong> — livré sans <code>node_modules</code>, <code>dist</code>, <code>.git</code> (régénérés au
+déploiement). Il contient les sources, le moteur de build, le kit <code>deploiement/</code> et les documents.</p>
+<h2>2. À lire, dans l'ordre</h2>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/DEPLOIEMENT_KALIPE.pdf</code></td>
+<td>Mode d'emploi complet</td>
+</tr>
+<tr>
+<td><code>deploiement/COMMANDES.md</code></td>
+<td>Les commandes, dans l'ordre</td>
+</tr>
+<tr>
+<td><code>deploiement/deploy.sh</code></td>
+<td>Script de mise en ligne (build + envoi des 8 sous-domaines)</td>
+</tr>
+<tr>
+<td><code>deploiement/nginx-vhost.template.conf</code></td>
+<td>Modèle Nginx + redirections</td>
+</tr>
+<tr>
+<td><code>deploiement/esig-nova.service</code> · <code>esig-formulaires.service</code></td>
+<td>Les 2 services systemd</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Accès à prévoir (à sécuriser — jamais en clair)</h2>
+<ul>
+<li><strong>SSH</strong> au serveur B (Scaleway) + <strong>admin Nginx Proxy Manager</strong> (serveur A).</li>
+<li><strong>Compte Cloudflare</strong> (pour corriger le DNS — <em>Error 1000</em>).</li>
+</ul>
+<h2>4. Secrets à renseigner (variables d'environnement)</h2>
+<ul>
+<li><strong>Clé API</strong> du modèle IA (assistant NOVA).</li>
+<li><strong>SMTP</strong> : hôte, utilisateur, mot de passe (formulaires).</li>
+<li><strong>Token Cloudflare Web Analytics</strong> (à créer dans le compte Cloudflare).</li>
+</ul>
+<h2>5. Ordre conseillé</h2>
+<ol>
+<li><strong>Corriger le DNS Cloudflare</strong> (sinon le site reste invisible — Error 1000).</li>
+<li><code>./deploiement/deploy.sh</code> — build + envoi des fichiers sur le serveur B.</li>
+<li>Déposer le dépôt sur le serveur B + activer les <strong>services systemd</strong> (NOVA, formulaires).</li>
+<li><strong>Nginx</strong> (modèle par sous-domaine) + <strong>NPM</strong> (SSL wildcard <code>*.esig.tg</code>).</li>
+<li><strong>Contrôles</strong> : HTTPS des 8 sites, formulaires (e-mail test), NOVA, document réservé en 404.</li>
+</ol>
+<h2>6. Points de vigilance</h2>
+<ul>
+<li>Serveur B = <strong>Nginx statique en HTTP, SANS SSL</strong> (le SSL/HSTS est géré par NPM). <strong>Aucun Caddy.</strong></li>
+<li><strong>Documents réservés</strong> (agrément / certificat qualité) : <strong>ne jamais exposer publiquement</strong>.</li>
+<li><strong>8 sous-domaines</strong> : <code>esig.tg</code> · <code>admission</code> · <code>executive</code> · <code>cooperation</code> · <code>carrieres</code> ·
+  <code>alumni</code> · <code>news</code> · <code>tech</code> (+ redirections <code>international → cooperation</code>, <code>entreprises → carrieres</code>).</li>
+</ul>
+<hr />
+<p><em>Contact projet : Direction Marketing &amp; Communication — ESIG Global Success.</em></p></body></html>

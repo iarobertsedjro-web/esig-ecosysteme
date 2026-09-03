@@ -21,20 +21,22 @@
      COMPOSANT PARTAGÉ : EN-TÊTE (bandeau écosystème + navigation)
      Injecté par build/build.js via le repère « #inclure:header ».
      Jetons remplaçables : {{ECO_*}} (aria-current du sous-domaine actif),
-     <li><a href="../../catalogue.html">Nos formations</a></li><li><a href="../../langues.html">Langues</a></li><li><a href="../../vae-vap.html">VAE / VAP</a></li><li><a href="../../devis.html">Devis entreprise</a></li><li><a href="../../index.html#contact">Contact</a></li> (liste de navigation propre au site), ../../devis.html, Demander un devis.
+     <li><a href="../../catalogue.html">Nos formations</a></li><li><a href="../../catalogue.html?niveau=modulaire">Modulaire</a></li><li><a href="../../langues.html">Langues</a></li><li><a href="../../vae-vap.html">VAE / VAP</a></li><li><a href="../../devis.html">Devis entreprise</a></li><li><a href="../../index.html#contact">Contact</a></li> (liste de navigation propre au site), ../../devis.html, Demander un devis.
      ========================================================================= -->
 <a class="saut-contenu" href="#contenu">Aller au contenu principal</a>
 
-<!-- Bandeau écosystème : navigation discrète entre les 6 sous-domaines -->
+<!-- Bandeau écosystème : sélecteur discret entre les 8 espaces du portail -->
 <div class="bandeau-ecosysteme">
   <div class="conteneur">
     <span class="bandeau-ecosysteme__label">Écosystème ESIG :</span>
     <a href="https://esig.tg" >Institution</a>
-    <a href="https://admission.esig.tg" >Admission</a>
+    <a href="https://admission.esig.tg" >Admissions</a>
     <a href="https://executive.esig.tg" aria-current="true">Formation continue</a>
-    <a href="https://international.esig.tg" >International</a>
-    <a href="https://news.esig.tg" >Actualités</a>
-    <a href="https://entreprises.esig.tg" >Entreprises</a>
+    <a href="https://cooperation.esig.tg" >Coopération</a>
+    <a href="https://carrieres.esig.tg" >Carrières</a>
+    <a href="https://alumni.esig.tg" >Alumni</a>
+    <a href="https://tech.esig.tg" >ESIG Tech</a>
+    <a href="https://news.esig.tg" >ESIG News</a>
   </div>
 </div>
 
@@ -55,7 +57,7 @@
     <div class="entete__nav" id="navigation-principale">
       <nav class="nav" aria-label="Navigation principale">
         <ul class="nav__liste">
-          <li><a href="../../catalogue.html">Nos formations</a></li><li><a href="../../langues.html">Langues</a></li><li><a href="../../vae-vap.html">VAE / VAP</a></li><li><a href="../../devis.html">Devis entreprise</a></li><li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="../../catalogue.html">Nos formations</a></li><li><a href="../../catalogue.html?niveau=modulaire">Modulaire</a></li><li><a href="../../langues.html">Langues</a></li><li><a href="../../vae-vap.html">VAE / VAP</a></li><li><a href="../../devis.html">Devis entreprise</a></li><li><a href="../../index.html#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="entete__actions" style="padding:var(--e-4)">
@@ -132,9 +134,11 @@
         <p class="pied__titre">L'écosystème</p>
         <ul>
           <li><a href="https://esig.tg">Institution</a></li>
-          <li><a href="https://international.esig.tg">International</a></li>
-          <li><a href="https://news.esig.tg">Actualités</a></li>
-          <li><a href="https://entreprises.esig.tg">Entreprises</a></li>
+          <li><a href="https://cooperation.esig.tg">Coopération &amp; International</a></li>
+          <li><a href="https://carrieres.esig.tg">Carrières &amp; Insertion</a></li>
+          <li><a href="https://alumni.esig.tg">Alumni</a></li>
+          <li><a href="https://tech.esig.tg">ESIG Tech</a></li>
+          <li><a href="https://news.esig.tg">ESIG News</a></li>
         </ul>
       </div>
 
@@ -167,6 +171,10 @@
     </div>
   </div>
 </footer>
+
+<!-- Cloudflare Web Analytics (sans cookie, RGPD) — remplacer le token par celui du tableau de bord Cloudflare -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN_A_REMPLACER"}'></script>
+<!-- Fin Cloudflare Web Analytics -->
 
 <script>window.ESIG_CONFIG={whatsapp:"+22893033351"};window.NOVA_CONFIG={endpoint:"http://localhost:8787/api/assistant",nom:"ESIG NOVA",accroche:"Une question sur cette formation ? Je vous oriente.",whatsapp:"+22893033351"};</script>
 <script src="/shared/js/commun.js" defer></script>
