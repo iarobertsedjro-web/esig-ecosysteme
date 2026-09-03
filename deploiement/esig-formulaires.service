@@ -9,8 +9,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=www-data
-WorkingDirectory=/opt/esig-ecosysteme
+User=root
+WorkingDirectory=/var/www/html/esig-ecosysteme
 Environment=PORT_FORMULAIRES=8788
 Environment=SMTP_HOTE=smtp.esig.tg
 Environment=SMTP_PORT=587

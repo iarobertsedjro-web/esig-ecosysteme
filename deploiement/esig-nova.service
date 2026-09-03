@@ -8,8 +8,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=www-data
-WorkingDirectory=/opt/esig-ecosysteme
+User=root
+WorkingDirectory=/var/www/html/esig-ecosysteme
 Environment=PORT=8787
 Environment=CLE_API_MODELE=REMPLACER_PAR_LA_CLE_API
 Environment=MODELE=claude-haiku-4-5-20251001

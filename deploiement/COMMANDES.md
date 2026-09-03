@@ -34,10 +34,16 @@ ssh deploy@SERVEUR_B "cd /opt/esig-ecosysteme && npm install nodemailer"
 ```
 
 ## 3. Nginx sur le serveur B (HTTP, sans SSL)
-Décliner `deploiement/nginx-vhost.template.conf` en **un vhost par sous-domaine**
-(adapter `server_name` + `root`). Ce fichier contient déjà les redirections 301
-`international → cooperation` et `entreprises → carrieres`.
+Les 8 vhosts sont **déjà prêts et nommés** dans `deploiement/nginx/` (un par sous-domaine +
+`redirections.conf`). Il suffit de les installer :
 ```bash
+sudo cp deploiement/nginx/*.conf /etc/nginx/sites-available/
+for f in deploiement/nginx/*.conf; do
+  sudo ln -sf "/etc/nginx/sites-available/$(basename "$f")" /etc/nginx/sites-enabled/
+done
+# IMPORTANT : le dépôt est cloné dans /var/www/html → désactiver le site par défaut,
+# sinon le code source serait exposé publiquement :
+sudo rm -f /etc/nginx/sites-enabled/default
 sudo nginx -t && sudo systemctl reload nginx
 ```
 
